@@ -73,7 +73,7 @@ export function AppSidebar() {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <Link to="/water" className="flex gap-2">
+                  <Link to="/water-management" className="flex gap-2"> {/* Updated path */}
                     <Droplets />
                     <span>Water Management</span>
                   </Link>

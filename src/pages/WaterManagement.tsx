@@ -1,8 +1,9 @@
-
 import { Layout } from "@/components/layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 import { Droplets, Cloud, Waves, Timer } from "lucide-react";
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 const waterData = [
   { month: 'Jan', rainfall: 12, irrigation: 40, requirement: 50 },
@@ -31,6 +32,19 @@ export default function WaterManagement() {
     <Layout>
       <div className="container mx-auto">
         <h1 className="text-3xl font-bold mb-6">Water Management</h1>
+        <div className="flex justify-between items-center mb-6">
+          <h1 className="text-3xl font-bold">Water Management</h1>
+          <Link to="/water-management/centre-pivot">
+            <Button className="flex items-center gap-2">
+              <span>3D Visualization</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/>
+                <path d="m16 8 5-5"/>
+                <path d="m21 3-5 5"/>
+              </svg>
+            </Button>
+          </Link>
+        </div>
         <div className="grid gap-6 md:grid-cols-4">
           <Card>
             <CardHeader className="pb-2">

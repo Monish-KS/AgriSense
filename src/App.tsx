@@ -1,3 +1,5 @@
+import { Layout } from "@/components/layout";
+
 
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -12,6 +14,7 @@ import NotFound from "./pages/NotFound";
 import CropRecommendations from "./pages/CropRecommendations";
 import Settings from "./pages/Settings";
 import WaterManagement from "./pages/WaterManagement";
+import IrrigationSimulatorComponent from "./pages/CentrePivotVisualization"; // Import the new component
 import SupplyChain from "./pages/SupplyChain";
 import Weather from "./pages/Weather";
 
@@ -30,7 +33,15 @@ const App = () => (
           <Route path="/soil" element={<SoilAnalytics />} />
           <Route path="/weather" element={<Weather />} />
           <Route path="/crop-recommendations" element={<CropRecommendations />} />
-          <Route path="/water" element={<WaterManagement />} />
+          <Route path="/water-management" element={<WaterManagement />} />
+          <Route
+            path="/water-management/centre-pivot"
+            element={
+              <Layout>
+                <IrrigationSimulatorComponent />
+              </Layout>
+            }
+          />
           <Route path="/supply-chain" element={<SupplyChain />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
