@@ -1,0 +1,1676 @@
+[
+  {
+    "Item": "Herbicides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 52279
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 49157
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 46195
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2000,
+    "Unit": "tonnes",
+    "Value": 44958
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2001,
+    "Unit": "tonnes",
+    "Value": 43720
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2002,
+    "Unit": "tonnes",
+    "Value": 42483
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2003,
+    "Unit": "tonnes",
+    "Value": 41245
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2004,
+    "Unit": "tonnes",
+    "Value": 35113
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2005,
+    "Unit": "tonnes",
+    "Value": 35342
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2006,
+    "Unit": "tonnes",
+    "Value": 37423
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2007,
+    "Unit": "tonnes",
+    "Value": 27423
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2008,
+    "Unit": "tonnes",
+    "Value": 14485
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2009,
+    "Unit": "tonnes",
+    "Value": 28707
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2010,
+    "Unit": "tonnes",
+    "Value": 40094
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 31078
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 28268
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 27405
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2000,
+    "Unit": "tonnes",
+    "Value": 26227
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2001,
+    "Unit": "tonnes",
+    "Value": 25050
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2002,
+    "Unit": "tonnes",
+    "Value": 23872
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2003,
+    "Unit": "tonnes",
+    "Value": 22694
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2004,
+    "Unit": "tonnes",
+    "Value": 21489
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2005,
+    "Unit": "tonnes",
+    "Value": 21783
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2006,
+    "Unit": "tonnes",
+    "Value": 16913
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2007,
+    "Unit": "tonnes",
+    "Value": 14618
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2008,
+    "Unit": "tonnes",
+    "Value": 3278
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2009,
+    "Unit": "tonnes",
+    "Value": 14810
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2010,
+    "Unit": "tonnes",
+    "Value": 20619
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 4504
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 3984
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 3777
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2003,
+    "Unit": "tonnes",
+    "Value": 2655
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2004,
+    "Unit": "tonnes",
+    "Value": 2907
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2005,
+    "Unit": "tonnes",
+    "Value": 2242
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2006,
+    "Unit": "tonnes",
+    "Value": 4209
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2007,
+    "Unit": "tonnes",
+    "Value": 3639
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2008,
+    "Unit": "tonnes",
+    "Value": 2841
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2009,
+    "Unit": "tonnes",
+    "Value": 3228
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2010,
+    "Unit": "tonnes",
+    "Value": 4485
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 23296
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 21099
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 19788
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2003,
+    "Unit": "tonnes",
+    "Value": 20039
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2004,
+    "Unit": "tonnes",
+    "Value": 18582
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2005,
+    "Unit": "tonnes",
+    "Value": 19541
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2006,
+    "Unit": "tonnes",
+    "Value": 12704
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2007,
+    "Unit": "tonnes",
+    "Value": 10979
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2008,
+    "Unit": "tonnes",
+    "Value": 437
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2009,
+    "Unit": "tonnes",
+    "Value": 11582
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2010,
+    "Unit": "tonnes",
+    "Value": 16134
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 1108
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 791
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 667
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 1623
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 1756
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 1886
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 395
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 482
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 874
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 152
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 156
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 413
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 6992
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 7481
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 7480
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2000,
+    "Unit": "tonnes",
+    "Value": 7485
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2001,
+    "Unit": "tonnes",
+    "Value": 7490
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2002,
+    "Unit": "tonnes",
+    "Value": 7495
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2003,
+    "Unit": "tonnes",
+    "Value": 7500
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2004,
+    "Unit": "tonnes",
+    "Value": 5154
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2005,
+    "Unit": "tonnes",
+    "Value": 6959
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2006,
+    "Unit": "tonnes",
+    "Value": 6304
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2007,
+    "Unit": "tonnes",
+    "Value": 4122
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2008,
+    "Unit": "tonnes",
+    "Value": 3575
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2009,
+    "Unit": "tonnes",
+    "Value": 4220
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2010,
+    "Unit": "tonnes",
+    "Value": 6335
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 609
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 659
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 680
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 350
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 452
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 424
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 2644
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 2647
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 2598
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 112
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 164
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 161
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2003,
+    "Unit": "tonnes",
+    "Value": 213
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2004,
+    "Unit": "tonnes",
+    "Value": 115
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2005,
+    "Unit": "tonnes",
+    "Value": 289
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2006,
+    "Unit": "tonnes",
+    "Value": 82
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2007,
+    "Unit": "tonnes",
+    "Value": 98
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2008,
+    "Unit": "tonnes",
+    "Value": 81
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2009,
+    "Unit": "tonnes",
+    "Value": 49
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2010,
+    "Unit": "tonnes",
+    "Value": 71
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 2674
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 2662
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 2685
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2003,
+    "Unit": "tonnes",
+    "Value": 2842
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2004,
+    "Unit": "tonnes",
+    "Value": 2333
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2005,
+    "Unit": "tonnes",
+    "Value": 1447
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2006,
+    "Unit": "tonnes",
+    "Value": 2251
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2007,
+    "Unit": "tonnes",
+    "Value": 1428
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2008,
+    "Unit": "tonnes",
+    "Value": 1217
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2009,
+    "Unit": "tonnes",
+    "Value": 1215
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2010,
+    "Unit": "tonnes",
+    "Value": 1834
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 41
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 62
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 113
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 562
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 835
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 819
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2003,
+    "Unit": "tonnes",
+    "Value": 4445
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2004,
+    "Unit": "tonnes",
+    "Value": 2706
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2005,
+    "Unit": "tonnes",
+    "Value": 5223
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2006,
+    "Unit": "tonnes",
+    "Value": 3971
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2007,
+    "Unit": "tonnes",
+    "Value": 2596
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2008,
+    "Unit": "tonnes",
+    "Value": 2276
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2009,
+    "Unit": "tonnes",
+    "Value": 2956
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2010,
+    "Unit": "tonnes",
+    "Value": 4430
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 8641
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 9864
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 7801
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2000,
+    "Unit": "tonnes",
+    "Value": 8608
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2001,
+    "Unit": "tonnes",
+    "Value": 9415
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2002,
+    "Unit": "tonnes",
+    "Value": 10221
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2003,
+    "Unit": "tonnes",
+    "Value": 11028
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2004,
+    "Unit": "tonnes",
+    "Value": 8435
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2005,
+    "Unit": "tonnes",
+    "Value": 6566
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2006,
+    "Unit": "tonnes",
+    "Value": 13367
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2007,
+    "Unit": "tonnes",
+    "Value": 8297
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2008,
+    "Unit": "tonnes",
+    "Value": 7491
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2009,
+    "Unit": "tonnes",
+    "Value": 9627
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2010,
+    "Unit": "tonnes",
+    "Value": 13055
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 4646
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 5359
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 3680
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2003,
+    "Unit": "tonnes",
+    "Value": 5573
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2004,
+    "Unit": "tonnes",
+    "Value": 4629
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2005,
+    "Unit": "tonnes",
+    "Value": 2318
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2006,
+    "Unit": "tonnes",
+    "Value": 5907
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2007,
+    "Unit": "tonnes",
+    "Value": 5410
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2008,
+    "Unit": "tonnes",
+    "Value": 5061
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2009,
+    "Unit": "tonnes",
+    "Value": 5580
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2010,
+    "Unit": "tonnes",
+    "Value": 6298
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 2832
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 3159
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 2624
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2003,
+    "Unit": "tonnes",
+    "Value": 4065
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2004,
+    "Unit": "tonnes",
+    "Value": 3222
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2005,
+    "Unit": "tonnes",
+    "Value": 2575
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2006,
+    "Unit": "tonnes",
+    "Value": 4417
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2007,
+    "Unit": "tonnes",
+    "Value": 1898
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2008,
+    "Unit": "tonnes",
+    "Value": 1503
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2009,
+    "Unit": "tonnes",
+    "Value": 2640
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2010,
+    "Unit": "tonnes",
+    "Value": 4198
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 529
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 576
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 545
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2003,
+    "Unit": "tonnes",
+    "Value": 859
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2004,
+    "Unit": "tonnes",
+    "Value": 400
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2005,
+    "Unit": "tonnes",
+    "Value": 603
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2006,
+    "Unit": "tonnes",
+    "Value": 2167
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2007,
+    "Unit": "tonnes",
+    "Value": 774
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2008,
+    "Unit": "tonnes",
+    "Value": 638
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2009,
+    "Unit": "tonnes",
+    "Value": 1195
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2010,
+    "Unit": "tonnes",
+    "Value": 1992
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 10
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 16
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 27
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 166
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 215
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 269
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 458
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 539
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 656
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2003,
+    "Unit": "tonnes",
+    "Value": 531
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2004,
+    "Unit": "tonnes",
+    "Value": 184
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2005,
+    "Unit": "tonnes",
+    "Value": 1070
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2006,
+    "Unit": "tonnes",
+    "Value": 876
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2007,
+    "Unit": "tonnes",
+    "Value": 216
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2008,
+    "Unit": "tonnes",
+    "Value": 289
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2009,
+    "Unit": "tonnes",
+    "Value": 211
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2010,
+    "Unit": "tonnes",
+    "Value": 567
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 392
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 438
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 480
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2000,
+    "Unit": "tonnes",
+    "Value": 360
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2001,
+    "Unit": "tonnes",
+    "Value": 240
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2002,
+    "Unit": "tonnes",
+    "Value": 120
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2003,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2004,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2005,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2006,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2007,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2008,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2009,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 2010,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 316
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 366
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 405
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 11
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 16
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 21
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 4
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 5
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 3
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 61
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 51
+  },
+  {
+    "Item": "Bactericides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 51
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 2341
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 2091
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 1563
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2000,
+    "Unit": "tonnes",
+    "Value": 1172
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2001,
+    "Unit": "tonnes",
+    "Value": 782
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2002,
+    "Unit": "tonnes",
+    "Value": 391
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2003,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2004,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2005,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2006,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2007,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2008,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2009,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2010,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 1654
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 1206
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 974
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 687
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 885
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 589
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 65
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 48
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 68
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2000,
+    "Unit": "tonnes",
+    "Value": 57
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2001,
+    "Unit": "tonnes",
+    "Value": 46
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2002,
+    "Unit": "tonnes",
+    "Value": 34
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2003,
+    "Unit": "tonnes",
+    "Value": 23
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2004,
+    "Unit": "tonnes",
+    "Value": 35
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2005,
+    "Unit": "tonnes",
+    "Value": 34
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2006,
+    "Unit": "tonnes",
+    "Value": 839
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2007,
+    "Unit": "tonnes",
+    "Value": 43
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2008,
+    "Unit": "tonnes",
+    "Value": 141
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2009,
+    "Unit": "tonnes",
+    "Value": 50
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2010,
+    "Unit": "tonnes",
+    "Value": 84
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 695
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 603
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 563
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2000,
+    "Unit": "tonnes",
+    "Value": 422
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2001,
+    "Unit": "tonnes",
+    "Value": 282
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2002,
+    "Unit": "tonnes",
+    "Value": 141
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2003,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2004,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2005,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2006,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2007,
+    "Unit": "tonnes",
+    "Value": 343
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2008,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2009,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 2010,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 24
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 42
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 79
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 671
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 561
+  },
+  {
+    "Item": "Insecticides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 484
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1997,
+    "Unit": "tonnes",
+    "Value": 2075
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1998,
+    "Unit": "tonnes",
+    "Value": 364
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 1999,
+    "Unit": "tonnes",
+    "Value": 835
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2000,
+    "Unit": "tonnes",
+    "Value": 626
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2001,
+    "Unit": "tonnes",
+    "Value": 418
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2002,
+    "Unit": "tonnes",
+    "Value": 209
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2003,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2004,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2005,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2006,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2007,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2008,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2009,
+    "Unit": "tonnes",
+    "Value": 0
+  },
+  {
+    "Item": "Herbicides",
+    "Year": 2010,
+    "Unit": "tonnes",
+    "Value": 0
+  }
+]

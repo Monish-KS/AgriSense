@@ -1,0 +1,4461 @@
+[
+  {
+    "Sl No": "1",
+    "State": "Andaman Nicobar",
+    "District": "South Andaman",
+    "No of Wholesalers": "2",
+    "No of Retailers": "2"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "Adilabad",
+    "No of Wholesalers": "97",
+    "No of Retailers": "646"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "Anantapur",
+    "No of Wholesalers": "32",
+    "No of Retailers": "552"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "Chittor",
+    "No of Wholesalers": "33",
+    "No of Retailers": "446"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "East Godavari",
+    "No of Wholesalers": "218",
+    "No of Retailers": "1136"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "Guntur",
+    "No of Wholesalers": "152",
+    "No of Retailers": "1181"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "Hyderabad",
+    "No of Wholesalers": "7",
+    "No of Retailers": "7"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "KarimNagar",
+    "No of Wholesalers": "88",
+    "No of Retailers": "762"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "Khammam",
+    "No of Wholesalers": "35",
+    "No of Retailers": "814"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "Krishna",
+    "No of Wholesalers": "75",
+    "No of Retailers": "919"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "Kurnool",
+    "No of Wholesalers": "100",
+    "No of Retailers": "793"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "MahbubaNagar",
+    "No of Wholesalers": "90",
+    "No of Retailers": "603"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "Medak",
+    "No of Wholesalers": "58",
+    "No of Retailers": "665"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "Nalgonda",
+    "No of Wholesalers": "84",
+    "No of Retailers": "638"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "Nizamabad",
+    "No of Wholesalers": "61",
+    "No of Retailers": "517"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "Prakasam",
+    "No of Wholesalers": "91",
+    "No of Retailers": "800"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "RangaReddy",
+    "No of Wholesalers": "31",
+    "No of Retailers": "356"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "Srikakulam",
+    "No of Wholesalers": "24",
+    "No of Retailers": "372"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "SripottiSrimallu Nellor",
+    "No of Wholesalers": "42",
+    "No of Retailers": "455"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "Vishakapatnam",
+    "No of Wholesalers": "26",
+    "No of Retailers": "298"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "ViziaNagaram",
+    "No of Wholesalers": "32",
+    "No of Retailers": "281"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "Warangal",
+    "No of Wholesalers": "174",
+    "No of Retailers": "757"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "West Godavari",
+    "No of Wholesalers": "137",
+    "No of Retailers": "1081"
+  },
+  {
+    "Sl No": "2",
+    "State": "Andhra Pradesh",
+    "District": "Y.S.R",
+    "No of Wholesalers": "26",
+    "No of Retailers": "331"
+  },
+  {
+    "Sl No": "3",
+    "State": "Arunachal Pradesh",
+    "District": "Anjaw",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "3",
+    "State": "Arunachal Pradesh",
+    "District": "Changlang",
+    "No of Wholesalers": "1",
+    "No of Retailers": "1"
+  },
+  {
+    "Sl No": "3",
+    "State": "Arunachal Pradesh",
+    "District": "Dibanga Valley",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "3",
+    "State": "Arunachal Pradesh",
+    "District": "East Kameng",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "3",
+    "State": "Arunachal Pradesh",
+    "District": "East Siang",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "3",
+    "State": "Arunachal Pradesh",
+    "District": "Kurung Kumey",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "3",
+    "State": "Arunachal Pradesh",
+    "District": "Lohit",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "3",
+    "State": "Arunachal Pradesh",
+    "District": "Lower Dibang Valley",
+    "No of Wholesalers": "1",
+    "No of Retailers": "1"
+  },
+  {
+    "Sl No": "3",
+    "State": "Arunachal Pradesh",
+    "District": "Lower Sibansiri",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "3",
+    "State": "Arunachal Pradesh",
+    "District": "Papum Pare",
+    "No of Wholesalers": "1",
+    "No of Retailers": "1"
+  },
+  {
+    "Sl No": "3",
+    "State": "Arunachal Pradesh",
+    "District": "Tawang",
+    "No of Wholesalers": "1",
+    "No of Retailers": "1"
+  },
+  {
+    "Sl No": "3",
+    "State": "Arunachal Pradesh",
+    "District": "Tirap",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "3",
+    "State": "Arunachal Pradesh",
+    "District": "Upper Siang",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "3",
+    "State": "Arunachal Pradesh",
+    "District": "Upper Sibansiri",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "3",
+    "State": "Arunachal Pradesh",
+    "District": "West Kameng",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "3",
+    "State": "Arunachal Pradesh",
+    "District": "West Siang",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Baksa",
+    "No of Wholesalers": "0",
+    "No of Retailers": "9"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Barpeta",
+    "No of Wholesalers": "9",
+    "No of Retailers": "145"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Bongaigaon",
+    "No of Wholesalers": "7",
+    "No of Retailers": "39"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Cachar",
+    "No of Wholesalers": "20",
+    "No of Retailers": "57"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Chirang",
+    "No of Wholesalers": "0",
+    "No of Retailers": "10"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Darrang",
+    "No of Wholesalers": "12",
+    "No of Retailers": "101"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Dhemaji",
+    "No of Wholesalers": "0",
+    "No of Retailers": "8"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Dhubri",
+    "No of Wholesalers": "12",
+    "No of Retailers": "58"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Dibrugarh",
+    "No of Wholesalers": "20",
+    "No of Retailers": "115"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Dima Hasao",
+    "No of Wholesalers": "0",
+    "No of Retailers": "1"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Goalpara",
+    "No of Wholesalers": "9",
+    "No of Retailers": "39"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Golaghat",
+    "No of Wholesalers": "20",
+    "No of Retailers": "62"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Hailakandi",
+    "No of Wholesalers": "3",
+    "No of Retailers": "14"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Jorhat",
+    "No of Wholesalers": "8",
+    "No of Retailers": "52"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Kamrup",
+    "No of Wholesalers": "37",
+    "No of Retailers": "89"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Kamrup Metropolitan",
+    "No of Wholesalers": "6",
+    "No of Retailers": "6"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Karbi Anglong",
+    "No of Wholesalers": "5",
+    "No of Retailers": "7"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Karimganj",
+    "No of Wholesalers": "7",
+    "No of Retailers": "18"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Kokrajhar",
+    "No of Wholesalers": "1",
+    "No of Retailers": "9"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Lakhimpur",
+    "No of Wholesalers": "3",
+    "No of Retailers": "39"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Marigaon",
+    "No of Wholesalers": "5",
+    "No of Retailers": "36"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Nagaon",
+    "No of Wholesalers": "19",
+    "No of Retailers": "103"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Nalbari",
+    "No of Wholesalers": "3",
+    "No of Retailers": "29"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Sivasagar",
+    "No of Wholesalers": "12",
+    "No of Retailers": "76"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Sonitpur",
+    "No of Wholesalers": "8",
+    "No of Retailers": "109"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Tinsukia",
+    "No of Wholesalers": "31",
+    "No of Retailers": "107"
+  },
+  {
+    "Sl No": "4",
+    "State": "Assam",
+    "District": "Udalguri",
+    "No of Wholesalers": "0",
+    "No of Retailers": "14"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Araria",
+    "No of Wholesalers": "20",
+    "No of Retailers": "519"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Arwal",
+    "No of Wholesalers": "13",
+    "No of Retailers": "293"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Aurangabad",
+    "No of Wholesalers": "22",
+    "No of Retailers": "578"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Banka",
+    "No of Wholesalers": "14",
+    "No of Retailers": "441"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Begusarai",
+    "No of Wholesalers": "26",
+    "No of Retailers": "620"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Bhagalpur",
+    "No of Wholesalers": "21",
+    "No of Retailers": "562"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Bhojpur",
+    "No of Wholesalers": "29",
+    "No of Retailers": "733"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Buxar",
+    "No of Wholesalers": "14",
+    "No of Retailers": "553"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Darbhanga",
+    "No of Wholesalers": "9",
+    "No of Retailers": "506"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Gaya",
+    "No of Wholesalers": "23",
+    "No of Retailers": "1149"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Gopalganj",
+    "No of Wholesalers": "11",
+    "No of Retailers": "554"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Jamui",
+    "No of Wholesalers": "13",
+    "No of Retailers": "283"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Jehanabad",
+    "No of Wholesalers": "12",
+    "No of Retailers": "299"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Katihar",
+    "No of Wholesalers": "20",
+    "No of Retailers": "610"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Khagaria",
+    "No of Wholesalers": "21",
+    "No of Retailers": "617"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Kishanganj",
+    "No of Wholesalers": "8",
+    "No of Retailers": "299"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Lakhisarai",
+    "No of Wholesalers": "14",
+    "No of Retailers": "186"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Madhepura",
+    "No of Wholesalers": "15",
+    "No of Retailers": "628"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Madhubani",
+    "No of Wholesalers": "24",
+    "No of Retailers": "440"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Munger",
+    "No of Wholesalers": "16",
+    "No of Retailers": "222"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Muzaffarpur",
+    "No of Wholesalers": "21",
+    "No of Retailers": "902"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Nalanda",
+    "No of Wholesalers": "31",
+    "No of Retailers": "789"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Nawada",
+    "No of Wholesalers": "12",
+    "No of Retailers": "493"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Pashchim Champaran",
+    "No of Wholesalers": "27",
+    "No of Retailers": "1000"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Patna",
+    "No of Wholesalers": "38",
+    "No of Retailers": "1050"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Purba Champaran",
+    "No of Wholesalers": "46",
+    "No of Retailers": "1258"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Purnia",
+    "No of Wholesalers": "18",
+    "No of Retailers": "908"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Rohtas",
+    "No of Wholesalers": "52",
+    "No of Retailers": "901"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Saharsa",
+    "No of Wholesalers": "17",
+    "No of Retailers": "467"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Samastipur",
+    "No of Wholesalers": "30",
+    "No of Retailers": "1136"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Saran",
+    "No of Wholesalers": "27",
+    "No of Retailers": "633"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Sheikhpura",
+    "No of Wholesalers": "6",
+    "No of Retailers": "172"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Sheohar",
+    "No of Wholesalers": "15",
+    "No of Retailers": "113"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Sitamarhi",
+    "No of Wholesalers": "24",
+    "No of Retailers": "683"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Siwan",
+    "No of Wholesalers": "21",
+    "No of Retailers": "909"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Supaul",
+    "No of Wholesalers": "6",
+    "No of Retailers": "328"
+  },
+  {
+    "Sl No": "5",
+    "State": "Bihar",
+    "District": "Vaishali",
+    "No of Wholesalers": "31",
+    "No of Retailers": "554"
+  },
+  {
+    "Sl No": "6",
+    "State": "chandigarh",
+    "District": "",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "7",
+    "State": "Chhattisgarh",
+    "District": "Bastar",
+    "No of Wholesalers": "23",
+    "No of Retailers": "101"
+  },
+  {
+    "Sl No": "7",
+    "State": "Chhattisgarh",
+    "District": "Bijapur",
+    "No of Wholesalers": "2",
+    "No of Retailers": "33"
+  },
+  {
+    "Sl No": "7",
+    "State": "Chhattisgarh",
+    "District": "Bilaspur",
+    "No of Wholesalers": "42",
+    "No of Retailers": "284"
+  },
+  {
+    "Sl No": "7",
+    "State": "Chhattisgarh",
+    "District": "Dakshin Bastar",
+    "No of Wholesalers": "5",
+    "No of Retailers": "47"
+  },
+  {
+    "Sl No": "7",
+    "State": "Chhattisgarh",
+    "District": "Dhamtari",
+    "No of Wholesalers": "40",
+    "No of Retailers": "240"
+  },
+  {
+    "Sl No": "7",
+    "State": "Chhattisgarh",
+    "District": "Durg",
+    "No of Wholesalers": "82",
+    "No of Retailers": "445"
+  },
+  {
+    "Sl No": "7",
+    "State": "Chhattisgarh",
+    "District": "Janjgir-Champa",
+    "No of Wholesalers": "37",
+    "No of Retailers": "218"
+  },
+  {
+    "Sl No": "7",
+    "State": "Chhattisgarh",
+    "District": "Jashpur",
+    "No of Wholesalers": "9",
+    "No of Retailers": "45"
+  },
+  {
+    "Sl No": "7",
+    "State": "Chhattisgarh",
+    "District": "Kabeerdham",
+    "No of Wholesalers": "15",
+    "No of Retailers": "135"
+  },
+  {
+    "Sl No": "7",
+    "State": "Chhattisgarh",
+    "District": "Korba",
+    "No of Wholesalers": "6",
+    "No of Retailers": "57"
+  },
+  {
+    "Sl No": "7",
+    "State": "Chhattisgarh",
+    "District": "Koriya",
+    "No of Wholesalers": "12",
+    "No of Retailers": "77"
+  },
+  {
+    "Sl No": "7",
+    "State": "Chhattisgarh",
+    "District": "Mahasamund",
+    "No of Wholesalers": "24",
+    "No of Retailers": "157"
+  },
+  {
+    "Sl No": "7",
+    "State": "Chhattisgarh",
+    "District": "Narayanpur",
+    "No of Wholesalers": "1",
+    "No of Retailers": "8"
+  },
+  {
+    "Sl No": "7",
+    "State": "Chhattisgarh",
+    "District": "Raigarh",
+    "No of Wholesalers": "24",
+    "No of Retailers": "202"
+  },
+  {
+    "Sl No": "7",
+    "State": "Chhattisgarh",
+    "District": "Raipur",
+    "No of Wholesalers": "88",
+    "No of Retailers": "494"
+  },
+  {
+    "Sl No": "7",
+    "State": "Chhattisgarh",
+    "District": "Rajnandgaon",
+    "No of Wholesalers": "28",
+    "No of Retailers": "210"
+  },
+  {
+    "Sl No": "7",
+    "State": "Chhattisgarh",
+    "District": "Surguja",
+    "No of Wholesalers": "43",
+    "No of Retailers": "179"
+  },
+  {
+    "Sl No": "7",
+    "State": "Chhattisgarh",
+    "District": "Uttar Bastar Kanker",
+    "No of Wholesalers": "28",
+    "No of Retailers": "133"
+  },
+  {
+    "Sl No": "8",
+    "State": "Dadra & Nagar Haveli",
+    "District": "Dadra & Nagar Haveli",
+    "No of Wholesalers": "0",
+    "No of Retailers": "1"
+  },
+  {
+    "Sl No": "9",
+    "State": "Daman & Diu",
+    "District": "Daman",
+    "No of Wholesalers": "0",
+    "No of Retailers": "1"
+  },
+  {
+    "Sl No": "9",
+    "State": "Daman & Diu",
+    "District": "Diu",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "10",
+    "State": "Goa",
+    "District": "North Goa",
+    "No of Wholesalers": "9",
+    "No of Retailers": "53"
+  },
+  {
+    "Sl No": "10",
+    "State": "Goa",
+    "District": "South Goa",
+    "No of Wholesalers": "9",
+    "No of Retailers": "43"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Ahmadabad",
+    "No of Wholesalers": "65",
+    "No of Retailers": "418"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Amreli",
+    "No of Wholesalers": "41",
+    "No of Retailers": "358"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Anand",
+    "No of Wholesalers": "91",
+    "No of Retailers": "504"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Banas Kantha",
+    "No of Wholesalers": "74",
+    "No of Retailers": "867"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Bharuch",
+    "No of Wholesalers": "48",
+    "No of Retailers": "229"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Bhavnagar",
+    "No of Wholesalers": "43",
+    "No of Retailers": "586"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Dohad",
+    "No of Wholesalers": "27",
+    "No of Retailers": "195"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Gandhinagar",
+    "No of Wholesalers": "42",
+    "No of Retailers": "272"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Jamnagar",
+    "No of Wholesalers": "50",
+    "No of Retailers": "423"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Junagadh",
+    "No of Wholesalers": "56",
+    "No of Retailers": "593"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Kachchh",
+    "No of Wholesalers": "44",
+    "No of Retailers": "328"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Kheda",
+    "No of Wholesalers": "47",
+    "No of Retailers": "443"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Mahesana",
+    "No of Wholesalers": "42",
+    "No of Retailers": "569"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Narmada",
+    "No of Wholesalers": "22",
+    "No of Retailers": "93"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Navsari",
+    "No of Wholesalers": "45",
+    "No of Retailers": "215"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Panch Mahals",
+    "No of Wholesalers": "44",
+    "No of Retailers": "433"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Patan",
+    "No of Wholesalers": "34",
+    "No of Retailers": "326"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Porbandar",
+    "No of Wholesalers": "30",
+    "No of Retailers": "82"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Rajkot",
+    "No of Wholesalers": "85",
+    "No of Retailers": "851"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Sabar Kantha",
+    "No of Wholesalers": "67",
+    "No of Retailers": "858"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Surat",
+    "No of Wholesalers": "41",
+    "No of Retailers": "273"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Surendranagar",
+    "No of Wholesalers": "39",
+    "No of Retailers": "441"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Tapi",
+    "No of Wholesalers": "20",
+    "No of Retailers": "147"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "The Dangs",
+    "No of Wholesalers": "9",
+    "No of Retailers": "10"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Vadodara",
+    "No of Wholesalers": "63",
+    "No of Retailers": "544"
+  },
+  {
+    "Sl No": "11",
+    "State": "Gujarat",
+    "District": "Valsad",
+    "No of Wholesalers": "24",
+    "No of Retailers": "211"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Ambala",
+    "No of Wholesalers": "48",
+    "No of Retailers": "274"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Bhiwani",
+    "No of Wholesalers": "47",
+    "No of Retailers": "324"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Faridabad",
+    "No of Wholesalers": "7",
+    "No of Retailers": "68"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Fatehabad",
+    "No of Wholesalers": "69",
+    "No of Retailers": "288"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Gurgaon",
+    "No of Wholesalers": "23",
+    "No of Retailers": "96"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Hisar",
+    "No of Wholesalers": "69",
+    "No of Retailers": "324"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Jhajjar",
+    "No of Wholesalers": "19",
+    "No of Retailers": "132"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Jind",
+    "No of Wholesalers": "83",
+    "No of Retailers": "301"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Kaithal",
+    "No of Wholesalers": "57",
+    "No of Retailers": "255"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Karnal",
+    "No of Wholesalers": "68",
+    "No of Retailers": "533"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Kurukshetra",
+    "No of Wholesalers": "61",
+    "No of Retailers": "394"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Mahendragarh",
+    "No of Wholesalers": "34",
+    "No of Retailers": "157"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Mewat",
+    "No of Wholesalers": "27",
+    "No of Retailers": "92"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Palwal",
+    "No of Wholesalers": "31",
+    "No of Retailers": "197"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Panchkula",
+    "No of Wholesalers": "4",
+    "No of Retailers": "60"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Panipat",
+    "No of Wholesalers": "37",
+    "No of Retailers": "254"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Rewari",
+    "No of Wholesalers": "29",
+    "No of Retailers": "193"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Rohtak",
+    "No of Wholesalers": "18",
+    "No of Retailers": "229"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Sirsa",
+    "No of Wholesalers": "76",
+    "No of Retailers": "368"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Sonipat",
+    "No of Wholesalers": "36",
+    "No of Retailers": "305"
+  },
+  {
+    "Sl No": "12",
+    "State": "Haryana",
+    "District": "Yamunanagar",
+    "No of Wholesalers": "41",
+    "No of Retailers": "344"
+  },
+  {
+    "Sl No": "13",
+    "State": "Himachal Pradesh",
+    "District": "Bilaspur",
+    "No of Wholesalers": "8",
+    "No of Retailers": "116"
+  },
+  {
+    "Sl No": "13",
+    "State": "Himachal Pradesh",
+    "District": "Chamba",
+    "No of Wholesalers": "6",
+    "No of Retailers": "133"
+  },
+  {
+    "Sl No": "13",
+    "State": "Himachal Pradesh",
+    "District": "Hamirpur",
+    "No of Wholesalers": "5",
+    "No of Retailers": "262"
+  },
+  {
+    "Sl No": "13",
+    "State": "Himachal Pradesh",
+    "District": "Kangra",
+    "No of Wholesalers": "10",
+    "No of Retailers": "633"
+  },
+  {
+    "Sl No": "13",
+    "State": "Himachal Pradesh",
+    "District": "Kinnaur",
+    "No of Wholesalers": "1",
+    "No of Retailers": "18"
+  },
+  {
+    "Sl No": "13",
+    "State": "Himachal Pradesh",
+    "District": "Kullu",
+    "No of Wholesalers": "6",
+    "No of Retailers": "215"
+  },
+  {
+    "Sl No": "13",
+    "State": "Himachal Pradesh",
+    "District": "Lahul & Spiti",
+    "No of Wholesalers": "1",
+    "No of Retailers": "38"
+  },
+  {
+    "Sl No": "13",
+    "State": "Himachal Pradesh",
+    "District": "Mandi",
+    "No of Wholesalers": "10",
+    "No of Retailers": "392"
+  },
+  {
+    "Sl No": "13",
+    "State": "Himachal Pradesh",
+    "District": "Shimla",
+    "No of Wholesalers": "30",
+    "No of Retailers": "301"
+  },
+  {
+    "Sl No": "13",
+    "State": "Himachal Pradesh",
+    "District": "Sirmaur",
+    "No of Wholesalers": "10",
+    "No of Retailers": "139"
+  },
+  {
+    "Sl No": "13",
+    "State": "Himachal Pradesh",
+    "District": "Solan",
+    "No of Wholesalers": "6",
+    "No of Retailers": "144"
+  },
+  {
+    "Sl No": "13",
+    "State": "Himachal Pradesh",
+    "District": "Una",
+    "No of Wholesalers": "5",
+    "No of Retailers": "235"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Anantnag",
+    "No of Wholesalers": "26",
+    "No of Retailers": "78"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Badgam",
+    "No of Wholesalers": "16",
+    "No of Retailers": "25"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Bandipore",
+    "No of Wholesalers": "18",
+    "No of Retailers": "15"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Baramula",
+    "No of Wholesalers": "24",
+    "No of Retailers": "52"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Doda",
+    "No of Wholesalers": "4",
+    "No of Retailers": "16"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Ganderbal",
+    "No of Wholesalers": "13",
+    "No of Retailers": "7"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Jammu",
+    "No of Wholesalers": "22",
+    "No of Retailers": "180"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Kargil",
+    "No of Wholesalers": "6",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Kathua",
+    "No of Wholesalers": "11",
+    "No of Retailers": "94"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Kishtwar",
+    "No of Wholesalers": "2",
+    "No of Retailers": "1"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Kulgam",
+    "No of Wholesalers": "27",
+    "No of Retailers": "62"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Kupwara",
+    "No of Wholesalers": "17",
+    "No of Retailers": "22"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Pulwama",
+    "No of Wholesalers": "19",
+    "No of Retailers": "39"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Punch",
+    "No of Wholesalers": "5",
+    "No of Retailers": "26"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Rajauri",
+    "No of Wholesalers": "5",
+    "No of Retailers": "65"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Ramban",
+    "No of Wholesalers": "9",
+    "No of Retailers": "14"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Reasi",
+    "No of Wholesalers": "5",
+    "No of Retailers": "15"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Samba",
+    "No of Wholesalers": "11",
+    "No of Retailers": "21"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Shupiyan",
+    "No of Wholesalers": "23",
+    "No of Retailers": "42"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Srinagar",
+    "No of Wholesalers": "10",
+    "No of Retailers": "6"
+  },
+  {
+    "Sl No": "14",
+    "State": "Jammu & Kashmir",
+    "District": "Udhampur",
+    "No of Wholesalers": "6",
+    "No of Retailers": "48"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Bokaro",
+    "No of Wholesalers": "2",
+    "No of Retailers": "30"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Chatra",
+    "No of Wholesalers": "3",
+    "No of Retailers": "91"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Deoghar",
+    "No of Wholesalers": "17",
+    "No of Retailers": "172"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Dhanbad",
+    "No of Wholesalers": "0",
+    "No of Retailers": "24"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Dumka",
+    "No of Wholesalers": "4",
+    "No of Retailers": "103"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Garhwa",
+    "No of Wholesalers": "10",
+    "No of Retailers": "153"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Giridiha",
+    "No of Wholesalers": "10",
+    "No of Retailers": "117"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Godda",
+    "No of Wholesalers": "4",
+    "No of Retailers": "160"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Gumla",
+    "No of Wholesalers": "5",
+    "No of Retailers": "78"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Hazaribagh",
+    "No of Wholesalers": "8",
+    "No of Retailers": "172"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Jamatra",
+    "No of Wholesalers": "2",
+    "No of Retailers": "33"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Khunti",
+    "No of Wholesalers": "2",
+    "No of Retailers": "44"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Kudarma",
+    "No of Wholesalers": "11",
+    "No of Retailers": "67"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Latehar",
+    "No of Wholesalers": "2",
+    "No of Retailers": "124"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Lohardaga",
+    "No of Wholesalers": "12",
+    "No of Retailers": "89"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Pakur",
+    "No of Wholesalers": "1",
+    "No of Retailers": "54"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Palmu",
+    "No of Wholesalers": "12",
+    "No of Retailers": "351"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Pashimi Singhbhum",
+    "No of Wholesalers": "4",
+    "No of Retailers": "60"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Purbi Singhbhum",
+    "No of Wholesalers": "4",
+    "No of Retailers": "65"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Ramgarh",
+    "No of Wholesalers": "3",
+    "No of Retailers": "90"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Ranchi",
+    "No of Wholesalers": "18",
+    "No of Retailers": "361"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Sahibagh",
+    "No of Wholesalers": "6",
+    "No of Retailers": "97"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Srikela-Kharswan",
+    "No of Wholesalers": "2",
+    "No of Retailers": "31"
+  },
+  {
+    "Sl No": "15",
+    "State": "Jharkhand",
+    "District": "Simdega",
+    "No of Wholesalers": "4",
+    "No of Retailers": "17"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Bagalkot",
+    "No of Wholesalers": "46",
+    "No of Retailers": "533"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Bangalore",
+    "No of Wholesalers": "80",
+    "No of Retailers": "216"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Bangalore Rural",
+    "No of Wholesalers": "18",
+    "No of Retailers": "119"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Belgaum",
+    "No of Wholesalers": "194",
+    "No of Retailers": "1221"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Bellary",
+    "No of Wholesalers": "58",
+    "No of Retailers": "532"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Bidar",
+    "No of Wholesalers": "23",
+    "No of Retailers": "274"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Bijapur",
+    "No of Wholesalers": "23",
+    "No of Retailers": "463"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Chamarajanagar",
+    "No of Wholesalers": "25",
+    "No of Retailers": "202"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Chikkaballapura",
+    "No of Wholesalers": "21",
+    "No of Retailers": "247"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Chikmaglur",
+    "No of Wholesalers": "33",
+    "No of Retailers": "334"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Chitradurga",
+    "No of Wholesalers": "19",
+    "No of Retailers": "321"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Dakshina Kannada",
+    "No of Wholesalers": "26",
+    "No of Retailers": "190"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Davanagere",
+    "No of Wholesalers": "69",
+    "No of Retailers": "768"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Dharwada",
+    "No of Wholesalers": "53",
+    "No of Retailers": "224"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Gadag",
+    "No of Wholesalers": "32",
+    "No of Retailers": "325"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Gulbarga",
+    "No of Wholesalers": "31",
+    "No of Retailers": "344"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Hasan",
+    "No of Wholesalers": "44",
+    "No of Retailers": "590"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Haveri",
+    "No of Wholesalers": "59",
+    "No of Retailers": "496"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Kodagu",
+    "No of Wholesalers": "23",
+    "No of Retailers": "137"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Kolar",
+    "No of Wholesalers": "50",
+    "No of Retailers": "200"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Koppal",
+    "No of Wholesalers": "75",
+    "No of Retailers": "345"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Mandya",
+    "No of Wholesalers": "42",
+    "No of Retailers": "410"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Mysore",
+    "No of Wholesalers": "59",
+    "No of Retailers": "625"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Raichur",
+    "No of Wholesalers": "270",
+    "No of Retailers": "526"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Ramanagara",
+    "No of Wholesalers": "12",
+    "No of Retailers": "188"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Shimoga",
+    "No of Wholesalers": "35",
+    "No of Retailers": "399"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Tumkur",
+    "No of Wholesalers": "41",
+    "No of Retailers": "599"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Udupi",
+    "No of Wholesalers": "20",
+    "No of Retailers": "76"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Uttar Kannada",
+    "No of Wholesalers": "21",
+    "No of Retailers": "164"
+  },
+  {
+    "Sl No": "16",
+    "State": "Karnataka",
+    "District": "Yadgir",
+    "No of Wholesalers": "42",
+    "No of Retailers": "346"
+  },
+  {
+    "Sl No": "17",
+    "State": "Kerala",
+    "District": "Alappuzha",
+    "No of Wholesalers": "18",
+    "No of Retailers": "173"
+  },
+  {
+    "Sl No": "17",
+    "State": "Kerala",
+    "District": "Ernakulam",
+    "No of Wholesalers": "36",
+    "No of Retailers": "240"
+  },
+  {
+    "Sl No": "17",
+    "State": "Kerala",
+    "District": "Idduki",
+    "No of Wholesalers": "20",
+    "No of Retailers": "115"
+  },
+  {
+    "Sl No": "17",
+    "State": "Kerala",
+    "District": "Kannur",
+    "No of Wholesalers": "17",
+    "No of Retailers": "208"
+  },
+  {
+    "Sl No": "17",
+    "State": "Kerala",
+    "District": "Kasaragod",
+    "No of Wholesalers": "12",
+    "No of Retailers": "109"
+  },
+  {
+    "Sl No": "17",
+    "State": "Kerala",
+    "District": "Kollam",
+    "No of Wholesalers": "12",
+    "No of Retailers": "238"
+  },
+  {
+    "Sl No": "17",
+    "State": "Kerala",
+    "District": "Kottayam",
+    "No of Wholesalers": "31",
+    "No of Retailers": "255"
+  },
+  {
+    "Sl No": "17",
+    "State": "Kerala",
+    "District": "Kozhikode",
+    "No of Wholesalers": "31",
+    "No of Retailers": "167"
+  },
+  {
+    "Sl No": "17",
+    "State": "Kerala",
+    "District": "Malappuram",
+    "No of Wholesalers": "22",
+    "No of Retailers": "283"
+  },
+  {
+    "Sl No": "17",
+    "State": "Kerala",
+    "District": "Palakkad",
+    "No of Wholesalers": "20",
+    "No of Retailers": "261"
+  },
+  {
+    "Sl No": "17",
+    "State": "Kerala",
+    "District": "Pathanamthitta",
+    "No of Wholesalers": "15",
+    "No of Retailers": "191"
+  },
+  {
+    "Sl No": "17",
+    "State": "Kerala",
+    "District": "Thiruvananthapuram",
+    "No of Wholesalers": "14",
+    "No of Retailers": "235"
+  },
+  {
+    "Sl No": "17",
+    "State": "Kerala",
+    "District": "Thrissur",
+    "No of Wholesalers": "21",
+    "No of Retailers": "239"
+  },
+  {
+    "Sl No": "17",
+    "State": "Kerala",
+    "District": "Wayanad",
+    "No of Wholesalers": "14",
+    "No of Retailers": "121"
+  },
+  {
+    "Sl No": "18",
+    "State": "Lakshadweep",
+    "District": "Lakshadweep",
+    "No of Wholesalers": "0",
+    "No of Retailers": "2"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Alirajpur",
+    "No of Wholesalers": "20",
+    "No of Retailers": "125"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Anuppur",
+    "No of Wholesalers": "5",
+    "No of Retailers": "35"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Ashknagar",
+    "No of Wholesalers": "32",
+    "No of Retailers": "142"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Balghat",
+    "No of Wholesalers": "17",
+    "No of Retailers": "173"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Barwani",
+    "No of Wholesalers": "38",
+    "No of Retailers": "136"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Betul",
+    "No of Wholesalers": "34",
+    "No of Retailers": "187"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Bhind",
+    "No of Wholesalers": "39",
+    "No of Retailers": "352"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Bhopal",
+    "No of Wholesalers": "39",
+    "No of Retailers": "99"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Burhanpur",
+    "No of Wholesalers": "26",
+    "No of Retailers": "139"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Chhatarpur",
+    "No of Wholesalers": "26",
+    "No of Retailers": "224"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Chhindwara",
+    "No of Wholesalers": "53",
+    "No of Retailers": "376"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Damoh",
+    "No of Wholesalers": "19",
+    "No of Retailers": "148"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Datia",
+    "No of Wholesalers": "24",
+    "No of Retailers": "158"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Dewas",
+    "No of Wholesalers": "90",
+    "No of Retailers": "259"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Dhar",
+    "No of Wholesalers": "136",
+    "No of Retailers": "336"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Dhindori",
+    "No of Wholesalers": "9",
+    "No of Retailers": "36"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "East Nimar",
+    "No of Wholesalers": "71",
+    "No of Retailers": "288"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Guna",
+    "No of Wholesalers": "37",
+    "No of Retailers": "182"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Gwalior",
+    "No of Wholesalers": "45",
+    "No of Retailers": "187"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Harda",
+    "No of Wholesalers": "43",
+    "No of Retailers": "155"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Hoshangabad",
+    "No of Wholesalers": "61",
+    "No of Retailers": "245"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Indore",
+    "No of Wholesalers": "56",
+    "No of Retailers": "273"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Jabalpur",
+    "No of Wholesalers": "51",
+    "No of Retailers": "177"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Jhabua",
+    "No of Wholesalers": "33",
+    "No of Retailers": "149"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Katni",
+    "No of Wholesalers": "19",
+    "No of Retailers": "176"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Mandla",
+    "No of Wholesalers": "13",
+    "No of Retailers": "111"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Mandsaur",
+    "No of Wholesalers": "114",
+    "No of Retailers": "286"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Morena",
+    "No of Wholesalers": "40",
+    "No of Retailers": "260"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Narasimhapur",
+    "No of Wholesalers": "67",
+    "No of Retailers": "294"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Nemuch",
+    "No of Wholesalers": "61",
+    "No of Retailers": "148"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Panna",
+    "No of Wholesalers": "14",
+    "No of Retailers": "174"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Raisen",
+    "No of Wholesalers": "37",
+    "No of Retailers": "172"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Rajgarh",
+    "No of Wholesalers": "64",
+    "No of Retailers": "225"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Ratlam",
+    "No of Wholesalers": "76",
+    "No of Retailers": "240"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Rewari",
+    "No of Wholesalers": "32",
+    "No of Retailers": "326"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Sagar",
+    "No of Wholesalers": "56",
+    "No of Retailers": "280"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Satna",
+    "No of Wholesalers": "34",
+    "No of Retailers": "325"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Shore",
+    "No of Wholesalers": "73",
+    "No of Retailers": "232"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Seoni",
+    "No of Wholesalers": "24",
+    "No of Retailers": "163"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Shahdol",
+    "No of Wholesalers": "24",
+    "No of Retailers": "59"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Shajapur",
+    "No of Wholesalers": "90",
+    "No of Retailers": "265"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Sheopur",
+    "No of Wholesalers": "15",
+    "No of Retailers": "88"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Shivpuri",
+    "No of Wholesalers": "37",
+    "No of Retailers": "221"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Sidhi",
+    "No of Wholesalers": "14",
+    "No of Retailers": "77"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Singrauli",
+    "No of Wholesalers": "6",
+    "No of Retailers": "69"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Tikamgarh",
+    "No of Wholesalers": "20",
+    "No of Retailers": "168"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Ujjain",
+    "No of Wholesalers": "128",
+    "No of Retailers": "359"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Umaria",
+    "No of Wholesalers": "7",
+    "No of Retailers": "64"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "Vidisha",
+    "No of Wholesalers": "36",
+    "No of Retailers": "221"
+  },
+  {
+    "Sl No": "19",
+    "State": "Madhya Pradesh",
+    "District": "WestNimar",
+    "No of Wholesalers": "45",
+    "No of Retailers": "332"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "AhamdNagar",
+    "No of Wholesalers": "274",
+    "No of Retailers": "1489"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Akola",
+    "No of Wholesalers": "109",
+    "No of Retailers": "525"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Amravati",
+    "No of Wholesalers": "124",
+    "No of Retailers": "1050"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Aurangabad",
+    "No of Wholesalers": "258",
+    "No of Retailers": "1440"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Bhandara",
+    "No of Wholesalers": "61",
+    "No of Retailers": "692"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Bid",
+    "No of Wholesalers": "213",
+    "No of Retailers": "1388"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Buldana",
+    "No of Wholesalers": "246",
+    "No of Retailers": "1118"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Chandrapur",
+    "No of Wholesalers": "100",
+    "No of Retailers": "872"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Dhule",
+    "No of Wholesalers": "115",
+    "No of Retailers": "580"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Gadchiroli",
+    "No of Wholesalers": "68",
+    "No of Retailers": "895"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Gondiya",
+    "No of Wholesalers": "75",
+    "No of Retailers": "779"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Hingoli",
+    "No of Wholesalers": "93",
+    "No of Retailers": "557"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Jalgaon",
+    "No of Wholesalers": "256",
+    "No of Retailers": "2082"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Jalna",
+    "No of Wholesalers": "175",
+    "No of Retailers": "1099"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Kolhapur",
+    "No of Wholesalers": "360",
+    "No of Retailers": "1472"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Latur",
+    "No of Wholesalers": "145",
+    "No of Retailers": "766"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Mumbai",
+    "No of Wholesalers": "3",
+    "No of Retailers": "5"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Nagpur",
+    "No of Wholesalers": "105",
+    "No of Retailers": "1000"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Nanded",
+    "No of Wholesalers": "214",
+    "No of Retailers": "1361"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Nandurbar",
+    "No of Wholesalers": "63",
+    "No of Retailers": "349"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Nashik",
+    "No of Wholesalers": "251",
+    "No of Retailers": "1705"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Osmanabad",
+    "No of Wholesalers": "118",
+    "No of Retailers": "738"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Parbhani",
+    "No of Wholesalers": "84",
+    "No of Retailers": "850"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Pune",
+    "No of Wholesalers": "198",
+    "No of Retailers": "1260"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Raigarh",
+    "No of Wholesalers": "42",
+    "No of Retailers": "194"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Ratnagiri",
+    "No of Wholesalers": "36",
+    "No of Retailers": "441"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Sangli",
+    "No of Wholesalers": "145",
+    "No of Retailers": "1223"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Satara",
+    "No of Wholesalers": "121",
+    "No of Retailers": "1098"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Sindhudurg",
+    "No of Wholesalers": "31",
+    "No of Retailers": "280"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Solapur",
+    "No of Wholesalers": "289",
+    "No of Retailers": "1687"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Thane",
+    "No of Wholesalers": "65",
+    "No of Retailers": "368"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Wardha",
+    "No of Wholesalers": "102",
+    "No of Retailers": "701"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Washim",
+    "No of Wholesalers": "71",
+    "No of Retailers": "507"
+  },
+  {
+    "Sl No": "20",
+    "State": "Maharastra",
+    "District": "Yavatmal",
+    "No of Wholesalers": "191",
+    "No of Retailers": "1186"
+  },
+  {
+    "Sl No": "21",
+    "State": "Manipur",
+    "District": "Bishnupur",
+    "No of Wholesalers": "8",
+    "No of Retailers": "6"
+  },
+  {
+    "Sl No": "21",
+    "State": "Manipur",
+    "District": "Chandel",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "21",
+    "State": "Manipur",
+    "District": "Churachandpur",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "21",
+    "State": "Manipur",
+    "District": "Imphal East",
+    "No of Wholesalers": "20",
+    "No of Retailers": "15"
+  },
+  {
+    "Sl No": "21",
+    "State": "Manipur",
+    "District": "ImphalWest",
+    "No of Wholesalers": "8",
+    "No of Retailers": "12"
+  },
+  {
+    "Sl No": "21",
+    "State": "Manipur",
+    "District": "Senapati",
+    "No of Wholesalers": "3",
+    "No of Retailers": "2"
+  },
+  {
+    "Sl No": "21",
+    "State": "Manipur",
+    "District": "Tamenglong",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "21",
+    "State": "Manipur",
+    "District": "Thoubal",
+    "No of Wholesalers": "14",
+    "No of Retailers": "12"
+  },
+  {
+    "Sl No": "21",
+    "State": "Manipur",
+    "District": "Ukhrul",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "22",
+    "State": "Meghalaya",
+    "District": "East Garo Hills",
+    "No of Wholesalers": "2",
+    "No of Retailers": "1"
+  },
+  {
+    "Sl No": "22",
+    "State": "Meghalaya",
+    "District": "East Khasi Hills",
+    "No of Wholesalers": "4",
+    "No of Retailers": "58"
+  },
+  {
+    "Sl No": "22",
+    "State": "Meghalaya",
+    "District": "Jaintia Hills",
+    "No of Wholesalers": "1",
+    "No of Retailers": "1"
+  },
+  {
+    "Sl No": "22",
+    "State": "Meghalaya",
+    "District": "Ribhoi",
+    "No of Wholesalers": "0",
+    "No of Retailers": "4"
+  },
+  {
+    "Sl No": "22",
+    "State": "Meghalaya",
+    "District": "South Garo Hills",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "22",
+    "State": "Meghalaya",
+    "District": "West Garo Hills",
+    "No of Wholesalers": "2",
+    "No of Retailers": "3"
+  },
+  {
+    "Sl No": "22",
+    "State": "Meghalaya",
+    "District": "West Khasi Hills",
+    "No of Wholesalers": "0",
+    "No of Retailers": "15"
+  },
+  {
+    "Sl No": "23",
+    "State": "Mizoram",
+    "District": "Aizawl",
+    "No of Wholesalers": "6",
+    "No of Retailers": "3"
+  },
+  {
+    "Sl No": "23",
+    "State": "Mizoram",
+    "District": "Champhai",
+    "No of Wholesalers": "10",
+    "No of Retailers": "1"
+  },
+  {
+    "Sl No": "23",
+    "State": "Mizoram",
+    "District": "Kolasib",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "23",
+    "State": "Mizoram",
+    "District": "Lawngtlai",
+    "No of Wholesalers": "1",
+    "No of Retailers": "1"
+  },
+  {
+    "Sl No": "23",
+    "State": "Mizoram",
+    "District": "Lunglei",
+    "No of Wholesalers": "1",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "23",
+    "State": "Mizoram",
+    "District": "Mamit",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "23",
+    "State": "Mizoram",
+    "District": "Saiha",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "23",
+    "State": "Mizoram",
+    "District": "Serchhip",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "24",
+    "State": "Nagaland",
+    "District": "Dimapur",
+    "No of Wholesalers": "2",
+    "No of Retailers": "4"
+  },
+  {
+    "Sl No": "24",
+    "State": "Nagaland",
+    "District": "Kiphire",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "24",
+    "State": "Nagaland",
+    "District": "Kohima",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "24",
+    "State": "Nagaland",
+    "District": "Longleng",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "24",
+    "State": "Nagaland",
+    "District": "Mokokchung",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "24",
+    "State": "Nagaland",
+    "District": "Mon",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "24",
+    "State": "Nagaland",
+    "District": "Perer",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "24",
+    "State": "Nagaland",
+    "District": "Phek",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "24",
+    "State": "Nagaland",
+    "District": "Tuensang",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "24",
+    "State": "Nagaland",
+    "District": "Wokha",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "24",
+    "State": "Nagaland",
+    "District": "Zunheboto",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "25",
+    "State": "NCT Of Delhi",
+    "District": "Central Delhi",
+    "No of Wholesalers": "64",
+    "No of Retailers": "56"
+  },
+  {
+    "Sl No": "25",
+    "State": "NCT Of Delhi",
+    "District": "East Delhi",
+    "No of Wholesalers": "3",
+    "No of Retailers": "9"
+  },
+  {
+    "Sl No": "25",
+    "State": "NCT Of Delhi",
+    "District": "New Delhi",
+    "No of Wholesalers": "1",
+    "No of Retailers": "1"
+  },
+  {
+    "Sl No": "25",
+    "State": "NCT Of Delhi",
+    "District": "NorthDelhi",
+    "No of Wholesalers": "1",
+    "No of Retailers": "1"
+  },
+  {
+    "Sl No": "25",
+    "State": "NCT Of Delhi",
+    "District": "North-East Delhi",
+    "No of Wholesalers": "1",
+    "No of Retailers": "1"
+  },
+  {
+    "Sl No": "25",
+    "State": "NCT Of Delhi",
+    "District": "North-West Delhi",
+    "No of Wholesalers": "14",
+    "No of Retailers": "22"
+  },
+  {
+    "Sl No": "25",
+    "State": "NCT Of Delhi",
+    "District": "Sahadara",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "25",
+    "State": "NCT Of Delhi",
+    "District": "South Delhi",
+    "No of Wholesalers": "1",
+    "No of Retailers": "3"
+  },
+  {
+    "Sl No": "25",
+    "State": "NCT Of Delhi",
+    "District": "South-West Delhi",
+    "No of Wholesalers": "1",
+    "No of Retailers": "11"
+  },
+  {
+    "Sl No": "25",
+    "State": "NCT Of Delhi",
+    "District": "West Delhi",
+    "No of Wholesalers": "2",
+    "No of Retailers": "2"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Anugul",
+    "No of Wholesalers": "32",
+    "No of Retailers": "222"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Balangir",
+    "No of Wholesalers": "28",
+    "No of Retailers": "776"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Baleswar",
+    "No of Wholesalers": "32",
+    "No of Retailers": "995"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Baragarh",
+    "No of Wholesalers": "60",
+    "No of Retailers": "415"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Baudh",
+    "No of Wholesalers": "8",
+    "No of Retailers": "214"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Bhadrak",
+    "No of Wholesalers": "42",
+    "No of Retailers": "638"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Cuttack",
+    "No of Wholesalers": "44",
+    "No of Retailers": "411"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Debagarh",
+    "No of Wholesalers": "7",
+    "No of Retailers": "95"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Dhenkanal",
+    "No of Wholesalers": "26",
+    "No of Retailers": "256"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Gajapati",
+    "No of Wholesalers": "20",
+    "No of Retailers": "75"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Ganjam",
+    "No of Wholesalers": "83",
+    "No of Retailers": "583"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Jagatsinghapur",
+    "No of Wholesalers": "25",
+    "No of Retailers": "173"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Jajpur",
+    "No of Wholesalers": "38",
+    "No of Retailers": "373"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Jharasuguda",
+    "No of Wholesalers": "9",
+    "No of Retailers": "68"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Kalahandi",
+    "No of Wholesalers": "48",
+    "No of Retailers": "799"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Kandhamal",
+    "No of Wholesalers": "4",
+    "No of Retailers": "70"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Kendrapara",
+    "No of Wholesalers": "23",
+    "No of Retailers": "302"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Kendujhar",
+    "No of Wholesalers": "22",
+    "No of Retailers": "455"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Khorda",
+    "No of Wholesalers": "30",
+    "No of Retailers": "237"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Koraput",
+    "No of Wholesalers": "36",
+    "No of Retailers": "267"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Malkangiri",
+    "No of Wholesalers": "14",
+    "No of Retailers": "216"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Mayurbhanj",
+    "No of Wholesalers": "39",
+    "No of Retailers": "754"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Nabarangapur",
+    "No of Wholesalers": "55",
+    "No of Retailers": "546"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Nayagarh",
+    "No of Wholesalers": "17",
+    "No of Retailers": "137"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Nuapada",
+    "No of Wholesalers": "17",
+    "No of Retailers": "333"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Puri",
+    "No of Wholesalers": "43",
+    "No of Retailers": "256"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Rayagada",
+    "No of Wholesalers": "20",
+    "No of Retailers": "196"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Sambalapur",
+    "No of Wholesalers": "26",
+    "No of Retailers": "301"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Subarnapur",
+    "No of Wholesalers": "17",
+    "No of Retailers": "251"
+  },
+  {
+    "Sl No": "26",
+    "State": "Odisha",
+    "District": "Sundargarh",
+    "No of Wholesalers": "18",
+    "No of Retailers": "313"
+  },
+  {
+    "Sl No": "27",
+    "State": "Poducherry",
+    "District": "Karaikal",
+    "No of Wholesalers": "3",
+    "No of Retailers": "6"
+  },
+  {
+    "Sl No": "27",
+    "State": "Poducherry",
+    "District": "Mahe",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "27",
+    "State": "Poducherry",
+    "District": "Poducherry",
+    "No of Wholesalers": "11",
+    "No of Retailers": "64"
+  },
+  {
+    "Sl No": "27",
+    "State": "Poducherry",
+    "District": "Yanam",
+    "No of Wholesalers": "0",
+    "No of Retailers": "4"
+  },
+  {
+    "Sl No": "28",
+    "State": "Punjab",
+    "District": "Amritsar",
+    "No of Wholesalers": "51",
+    "No of Retailers": "631"
+  },
+  {
+    "Sl No": "28",
+    "State": "Punjab",
+    "District": "Barnal",
+    "No of Wholesalers": "27",
+    "No of Retailers": "293"
+  },
+  {
+    "Sl No": "28",
+    "State": "Punjab",
+    "District": "Bathinda",
+    "No of Wholesalers": "65",
+    "No of Retailers": "583"
+  },
+  {
+    "Sl No": "28",
+    "State": "Punjab",
+    "District": "Faridkot",
+    "No of Wholesalers": "50",
+    "No of Retailers": "232"
+  },
+  {
+    "Sl No": "28",
+    "State": "Punjab",
+    "District": "Ftegarh Saheb",
+    "No of Wholesalers": "20",
+    "No of Retailers": "194"
+  },
+  {
+    "Sl No": "28",
+    "State": "Punjab",
+    "District": "Firozpur",
+    "No of Wholesalers": "95",
+    "No of Retailers": "873"
+  },
+  {
+    "Sl No": "28",
+    "State": "Punjab",
+    "District": "Gurdaspur",
+    "No of Wholesalers": "39",
+    "No of Retailers": "780"
+  },
+  {
+    "Sl No": "28",
+    "State": "Punjab",
+    "District": "Hoshiarpur",
+    "No of Wholesalers": "37",
+    "No of Retailers": "516"
+  },
+  {
+    "Sl No": "28",
+    "State": "Punjab",
+    "District": "Jalandhar",
+    "No of Wholesalers": "44",
+    "No of Retailers": "461"
+  },
+  {
+    "Sl No": "28",
+    "State": "Punjab",
+    "District": "Kapurthala",
+    "No of Wholesalers": "38",
+    "No of Retailers": "304"
+  },
+  {
+    "Sl No": "28",
+    "State": "Punjab",
+    "District": "Ludhiana",
+    "No of Wholesalers": "80",
+    "No of Retailers": "655"
+  },
+  {
+    "Sl No": "28",
+    "State": "Punjab",
+    "District": "Mansa",
+    "No of Wholesalers": "32",
+    "No of Retailers": "352"
+  },
+  {
+    "Sl No": "28",
+    "State": "Punjab",
+    "District": "Moga",
+    "No of Wholesalers": "33",
+    "No of Retailers": "309"
+  },
+  {
+    "Sl No": "28",
+    "State": "Punjab",
+    "District": "Muktsar",
+    "No of Wholesalers": "68",
+    "No of Retailers": "404"
+  },
+  {
+    "Sl No": "28",
+    "State": "Punjab",
+    "District": "Patiala",
+    "No of Wholesalers": "77",
+    "No of Retailers": "551"
+  },
+  {
+    "Sl No": "28",
+    "State": "Punjab",
+    "District": "Rupnagar",
+    "No of Wholesalers": "22",
+    "No of Retailers": "183"
+  },
+  {
+    "Sl No": "28",
+    "State": "Punjab",
+    "District": "Sahibazada Ajit Singh Nagar",
+    "No of Wholesalers": "21",
+    "No of Retailers": "130"
+  },
+  {
+    "Sl No": "28",
+    "State": "Punjab",
+    "District": "Sangrur",
+    "No of Wholesalers": "59",
+    "No of Retailers": "678"
+  },
+  {
+    "Sl No": "28",
+    "State": "Punjab",
+    "District": "Shahid Bhagat Singh Nagar",
+    "No of Wholesalers": "28",
+    "No of Retailers": "205"
+  },
+  {
+    "Sl No": "28",
+    "State": "Punjab",
+    "District": "Tarn Taran",
+    "No of Wholesalers": "54",
+    "No of Retailers": "550"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Ajmer",
+    "No of Wholesalers": "34",
+    "No of Retailers": "272"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Alwar",
+    "No of Wholesalers": "47",
+    "No of Retailers": "844"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Banswara",
+    "No of Wholesalers": "28",
+    "No of Retailers": "322"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Baran",
+    "No of Wholesalers": "34",
+    "No of Retailers": "300"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Barmer",
+    "No of Wholesalers": "17",
+    "No of Retailers": "126"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Bharatpur",
+    "No of Wholesalers": "50",
+    "No of Retailers": "394"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Bhilwara",
+    "No of Wholesalers": "42",
+    "No of Retailers": "357"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Bikaner",
+    "No of Wholesalers": "43",
+    "No of Retailers": "174"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Bundi",
+    "No of Wholesalers": "44",
+    "No of Retailers": "339"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Chittaurgarh",
+    "No of Wholesalers": "40",
+    "No of Retailers": "391"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Churu",
+    "No of Wholesalers": "12",
+    "No of Retailers": "60"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Dausa",
+    "No of Wholesalers": "32",
+    "No of Retailers": "311"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Dhaulpur",
+    "No of Wholesalers": "31",
+    "No of Retailers": "219"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Dungarpur",
+    "No of Wholesalers": "18",
+    "No of Retailers": "137"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "GangaNagar",
+    "No of Wholesalers": "121",
+    "No of Retailers": "603"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Hanumangarh",
+    "No of Wholesalers": "109",
+    "No of Retailers": "451"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Jaipur",
+    "No of Wholesalers": "77",
+    "No of Retailers": "749"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Jaisalmer",
+    "No of Wholesalers": "15",
+    "No of Retailers": "97"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Jalor",
+    "No of Wholesalers": "23",
+    "No of Retailers": "424"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Jhalwar",
+    "No of Wholesalers": "47",
+    "No of Retailers": "397"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Jhunjhunun",
+    "No of Wholesalers": "32",
+    "No of Retailers": "255"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Jodhapur",
+    "No of Wholesalers": "31",
+    "No of Retailers": "394"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Karauli",
+    "No of Wholesalers": "29",
+    "No of Retailers": "318"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Kota",
+    "No of Wholesalers": "44",
+    "No of Retailers": "341"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Nagaur",
+    "No of Wholesalers": "34",
+    "No of Retailers": "334"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Pali",
+    "No of Wholesalers": "29",
+    "No of Retailers": "252"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Pratapgarh",
+    "No of Wholesalers": "29",
+    "No of Retailers": "162"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Rajsamand",
+    "No of Wholesalers": "14",
+    "No of Retailers": "138"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Sawai Madhopur",
+    "No of Wholesalers": "34",
+    "No of Retailers": "330"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Sikar",
+    "No of Wholesalers": "31",
+    "No of Retailers": "317"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Sirohi",
+    "No of Wholesalers": "20",
+    "No of Retailers": "170"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Tonk",
+    "No of Wholesalers": "27",
+    "No of Retailers": "422"
+  },
+  {
+    "Sl No": "29",
+    "State": "Rajastan",
+    "District": "Udaipur",
+    "No of Wholesalers": "34",
+    "No of Retailers": "288"
+  },
+  {
+    "Sl No": "30",
+    "State": "Sikkim",
+    "District": "East District",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "30",
+    "State": "Sikkim",
+    "District": "North District",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "30",
+    "State": "Sikkim",
+    "District": "South District",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "30",
+    "State": "Sikkim",
+    "District": "West District",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Ariyalur",
+    "No of Wholesalers": "19",
+    "No of Retailers": "157"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Chennai",
+    "No of Wholesalers": "0",
+    "No of Retailers": "1"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Coimbator",
+    "No of Wholesalers": "66",
+    "No of Retailers": "385"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Cuddalore",
+    "No of Wholesalers": "42",
+    "No of Retailers": "470"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Dharmapuri",
+    "No of Wholesalers": "31",
+    "No of Retailers": "403"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Dindigul",
+    "No of Wholesalers": "55",
+    "No of Retailers": "499"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Erode",
+    "No of Wholesalers": "76",
+    "No of Retailers": "572"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Kancheepuram",
+    "No of Wholesalers": "38",
+    "No of Retailers": "364"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Kanniyakumar",
+    "No of Wholesalers": "18",
+    "No of Retailers": "246"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Karur",
+    "No of Wholesalers": "28",
+    "No of Retailers": "251"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Krishnagiri",
+    "No of Wholesalers": "29",
+    "No of Retailers": "347"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Madurai",
+    "No of Wholesalers": "89",
+    "No of Retailers": "396"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Nagapattinam",
+    "No of Wholesalers": "25",
+    "No of Retailers": "284"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Namakkal",
+    "No of Wholesalers": "29",
+    "No of Retailers": "507"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Perambalur",
+    "No of Wholesalers": "24",
+    "No of Retailers": "199"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Poudukottai",
+    "No of Wholesalers": "61",
+    "No of Retailers": "399"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Ramanathapuram",
+    "No of Wholesalers": "20",
+    "No of Retailers": "277"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Salem",
+    "No of Wholesalers": "105",
+    "No of Retailers": "730"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Sivaganga",
+    "No of Wholesalers": "19",
+    "No of Retailers": "295"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Thanjavarur",
+    "No of Wholesalers": "57",
+    "No of Retailers": "512"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Theni",
+    "No of Wholesalers": "31",
+    "No of Retailers": "273"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "The Nalgiris",
+    "No of Wholesalers": "24",
+    "No of Retailers": "220"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Thiruvallur",
+    "No of Wholesalers": "30",
+    "No of Retailers": "257"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Thiruvarur",
+    "No of Wholesalers": "27",
+    "No of Retailers": "409"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Thoothukkudi",
+    "No of Wholesalers": "32",
+    "No of Retailers": "309"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Tiruchirappalli",
+    "No of Wholesalers": "61",
+    "No of Retailers": "423"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Tirunelveli",
+    "No of Wholesalers": "60",
+    "No of Retailers": "527"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Tiruppur",
+    "No of Wholesalers": "42",
+    "No of Retailers": "344"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Tiruvannamalai",
+    "No of Wholesalers": "44",
+    "No of Retailers": "639"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Vellore",
+    "No of Wholesalers": "56",
+    "No of Retailers": "465"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Viluppuram",
+    "No of Wholesalers": "98",
+    "No of Retailers": "774"
+  },
+  {
+    "Sl No": "31",
+    "State": "Tamil Nadu",
+    "District": "Virudhunagar",
+    "No of Wholesalers": "22",
+    "No of Retailers": "333"
+  },
+  {
+    "Sl No": "32",
+    "State": "Tripura",
+    "District": "Dhalai",
+    "No of Wholesalers": "2",
+    "No of Retailers": "18"
+  },
+  {
+    "Sl No": "32",
+    "State": "Tripura",
+    "District": "North Tripura",
+    "No of Wholesalers": "5",
+    "No of Retailers": "31"
+  },
+  {
+    "Sl No": "32",
+    "State": "Tripura",
+    "District": "South Tripura",
+    "No of Wholesalers": "5",
+    "No of Retailers": "107"
+  },
+  {
+    "Sl No": "32",
+    "State": "Tripura",
+    "District": "West tripura",
+    "No of Wholesalers": "17",
+    "No of Retailers": "192"
+  },
+  {
+    "Sl No": "33",
+    "State": "Uttarakhand",
+    "District": "Almora",
+    "No of Wholesalers": "0",
+    "No of Retailers": "82"
+  },
+  {
+    "Sl No": "33",
+    "State": "Uttarakhand",
+    "District": "Bageswar",
+    "No of Wholesalers": "0",
+    "No of Retailers": "17"
+  },
+  {
+    "Sl No": "33",
+    "State": "Uttarakhand",
+    "District": "Chamoli",
+    "No of Wholesalers": "0",
+    "No of Retailers": "52"
+  },
+  {
+    "Sl No": "33",
+    "State": "Uttarakhand",
+    "District": "Champawat",
+    "No of Wholesalers": "0",
+    "No of Retailers": "17"
+  },
+  {
+    "Sl No": "33",
+    "State": "Uttarakhand",
+    "District": "Dehradun",
+    "No of Wholesalers": "3",
+    "No of Retailers": "67"
+  },
+  {
+    "Sl No": "33",
+    "State": "Uttarakhand",
+    "District": "Garhwal",
+    "No of Wholesalers": "0",
+    "No of Retailers": "26"
+  },
+  {
+    "Sl No": "33",
+    "State": "Uttarakhand",
+    "District": "Hardwar",
+    "No of Wholesalers": "24",
+    "No of Retailers": "122"
+  },
+  {
+    "Sl No": "33",
+    "State": "Uttarakhand",
+    "District": "Nainital",
+    "No of Wholesalers": "4",
+    "No of Retailers": "82"
+  },
+  {
+    "Sl No": "33",
+    "State": "Uttarakhand",
+    "District": "Pithoragarh",
+    "No of Wholesalers": "0",
+    "No of Retailers": "67"
+  },
+  {
+    "Sl No": "33",
+    "State": "Uttarakhand",
+    "District": "Rudraprayag",
+    "No of Wholesalers": "0",
+    "No of Retailers": "37"
+  },
+  {
+    "Sl No": "33",
+    "State": "Uttarakhand",
+    "District": "Tehri Garhwal",
+    "No of Wholesalers": "0",
+    "No of Retailers": "77"
+  },
+  {
+    "Sl No": "33",
+    "State": "Uttarakhand",
+    "District": "Udham Singh Nagar",
+    "No of Wholesalers": "41",
+    "No of Retailers": "400"
+  },
+  {
+    "Sl No": "33",
+    "State": "Uttarakhand",
+    "District": "Uttarkashi",
+    "No of Wholesalers": "0",
+    "No of Retailers": "44"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Agra",
+    "No of Wholesalers": "57",
+    "No of Retailers": "563"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Aligarh",
+    "No of Wholesalers": "48",
+    "No of Retailers": "723"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Allahabad",
+    "No of Wholesalers": "56",
+    "No of Retailers": "760"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Ambedkar Nagar",
+    "No of Wholesalers": "26",
+    "No of Retailers": "597"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Auraiya",
+    "No of Wholesalers": "39",
+    "No of Retailers": "360"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Azamgarh",
+    "No of Wholesalers": "43",
+    "No of Retailers": "902"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Baghpat",
+    "No of Wholesalers": "10",
+    "No of Retailers": "104"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Bahraich",
+    "No of Wholesalers": "36",
+    "No of Retailers": "810"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Ballia",
+    "No of Wholesalers": "35",
+    "No of Retailers": "528"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Balrampur",
+    "No of Wholesalers": "18",
+    "No of Retailers": "719"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Banda",
+    "No of Wholesalers": "10",
+    "No of Retailers": "106"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Bara Banki",
+    "No of Wholesalers": "53",
+    "No of Retailers": "982"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Bareilly",
+    "No of Wholesalers": "35",
+    "No of Retailers": "582"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Basti",
+    "No of Wholesalers": "31",
+    "No of Retailers": "609"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Bijnor",
+    "No of Wholesalers": "25",
+    "No of Retailers": "410"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Budaun",
+    "No of Wholesalers": "92",
+    "No of Retailers": "467"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Bulandshahar",
+    "No of Wholesalers": "26",
+    "No of Retailers": "594"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Chandauli",
+    "No of Wholesalers": "20",
+    "No of Retailers": "322"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Chitrakoot",
+    "No of Wholesalers": "8",
+    "No of Retailers": "60"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "CSM Nagar",
+    "No of Wholesalers": "28",
+    "No of Retailers": "350"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Deoria",
+    "No of Wholesalers": "36",
+    "No of Retailers": "1303"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Etah",
+    "No of Wholesalers": "27",
+    "No of Retailers": "385"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Etawah",
+    "No of Wholesalers": "40",
+    "No of Retailers": "303"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Faizabad",
+    "No of Wholesalers": "32",
+    "No of Retailers": "701"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Farrukhabad",
+    "No of Wholesalers": "33",
+    "No of Retailers": "843"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Fatehpur",
+    "No of Wholesalers": "26",
+    "No of Retailers": "685"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Firozabad",
+    "No of Wholesalers": "46",
+    "No of Retailers": "556"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Gautam Budha Nagar",
+    "No of Wholesalers": "14",
+    "No of Retailers": "120"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Ghaziabad",
+    "No of Wholesalers": "20",
+    "No of Retailers": "194"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Ghazipur",
+    "No of Wholesalers": "30",
+    "No of Retailers": "579"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Gonda",
+    "No of Wholesalers": "31",
+    "No of Retailers": "1438"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Gorakhpur",
+    "No of Wholesalers": "37",
+    "No of Retailers": "1375"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Hamirpur",
+    "No of Wholesalers": "12",
+    "No of Retailers": "156"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Hardoi",
+    "No of Wholesalers": "49",
+    "No of Retailers": "1076"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Jalaun",
+    "No of Wholesalers": "29",
+    "No of Retailers": "222"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "No of Wholesalers": "39",
+    "No of Retailers": "885"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Jhansi",
+    "No of Wholesalers": "16",
+    "No of Retailers": "234"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Jyotiba Phule Nagar",
+    "No of Wholesalers": "38",
+    "No of Retailers": "328"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Kannauj",
+    "No of Wholesalers": "44",
+    "No of Retailers": "626"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Kanpur Dehat",
+    "No of Wholesalers": "15",
+    "No of Retailers": "387"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Kanpur Nagar",
+    "No of Wholesalers": "26",
+    "No of Retailers": "450"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Kanshiram Nagar",
+    "No of Wholesalers": "27",
+    "No of Retailers": "391"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Kaushambi",
+    "No of Wholesalers": "15",
+    "No of Retailers": "193"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Kheri",
+    "No of Wholesalers": "47",
+    "No of Retailers": "896"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "KushiNagar",
+    "No of Wholesalers": "52",
+    "No of Retailers": "966"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Lalitpur",
+    "No of Wholesalers": "31",
+    "No of Retailers": "238"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Lucknow",
+    "No of Wholesalers": "42",
+    "No of Retailers": "511"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Mahamaya Nagar",
+    "No of Wholesalers": "31",
+    "No of Retailers": "291"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Mahoba",
+    "No of Wholesalers": "5",
+    "No of Retailers": "68"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Maharajganj",
+    "No of Wholesalers": "47",
+    "No of Retailers": "961"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Mainpuri",
+    "No of Wholesalers": "39",
+    "No of Retailers": "586"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Mathura",
+    "No of Wholesalers": "25",
+    "No of Retailers": "527"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Mau",
+    "No of Wholesalers": "24",
+    "No of Retailers": "369"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Meerut",
+    "No of Wholesalers": "38",
+    "No of Retailers": "266"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Mirzapur",
+    "No of Wholesalers": "17",
+    "No of Retailers": "240"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Moradabad",
+    "No of Wholesalers": "34",
+    "No of Retailers": "695"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Muzaffarnagar",
+    "No of Wholesalers": "31",
+    "No of Retailers": "439"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Pilibhit",
+    "No of Wholesalers": "40",
+    "No of Retailers": "449"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Pratapgarh",
+    "No of Wholesalers": "28",
+    "No of Retailers": "733"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "RaeBareli",
+    "No of Wholesalers": "22",
+    "No of Retailers": "680"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Rampur",
+    "No of Wholesalers": "16",
+    "No of Retailers": "333"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Saharnpur",
+    "No of Wholesalers": "30",
+    "No of Retailers": "320"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Sant Kabir Nagar",
+    "No of Wholesalers": "24",
+    "No of Retailers": "515"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Sant Ravidas Nagar",
+    "No of Wholesalers": "0",
+    "No of Retailers": "0"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Shahjahanpur",
+    "No of Wholesalers": "51",
+    "No of Retailers": "666"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Shrawasti",
+    "No of Wholesalers": "10",
+    "No of Retailers": "255"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Siddharthnagar",
+    "No of Wholesalers": "33",
+    "No of Retailers": "936"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Sitapur",
+    "No of Wholesalers": "38",
+    "No of Retailers": "855"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Sonbhadra",
+    "No of Wholesalers": "32",
+    "No of Retailers": "209"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Sultanpur",
+    "No of Wholesalers": "29",
+    "No of Retailers": "622"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Unnao",
+    "No of Wholesalers": "25",
+    "No of Retailers": "643"
+  },
+  {
+    "Sl No": "34",
+    "State": "Uttar Pradesh",
+    "District": "Varanasi",
+    "No of Wholesalers": "53",
+    "No of Retailers": "444"
+  },
+  {
+    "Sl No": "35",
+    "State": "West Bengal",
+    "District": "Bankura",
+    "No of Wholesalers": "184",
+    "No of Retailers": "1182"
+  },
+  {
+    "Sl No": "35",
+    "State": "West Bengal",
+    "District": "Barddhaman",
+    "No of Wholesalers": "165",
+    "No of Retailers": "1450"
+  },
+  {
+    "Sl No": "35",
+    "State": "West Bengal",
+    "District": "Birbhum",
+    "No of Wholesalers": "70",
+    "No of Retailers": "887"
+  },
+  {
+    "Sl No": "35",
+    "State": "West Bengal",
+    "District": "Dakshin Dinajpur",
+    "No of Wholesalers": "113",
+    "No of Retailers": "990"
+  },
+  {
+    "Sl No": "35",
+    "State": "West Bengal",
+    "District": "Darjling",
+    "No of Wholesalers": "10",
+    "No of Retailers": "15"
+  },
+  {
+    "Sl No": "35",
+    "State": "West Bengal",
+    "District": "Howrah",
+    "No of Wholesalers": "79",
+    "No of Retailers": "394"
+  },
+  {
+    "Sl No": "35",
+    "State": "West Bengal",
+    "District": "Hugli",
+    "No of Wholesalers": "240",
+    "No of Retailers": "1421"
+  },
+  {
+    "Sl No": "35",
+    "State": "West Bengal",
+    "District": "Jalpaiguri",
+    "No of Wholesalers": "170",
+    "No of Retailers": "958"
+  },
+  {
+    "Sl No": "35",
+    "State": "West Bengal",
+    "District": "Koch Bihar",
+    "No of Wholesalers": "186",
+    "No of Retailers": "1202"
+  },
+  {
+    "Sl No": "35",
+    "State": "West Bengal",
+    "District": "Kolkata",
+    "No of Wholesalers": "3",
+    "No of Retailers": "9"
+  },
+  {
+    "Sl No": "35",
+    "State": "West Bengal",
+    "District": "Maldah",
+    "No of Wholesalers": "106",
+    "No of Retailers": "961"
+  },
+  {
+    "Sl No": "35",
+    "State": "West Bengal",
+    "District": "Murshidabad",
+    "No of Wholesalers": "156",
+    "No of Retailers": "1628"
+  },
+  {
+    "Sl No": "35",
+    "State": "West Bengal",
+    "District": "Nadia",
+    "No of Wholesalers": "298",
+    "No of Retailers": "2883"
+  },
+  {
+    "Sl No": "35",
+    "State": "West Bengal",
+    "District": "North Twenty Four Pargannas",
+    "No of Wholesalers": "225",
+    "No of Retailers": "2326"
+  },
+  {
+    "Sl No": "35",
+    "State": "West Bengal",
+    "District": "Paschim Medinipur",
+    "No of Wholesalers": "395",
+    "No of Retailers": "1788"
+  },
+  {
+    "Sl No": "35",
+    "State": "West Bengal",
+    "District": "Purba Medinipur",
+    "No of Wholesalers": "147",
+    "No of Retailers": "949"
+  },
+  {
+    "Sl No": "35",
+    "State": "West Bengal",
+    "District": "Puruliya",
+    "No of Wholesalers": "27",
+    "No of Retailers": "417"
+  },
+  {
+    "Sl No": "35",
+    "State": "West Bengal",
+    "District": "South Twenty Four Pargannas",
+    "No of Wholesalers": "193",
+    "No of Retailers": "1663"
+  },
+  {
+    "Sl No": "35",
+    "State": "West Bengal",
+    "District": "Uttar Dinajpur",
+    "No of Wholesalers": "151",
+    "No of Retailers": "957"
+  }
+]
