@@ -1,3 +1,8 @@
+import { InferenceSession, Tensor } from 'onnxruntime-web';
+import ort from 'onnxruntime-web';
+
+
+
 import React, { useState } from "react";
 import { Layout } from "@/components/layout";
 import {
@@ -33,6 +38,70 @@ import ReactMarkdown from 'react-markdown';
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" }); // Using gemini-2.0-flash as requested
+const loadModel = async () => {
+  // The model file should be in the public directory or served statically
+  const modelPath = '/RF_Crop_Rec.onnx';
+  try {
+    const session = await InferenceSession.create(
+      modelPath,
+      { executionProviders: ['wasm'] }
+    );
+    console.log('ONNX model loaded successfully');
+    return session;
+  } catch (error) {
+    console.error('Failed to load ONNX model:', error);
+    return null;
+  }
+};
+const runInference = async (session: InferenceSession, inputData: { N: number; P: number; K: number; temperature: number; humidity: number; ph: number; rainfall: number; }) => {
+  try {
+    // Prepare input data as a tensor
+    const input = new Tensor('float32', [
+      inputData.N,
+      inputData.P,
+      inputData.K,
+      inputData.temperature,
+      inputData.humidity,
+      inputData.ph,
+      inputData.rainfall,
+    ], [1, 7]); // Assuming input shape [1, 7]
+
+    // Create feeds object
+    const feeds: Record<string, Tensor> = {};
+    // The input name 'float_input' is a common default, but might need to be adjusted
+    // based on the actual model's input name. Without being able to read the .onnx
+    // file, 'float_input' is a reasonable guess. If inference fails, this might
+    // need to be updated based on error messages or model documentation.
+    feeds['float_input'] = input;
+
+    // Run inference
+    const results = await session.run(feeds);
+
+    // Process output - assuming the output is a single tensor containing the crop name string
+    // The output name 'output_label' is a common default, but might need adjustment.
+    // The output shape and data type also need to be confirmed from the model.
+    // Assuming the output is a tensor of shape [1] with a string value.
+    const outputTensor = results['output_label']; // Adjust output name if necessary
+    if (!outputTensor) {
+        throw new Error("Model output 'output_label' not found."); // Adjust output name if necessary
+    }
+
+    // Extract the crop name string from the output tensor
+    // Assuming the output tensor data is an array with the crop name at index 0
+    const predictedCropName = outputTensor.data[0] as string;
+
+    console.log('Predicted crop name:', predictedCropName);
+    return predictedCropName;
+
+  } catch (error) {
+    console.error('Failed to run inference:', error);
+    return null;
+  }
+};
+
+
+
+
 
 interface Crop {
   name: string;
@@ -54,6 +123,22 @@ export default function CropRecommendation() {
   const [cropResults, setCropResults] = useState<{ [key: string]: { analysis: string | null; guide: string | null } }>({});
   const [selectedCrop, setSelectedCrop] = useState<Crop | null>(null);
   const [expandedSection, setExpandedSection] = useState<{ name: string; type: 'crop_analysis' | 'crop_guide' | 'intercrop_guide' } | null>(null);
+  const [onnxSession, setOnnxSession] = useState<InferenceSession | null>(null);
+  const [prediction, setPrediction] = useState<string | null>(null);
+
+  // Load the ONNX model when the component mounts
+  React.useEffect(() => {
+    loadModel().then(session => {
+      setOnnxSession(session);
+    });
+
+    // Cleanup the session when the component unmounts
+    return () => {
+      if (onnxSession) {
+        onnxSession.release();
+      }
+    };
+  }, [onnxSession]); // Re-run effect if onnxSession changes (e.g., on hot reload)
 
   const getGeminiResponse = async (prompt: string) => {
     setLoading(true);
@@ -266,7 +351,45 @@ export default function CropRecommendation() {
           </p>
         </div>
 
-        <Tabs defaultValue="recommendations">
+       {/* ONNX Model Integration Section */}
+       <Card className="mb-8">
+         <CardHeader>
+           <CardTitle>ONNX Crop Recommendation</CardTitle>
+           <CardDescription>Get crop recommendations using the ONNX model.</CardDescription>
+         </CardHeader>
+         <CardContent>
+           {onnxSession ? (
+             <div className="space-y-4">
+               <p>ONNX model loaded. Ready for inference.</p>
+               {/* TODO: Add input fields for N, P, K, temperature, humidity, ph, rainfall */}
+               {/* For now, using a sample data point from the JSON */}
+               <Button
+                 onClick={async () => {
+                   if (onnxSession) {
+                     // Using the first data point from the JSON as a sample
+                     const sampleData = { N: 90, P: 42, K: 43, temperature: 20.88, humidity: 82.00, ph: 6.50, rainfall: 202.94 }; // Using rounded values for simplicity
+                     const predictedIndex = await runInference(onnxSession, sampleData);
+                     setPrediction(predictedIndex);
+                   }
+                 }}
+                 disabled={!onnxSession}
+               >
+                 Run ONNX Inference (Sample Data)
+               </Button>
+               {prediction !== null && (
+                 <>
+                   <p className="text-lg font-semibold">Predicted Class Index: {prediction}</p>
+                   {/* TODO: Map predicted index to crop name */}
+                 </>
+               )}
+             </div>
+           ) : (
+             <p>Loading ONNX model...</p>
+           )}
+         </CardContent>
+       </Card>
+
+       <Tabs defaultValue="recommendations">
           <TabsList className="mb-6">
             <TabsTrigger value="recommendations">Recommendations</TabsTrigger>
             <TabsTrigger value="intercropping">Intercropping</TabsTrigger>

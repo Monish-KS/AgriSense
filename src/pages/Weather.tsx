@@ -8,6 +8,9 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/h
 import RainfallChart from "@/components/RainfallChart";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Command, CommandInput, CommandList, CommandEmpty, CommandGroup, CommandItem } from "@/components/ui/command";
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
+import { Check, ChevronsUpDown } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import rainfallData from "../data/icrisat_district_data_1.json";
@@ -125,15 +128,31 @@ const Weather = () => {
     const [weatherData, setWeatherData] = useState<WeatherApiResponse | null>(null); // State for weather data
     const [loadingWeather, setLoadingWeather] = useState(false); // Loading state for weather
     const [fetchError, setFetchError] = useState<string | null>(null); // State for fetch errors
+    const [isDistrictSelectOpen, setIsDistrictSelectOpen] = useState(false); // State for controlling the popover
+    const [districtSearchTerm, setDistrictSearchTerm] = useState(""); // State for the search input
+    const [isYearSelectOpen, setIsYearSelectOpen] = useState(false); // State for controlling the year popover
+    const [yearSearchTerm, setYearSearchTerm] = useState(""); // State for the year search input
 
     const rainfallDataTyped = rainfallData as RainfallData[];
 
     const districts: string[] = [...new Set(rainfallDataTyped.map((item: RainfallData) => item["Dist Name"]))];
     const years: string[] = [...new Set(rainfallDataTyped.map((item: RainfallData) => item["Year"]))];
 
+    // Filter years based on search term
+    const filteredYears = years.filter(year =>
+        String(year).toLowerCase().includes(yearSearchTerm.toLowerCase())
+    );
+
+    // Filter districts based on search term
+    const filteredDistricts = districts.filter(district =>
+        district.toLowerCase().includes(districtSearchTerm.toLowerCase())
+    );
+
     // Filter rainfall data based on selected district and year
     const filteredRainfallData = rainfallDataTyped.find(
-        (item: RainfallData) => item["Dist Name"] === selectedDistrict && item["Year"] === selectedYear
+        (item: RainfallData) =>
+            item["Dist Name"].trim().toLowerCase() === selectedDistrict.trim().toLowerCase() &&
+            String(item["Year"]).trim() === selectedYear.trim()
     );
 
     // Still use geocoding API directly for location search (openmeteo lib doesn't include this)
@@ -400,34 +419,102 @@ const Weather = () => {
                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4"> {/* Adjusted grid cols */}
                                  <div>
                                      <Label htmlFor="district">District</Label>
-                                     <Select onValueChange={setSelectedDistrict} value={selectedDistrict || undefined}> {/* Controlled component */}
-                                         <SelectTrigger className="w-full sm:w-[180px]"> {/* Responsive width */}
-                                             <SelectValue placeholder="Select District" />
-                                         </SelectTrigger>
-                                         <SelectContent>
-                                             {districts.map((district) => (
-                                                 <SelectItem key={district} value={district}>
-                                                     {district}
-                                                 </SelectItem>
-                                             ))}
-                                         </SelectContent>
-                                     </Select>
+                                     <Popover open={isDistrictSelectOpen} onOpenChange={setIsDistrictSelectOpen}>
+                                         <PopoverTrigger asChild>
+                                             <Button
+                                                 variant="outline"
+                                                 role="combobox"
+                                                 aria-expanded={isDistrictSelectOpen}
+                                                 className="w-full sm:w-[180px] justify-between"
+                                             >
+                                                 {selectedDistrict
+                                                     ? districts.find((district) => district === selectedDistrict)
+                                                     : "Select District..."}
+                                                 <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                                             </Button>
+                                         </PopoverTrigger>
+                                         <PopoverContent className="w-full sm:w-[180px] p-0">
+                                             <Command>
+                                                 <CommandInput
+                                                     placeholder="Search district..."
+                                                     value={districtSearchTerm}
+                                                     onValueChange={setDistrictSearchTerm}
+                                                 />
+                                                 <CommandList>
+                                                     <CommandEmpty>No district found.</CommandEmpty>
+                                                     <CommandGroup>
+                                                         {filteredDistricts.map((district) => (
+                                                             <CommandItem
+                                                                 key={district}
+                                                                 value={district}
+                                                                 onSelect={(currentValue) => {
+                                                                     setSelectedDistrict(currentValue === selectedDistrict ? "" : currentValue);
+                                                                     setIsDistrictSelectOpen(false);
+                                                                     setDistrictSearchTerm(""); // Clear search term on select
+                                                                 }}
+                                                             >
+                                                                 <Check
+                                                                     className={`mr-2 h-4 w-4 ${selectedDistrict === district ? "opacity-100" : "opacity-0"
+                                                                         }`}
+                                                                 />
+                                                                 {district}
+                                                             </CommandItem>
+                                                         ))}
+                                                     </CommandGroup>
+                                                 </CommandList>
+                                             </Command>
+                                         </PopoverContent>
+                                     </Popover>
                                  </div>
 
                                  <div>
                                      <Label htmlFor="year">Year</Label>
-                                     <Select onValueChange={setSelectedYear} value={selectedYear || undefined}> {/* Controlled component */}
-                                         <SelectTrigger className="w-full sm:w-[120px]"> {/* Responsive width */}
-                                             <SelectValue placeholder="Select Year" />
-                                         </SelectTrigger>
-                                         <SelectContent>
-                                             {years.map((year) => (
-                                                 <SelectItem key={year} value={year}>
-                                                     {year}
-                                                 </SelectItem>
-                                             ))}
-                                         </SelectContent>
-                                     </Select>
+                                     <Popover open={isYearSelectOpen} onOpenChange={setIsYearSelectOpen}>
+                                         <PopoverTrigger asChild>
+                                             <Button
+                                                 variant="outline"
+                                                 role="combobox"
+                                                 aria-expanded={isYearSelectOpen}
+                                                 className="w-full sm:w-[120px] justify-between"
+                                             >
+                                                 {selectedYear
+                                                     ? years.find((year) => year === selectedYear)
+                                                     : "Select Year..."}
+                                                 <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                                             </Button>
+                                         </PopoverTrigger>
+                                         <PopoverContent className="w-full sm:w-[120px] p-0">
+                                             <Command>
+                                                 <CommandInput
+                                                     placeholder="Search year..."
+                                                     value={yearSearchTerm}
+                                                     onValueChange={setYearSearchTerm}
+                                                 />
+                                                 <CommandList>
+                                                     <CommandEmpty>No year found.</CommandEmpty>
+                                                     <CommandGroup>
+                                                         {filteredYears.map((year) => (
+                                                             <CommandItem
+                                                                 key={year}
+                                                                 value={year}
+                                                                 onSelect={(currentValue) => {
+                                                                     setSelectedYear(currentValue === selectedYear ? "" : currentValue);
+                                                                     setIsYearSelectOpen(false);
+                                                                     setYearSearchTerm(""); // Clear search term on select
+                                                                 }}
+                                                             >
+                                                                 <Check
+                                                                     className={`mr-2 h-4 w-4 ${selectedYear === year ? "opacity-100" : "opacity-0"
+                                                                         }`}
+                                                                 />
+                                                                 {year}
+                                                             </CommandItem>
+                                                         ))}
+                                                     </CommandGroup>
+                                                 </CommandList>
+                                             </Command>
+                                         </PopoverContent>
+                                     </Popover>
                                  </div>
                              </div>
                                 {/* Only render chart if data is available */}
