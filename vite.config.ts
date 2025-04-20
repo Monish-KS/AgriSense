@@ -9,11 +9,11 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
-    // Optional: Add headers to ensure correct MIME type for wasm files during development
-    // headers: {
-    //   'Cross-Origin-Embedder-Policy': 'require-corp',
-    //   'Cross-Origin-Opener-Policy': 'same-origin',
-    // }
+    // Configure proper MIME types for WebAssembly files
+    headers: {
+      'Cross-Origin-Opener-Policy': 'same-origin',
+      'Cross-Origin-Embedder-Policy': 'require-corp',
+    },
   },
   plugins: [
     react(),
@@ -30,10 +30,33 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      // Add an alias to fix the use-sync-external-store import issue
+      'use-sync-external-store/shim/with-selector': path.resolve(__dirname, './src/lib/use-sync-external-store-shim.js')
     },
   },
   // Optional: Optimize dependencies if needed
-  // optimizeDeps: {
-  //   exclude: ['onnxruntime-web']
-  // }
+  optimizeDeps: {
+    include: [],
+    exclude: ['onnxruntime-web', '@react-three/fiber', '@react-three/drei'],
+    esbuildOptions: {
+      // Properly handle use-sync-external-store package
+      resolveExtensions: ['.js', '.jsx', '.ts', '.tsx'],
+      mainFields: ['module', 'main']
+    }
+  },
+  // Configure static file handling and MIME types
+  assetsInclude: ['**/*.onnx'],
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          // Ensure WebAssembly files keep their extension and are served with correct MIME type
+          if (assetInfo && assetInfo.name && assetInfo.name.endsWith('.wasm')) {
+            return 'assets/wasm/[name].[hash][extname]';
+          }
+          return 'assets/[name].[hash][extname]';
+        },
+      },
+    },
+  },
 }));

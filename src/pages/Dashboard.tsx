@@ -10,6 +10,8 @@ import cropDamageData from "../data/crop_damage_data.json";
 import chemicalsData from "../data/chemicals_data.json"; // Import chemicalsData
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { useEffect, useState, lazy, Suspense } from "react"; // Added lazy and Suspense
+import SensorData from "@/components/SensorData"; // Import the new component
+
 
 const CropProductionMap = lazy(() => import("@/components/CropProductionMap")); // Dynamic import
 
@@ -168,6 +170,10 @@ export default function Dashboard() {
             trendValue="Next irrigation in 3 days"
           />
         </div>
+
+
+        {/* Sensor Data Cards */}
+        <SensorData />
 
         <Tabs defaultValue="summary" className="mt-4">
           <TabsList>

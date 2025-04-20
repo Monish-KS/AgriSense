@@ -71,7 +71,14 @@ export default function SupplyChain() {
     <Layout>
       <div className="container mx-auto">
         <h1 className="text-3xl font-bold mb-6">Agricultural Supply Chain</h1>
-        
+
+        {/* Tractor Animation Container */}
+        <div className="tractor-animation-container">
+          <div className="tractor">
+            <div className="smoke"></div>
+          </div>
+        </div>
+
         <div className="grid gap-6 md:grid-cols-4">
           <Card>
             <CardHeader className="pb-2">

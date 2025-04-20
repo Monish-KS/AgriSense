@@ -122,3 +122,64 @@
 .animate-fade-in {
   animation: fade-in 0.5s ease-out forwards;
 }
+
+.tractor-animation-container {
+  position: relative;
+  width: 100%;
+  height: 100px; /* Adjust height as needed */
+  overflow: hidden;
+  margin-bottom: 20px; /* Space below the animation */
+}
+
+.tractor {
+  position: absolute;
+  bottom: 10px; /* Adjust vertical position */
+  left: -100px; /* Start off-screen */
+  width: 100px; /* Container width for emoji */
+  height: 60px; /* Container height for emoji */
+  animation: move-tractor 15s linear infinite; /* Animation duration and timing */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px; /* Adjust emoji size */
+}
+
+.tractor::before {
+  content: '🚜'; /* Tractor emoji */
+  transform: scaleX(-1); /* Flip the emoji horizontally */
+}
+
+.smoke {
+  position: absolute;
+  top: -10px; /* Position smoke above tractor */
+  right: 10px; /* Position smoke near exhaust */
+  width: 15px;
+  height: 15px;
+  background-color: #a0aec0; /* Smoke color */
+  border-radius: 50%;
+  animation: emit-smoke 3s ease-out infinite;
+  opacity: 0;
+}
+
+@keyframes move-tractor {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes emit-smoke {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-30px) scale(1.5);
+    opacity: 0;
+  }
+}

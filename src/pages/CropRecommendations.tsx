@@ -1,9 +1,139 @@
-import { InferenceSession, Tensor } from 'onnxruntime-web';
-import ort from 'onnxruntime-web';
+import { InferenceSession, Tensor, env } from 'onnxruntime-web';
+import React, { useState, useEffect, useCallback } from "react";
 
+interface Crop {
+  name: string;
+  icon: string;
+  score: number;
+  waterRequirement: number;
+  soilSuitability: number;
+  climateSuitability: number;
+  yieldPotential: number;
+  marketDemand: number;
+  season: string;
+  growingPeriod: string;
+  waterRequirementText: string;
+  advantages: string[];
+  considerations: string[];
+}
 
+const recommendedCrops: Crop[] = [
+  {
+    name: "Rice",
+    icon: "🌾",
+    score: 94,
+    waterRequirement: 85,
+    soilSuitability: 95,
+    climateSuitability: 90,
+    yieldPotential: 88,
+    marketDemand: 92,
+    season: "Kharif",
+    growingPeriod: "90-120 days",
+    waterRequirementText: "High (1300-1800 mm)",
+    advantages: [
+      "Well-suited to your soil type",
+      "Optimal weather conditions",
+      "Strong market demand in your region",
+    ],
+    considerations: ["Requires good water management"],
+  },
+  {
+    name: "Cotton",
+    icon: "🌿",
+    score: 86,
+    waterRequirement: 65,
+    soilSuitability: 90,
+    climateSuitability: 85,
+    yieldPotential: 82,
+    marketDemand: 88,
+    season: "Kharif",
+    growingPeriod: "150-180 days",
+    waterRequirementText: "Medium (700-1300 mm)",
+    advantages: [
+      "Drought tolerant once established",
+      "Good price in current market",
+    ],
+    considerations: [
+      "Susceptible to bollworm",
+      "Requires moderate soil fertility",
+    ],
+  },
+  {
+    name: "Maize",
+    icon: "🌽",
+    score: 78,
+    waterRequirement: 60,
+    soilSuitability: 80,
+    climateSuitability: 75,
+    yieldPotential: 80,
+    marketDemand: 78,
+    season: "Kharif/Rabi",
+    growingPeriod: "80-110 days",
+    waterRequirementText: "Medium (500-800 mm)",
+    advantages: [
+      "Can be grown in both seasons",
+      "Short growing period",
+    ],
+    considerations: [
+      "Moderate susceptibility to drought",
+      "Price fluctuations in local market",
+    ],
+  },
+  {
+    name: "Soybean",
+    icon: "🫘",
+    score: 72,
+    waterRequirement: 55,
+    soilSuitability: 75,
+    climateSuitability: 70,
+    yieldPotential: 72,
+    marketDemand: 80,
+    season: "Kharif",
+    growingPeriod: "90-120 days",
+    waterRequirementText: "Medium (450-700 mm)",
+    advantages: ["Improves soil fertility", "Growing market demand"],
+    considerations: [
+      "Sensitive to waterlogging",
+      "Requires well-drained soil",
+    ],
+  },
+  {
+    name: "Groundnut",
+    icon: "🥜",
+    score: 68,
+    waterRequirement: 50,
+    soilSuitability: 65,
+    climateSuitability: 70,
+    yieldPotential: 65,
+    marketDemand: 75,
+    season: "Kharif/Summer",
+    growingPeriod: "100-130 days",
+    waterRequirementText: "Medium (500-700 mm)",
+    advantages: ["Drought tolerant", "Improves soil fertility"],
+    considerations: [
+      "Sensitive to leaf spot diseases",
+      "Requires well-drained sandy loam",
+    ],
+  },
+];
 
-import React, { useState } from "react";
+const intercropSuggestions = [
+  {
+    primary: "Rice",
+    secondary: "Azolla",
+    benefits: "Nitrogen fixation, weed suppression, increased rice yield",
+  },
+  {
+    primary: "Cotton",
+    secondary: "Groundnut",
+    benefits: "Better land utilization, risk diversification, income stability",
+  },
+  {
+    primary: "Maize",
+    secondary: "Black gram",
+    benefits: "Soil enrichment, efficient resource use, reduced pest pressure",
+  },
+];
 import { Layout } from "@/components/layout";
 import {
   Card,
@@ -38,14 +168,29 @@ import ReactMarkdown from 'react-markdown';
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" }); // Using gemini-2.0-flash as requested
+
+// Configure ONNX environment - IMPORTANT: Don't directly import WASM files
+// Instead, tell ONNX runtime where to find them at runtime
+env.wasm = {
+  // Use empty string to look for wasm files at the same level as the page
+  wasmPaths: '',
+  // Disable threading and SIMD initially for better compatibility
+  numThreads: 1,
+  simd: false
+};
+
 const loadModel = async () => {
-  // The model file should be in the public directory or served statically
-  const modelPath = '/RF_Crop_Rec.onnx';
   try {
-    const session = await InferenceSession.create(
-      modelPath,
-      { executionProviders: ['wasm'] }
-    );
+    console.log('Loading ONNX model...');
+    
+    const options = {
+      executionProviders: ['wasm'],
+      graphOptimizationLevel: 'all',
+      enableCpuMemArena: true,
+    };
+    
+    // Load model from public directory
+    const session = await InferenceSession.create('/RF_Crop_Rec.onnx', options);
     console.log('ONNX model loaded successfully');
     return session;
   } catch (error) {
@@ -53,10 +198,18 @@ const loadModel = async () => {
     return null;
   }
 };
-const runInference = async (session: InferenceSession, inputData: { N: number; P: number; K: number; temperature: number; humidity: number; ph: number; rainfall: number; }) => {
+
+const runInference = async (session: InferenceSession | null, inputData: { N: number; P: number; K: number; temperature: number; humidity: number; ph: number; rainfall: number; }) => {
   try {
-    // Prepare input data as a tensor
-    const input = new Tensor('float32', [
+    if (!session) {
+      throw new Error('Session is not initialized');
+    }
+
+    console.log('Running inference...');
+
+    // --- Input Preparation ---
+    const inputName = 'float_input'; // Correct input name from graph properties
+    const inputArray = Float32Array.from([
       inputData.N,
       inputData.P,
       inputData.K,
@@ -64,81 +217,129 @@ const runInference = async (session: InferenceSession, inputData: { N: number; P
       inputData.humidity,
       inputData.ph,
       inputData.rainfall,
-    ], [1, 7]); // Assuming input shape [1, 7]
+    ]);
+    console.log('Input data array:', Array.from(inputArray));
+    // Shape [1, 7] for batch size 1 and 7 features
+    const input = new Tensor('float32', inputArray, [1, 7]);
+    const feeds = { [inputName]: input };
 
-    // Create feeds object
-    const feeds: Record<string, Tensor> = {};
-    // The input name 'float_input' is a common default, but might need to be adjusted
-    // based on the actual model's input name. Without being able to read the .onnx
-    // file, 'float_input' is a reasonable guess. If inference fails, this might
-    // need to be updated based on error messages or model documentation.
-    feeds['float_input'] = input;
+    // --- Run Inference ---
+    console.log('Running session.run with feeds:', feeds);
+    console.log('Expecting output names:', session.outputNames); // Should include 'output_label' and 'output_probability'
+    const labelOutputName = 'output_label'; // Correct output name from graph properties
+    // Explicitly request only the 'output_label' to potentially avoid issues with other outputs
+    const outputToFetch = { [labelOutputName]: null }; // Use the defined labelOutputName
+    const results = await session.run(feeds, outputToFetch);
 
-    // Run inference
-    const results = await session.run(feeds);
+    console.log('Inference results object:', results); // Log the raw results
 
-    // Process output - assuming the output is a single tensor containing the crop name string
-    // The output name 'output_label' is a common default, but might need adjustment.
-    // The output shape and data type also need to be confirmed from the model.
-    // Assuming the output is a tensor of shape [1] with a string value.
-    const outputTensor = results['output_label']; // Adjust output name if necessary
-    if (!outputTensor) {
-        throw new Error("Model output 'output_label' not found."); // Adjust output name if necessary
+    // --- Output Processing ---
+    const probabilityOutputName = 'output_probability'; // Name of the second output
+
+    // Check if the primary output exists
+    if (!results || !(labelOutputName in results)) {
+      console.error(`Error: Output key "${labelOutputName}" not found in results.`);
+      console.error("Available keys:", results ? Object.keys(results) : 'results object is null/undefined');
+      throw new Error(`Output key "${labelOutputName}" not found.`);
     }
 
-    // Extract the crop name string from the output tensor
-    // Assuming the output tensor data is an array with the crop name at index 0
-    const predictedCropName = outputTensor.data[0] as string;
+    const outputLabelTensor = results[labelOutputName];
+    console.log(`Data for "${labelOutputName}":`, outputLabelTensor);
 
-    console.log('Predicted crop name:', predictedCropName);
-    return predictedCropName;
+    // Log info about the second output, but avoid operations that might fail
+     if (probabilityOutputName in results) {
+         const outputProbData = results[probabilityOutputName];
+         console.log(`Data for "${probabilityOutputName}" (potentially problematic type):`, outputProbData);
+         console.log(`Type of "${probabilityOutputName}" data: ${typeof outputProbData}, Is Tensor: ${outputProbData instanceof Tensor}`);
+         // Avoid accessing .data if it's not a standard Tensor or the known complex type
+     } else {
+         console.warn(`Output key "${probabilityOutputName}" not found in results.`);
+     }
 
-  } catch (error) {
+
+    // Process the 'output_label' tensor
+    let predictedCropName = 'Unknown (Processing Error)';
+    if (outputLabelTensor instanceof Tensor && outputLabelTensor.type === 'string') {
+        console.log(`Processing "${labelOutputName}" as string tensor.`);
+        console.log(` Tensor dimensions: ${outputLabelTensor.dims.join(' x ')}`);
+
+        // For string tensors, '.data' should contain the string(s)
+        const stringData = outputLabelTensor.data as string[]; // Type assertion
+        console.log(` Extracted string data:`, stringData);
+
+        if (stringData && stringData.length > 0) {
+            predictedCropName = stringData[0]; // Get the first predicted label
+            console.log(` Successfully extracted predicted crop name: ${predictedCropName}`);
+        } else {
+            console.warn(` String tensor data for "${labelOutputName}" is empty or invalid.`);
+            predictedCropName = 'Unknown (Empty String Tensor)';
+        }
+    } else {
+      // Fallback or error if the output is not the expected string tensor
+      console.error(`Unexpected type or structure for "${labelOutputName}". Expected string Tensor. Got:`, outputLabelTensor);
+       // You could potentially try accessing index 0 if it's numeric, but the schema says string
+      predictedCropName = `Unknown (Unexpected type: ${outputLabelTensor?.type ?? typeof outputLabelTensor})`;
+    }
+
+    console.log('Final prediction result:', predictedCropName);
+    return predictedCropName; // Return the extracted name
+
+  } catch (error: unknown) { // Catch unknown type
     console.error('Failed to run inference:', error);
-    return null;
+    // Log more details if available, checking the error type first
+    if (error instanceof Error) {
+      console.error('Error message:', error.message);
+      console.error('Error stack:', error.stack);
+    } else {
+      console.error('Caught error is not an Error instance:', error);
+    }
+    // The calling function should handle setting state based on the null return
+    return null; // Indicate failure
   }
 };
 
-
-
-
-
-interface Crop {
-  name: string;
-  icon: string;
-  score: number;
-  waterRequirement: number;
-  soilSuitability: number;
-  climateSuitability: number;
-  yieldPotential: number;
-  marketDemand: number;
-  season: string;
-  growingPeriod: string;
-  waterRequirementText: string;
-  advantages: string[];
-  considerations: string[];
-}
 export default function CropRecommendation() {
   const [loading, setLoading] = useState(false);
+  const [modelLoaded, setModelLoaded] = useState(false);
   const [cropResults, setCropResults] = useState<{ [key: string]: { analysis: string | null; guide: string | null } }>({});
   const [selectedCrop, setSelectedCrop] = useState<Crop | null>(null);
   const [expandedSection, setExpandedSection] = useState<{ name: string; type: 'crop_analysis' | 'crop_guide' | 'intercrop_guide' } | null>(null);
   const [onnxSession, setOnnxSession] = useState<InferenceSession | null>(null);
   const [prediction, setPrediction] = useState<string | null>(null);
 
-  // Load the ONNX model when the component mounts
-  React.useEffect(() => {
-    loadModel().then(session => {
-      setOnnxSession(session);
-    });
-
-    // Cleanup the session when the component unmounts
-    return () => {
-      if (onnxSession) {
-        onnxSession.release();
+  useEffect(() => {
+    let isMounted = true;
+    
+    const initModel = async () => {
+      try {
+        console.log('Initializing ONNX model...');
+        const session = await loadModel();
+        
+        if (session && isMounted) {
+          console.log('Session created successfully with ID:', session.sessionId);
+          setOnnxSession(session);
+          setModelLoaded(true);
+        }
+      } catch (err) {
+        console.error('Error initializing model:', err);
       }
     };
-  }, [onnxSession]); // Re-run effect if onnxSession changes (e.g., on hot reload)
+    
+    initModel();
+    
+    // Cleanup function
+    return () => {
+      isMounted = false;
+      if (onnxSession) {
+        console.log('Releasing ONNX session...');
+        try {
+          onnxSession.release();
+        } catch (err) {
+          console.error('Error releasing session:', err);
+        }
+      }
+    };
+  }, []);
 
   const getGeminiResponse = async (prompt: string) => {
     setLoading(true);
@@ -158,9 +359,8 @@ export default function CropRecommendation() {
   const handleDetailedAnalysis = async (crop: Crop) => {
     setSelectedCrop(crop);
     setExpandedSection({ name: crop.name, type: 'crop_analysis' });
-    // Check if analysis result already exists
     if (cropResults[crop.name]?.analysis) {
-      return; // Don't fetch again if already exists
+      return;
     }
     const prompt = `Provide a concise detailed analysis (around half a page, formatted using markdown) for growing ${crop.name} based on the following data: Soil Suitability: ${crop.soilSuitability}%, Climate Suitability: ${crop.climateSuitability}%, Water Requirement: ${crop.waterRequirementText}, Yield Potential: ${crop.yieldPotential}%, Market Demand: ${crop.marketDemand}%. Advantages: ${crop.advantages.join(", ")}, Considerations: ${crop.considerations.join(", ")}.`;
     const result = await getGeminiResponse(prompt);
@@ -173,9 +373,8 @@ export default function CropRecommendation() {
   const handleImplementationGuide = async (crop: Crop) => {
     setSelectedCrop(crop);
     setExpandedSection({ name: crop.name, type: 'crop_guide' });
-     // Check if guide result already exists
     if (cropResults[crop.name]?.guide) {
-      return; // Don't fetch again if already exists
+      return;
     }
     const prompt = `Provide a concise implementation guide (around half a page, formatted using markdown) for growing ${crop.name} based on the following data: Season: ${crop.season}, Growing Period: ${crop.growingPeriod}, Water Requirement: ${crop.waterRequirementText}, Soil Suitability: ${crop.soilSuitability}%. Include steps for land preparation, sowing, irrigation, fertilization, pest and disease management, and harvesting.`;
     const result = await getGeminiResponse(prompt);
@@ -188,158 +387,16 @@ export default function CropRecommendation() {
   const handleIntercropGuide = async (suggestion: typeof intercropSuggestions[0]) => {
     const key = `intercrop_${suggestion.primary}_${suggestion.secondary}`;
     setExpandedSection({ name: key, type: 'intercrop_guide' });
-    // Check if guide result already exists
     if (cropResults[key]?.guide) {
-      return; // Don't fetch again if already exists
+      return;
     }
     const prompt = `Provide a concise implementation guide (around half a page, formatted using markdown) for intercropping ${suggestion.primary} and ${suggestion.secondary} based on the following benefits: ${suggestion.benefits}. Include steps for planning, planting, and management.`;
-     const result = await getGeminiResponse(prompt);
+    const result = await getGeminiResponse(prompt);
     setCropResults(prevResults => ({
       ...prevResults,
       [key]: { ...prevResults[key], guide: result }
     }));
   };
-
-  const recommendedCrops = [
-    {
-      name: "Rice",
-      icon: "🌾",
-      score: 94,
-      waterRequirement: 85,
-      soilSuitability: 95,
-      climateSuitability: 90,
-      yieldPotential: 88,
-      marketDemand: 92,
-      season: "Kharif",
-      growingPeriod: "90-120 days",
-      waterRequirementText: "High (1300-1800 mm)",
-      advantages: [
-        "Well-suited to your soil type",
-        "Optimal weather conditions",
-        "Strong market demand in your region",
-      ],
-      considerations: ["Requires good water management"],
-    },
-    {
-      name: "Cotton",
-      icon: "🌿",
-      score: 86,
-      waterRequirement: 65,
-      soilSuitability: 90,
-      climateSuitability: 85,
-      yieldPotential: 82,
-      marketDemand: 88,
-      season: "Kharif",
-      growingPeriod: "150-180 days",
-      waterRequirementText: "Medium (700-1300 mm)",
-      advantages: [
-        "Drought tolerant once established",
-        "Good price in current market",
-      ],
-      considerations: [
-        "Susceptible to bollworm",
-        "Requires moderate soil fertility",
-      ],
-    },
-    {
-      name: "Maize",
-      icon: "🌽",
-      score: 78,
-      waterRequirement: 60,
-      soilSuitability: 80,
-      climateSuitability: 75,
-      yieldPotential: 80,
-      marketDemand: 78,
-      season: "Kharif/Rabi",
-      growingPeriod: "80-110 days",
-      waterRequirementText: "Medium (500-800 mm)",
-      advantages: [
-        "Can be grown in both seasons",
-        "Short growing period",
-      ],
-      considerations: [
-        "Moderate susceptibility to drought",
-        "Price fluctuations in local market",
-      ],
-    },
-    {
-      name: "Soybean",
-      icon: "🫘",
-      score: 72,
-      waterRequirement: 55,
-      soilSuitability: 75,
-      climateSuitability: 70,
-      yieldPotential: 72,
-      marketDemand: 80,
-      season: "Kharif",
-      growingPeriod: "90-120 days",
-      waterRequirementText: "Medium (450-700 mm)",
-      advantages: ["Improves soil fertility", "Growing market demand"],
-      considerations: [
-        "Sensitive to waterlogging",
-        "Requires well-drained soil",
-      ],
-    },
-    {
-      name: "Groundnut",
-      icon: "🥜",
-      score: 68,
-      waterRequirement: 50,
-      soilSuitability: 65,
-      climateSuitability: 70,
-      yieldPotential: 65,
-      marketDemand: 75,
-      season: "Kharif/Summer",
-      growingPeriod: "100-130 days",
-      waterRequirementText: "Medium (500-700 mm)",
-      advantages: ["Drought tolerant", "Improves soil fertility"],
-      considerations: [
-        "Sensitive to leaf spot diseases",
-        "Requires well-drained sandy loam",
-      ],
-    },
-  ];
-
-  const intercropSuggestions = [
-    {
-      primary: "Rice",
-      secondary: "Azolla",
-      benefits: "Nitrogen fixation, weed suppression, increased rice yield",
-    },
-    {
-      primary: "Cotton",
-      secondary: "Groundnut",
-      benefits: "Better land utilization, risk diversification, income stability",
-    },
-    {
-      primary: "Maize",
-      secondary: "Black gram",
-      benefits: "Soil enrichment, efficient resource use, reduced pest pressure",
-    },
-  ];
-
-  const cropRotationPlan = [
-    {
-      season: "Kharif 2025",
-      crop: "Rice",
-      icon: "🌾",
-    },
-    {
-      season: "Rabi 2025-26",
-      crop: "Wheat",
-      icon: "🌾",
-    },
-    {
-      season: "Summer 2026",
-      crop: "Green Manure",
-      icon: "🌱",
-    },
-    {
-      season: "Kharif 2026",
-      crop: "Cotton",
-      icon: "🌿",
-    },
-  ];
 
   return (
     <Layout>
@@ -351,40 +408,58 @@ export default function CropRecommendation() {
           </p>
         </div>
 
-       {/* ONNX Model Integration Section */}
        <Card className="mb-8">
          <CardHeader>
-           <CardTitle>ONNX Crop Recommendation</CardTitle>
-           <CardDescription>Get crop recommendations using the ONNX model.</CardDescription>
+           <CardTitle>Crop Recommendation</CardTitle>
+           <CardDescription>Get AI-powered crop recommendations.</CardDescription>
          </CardHeader>
          <CardContent>
-           {onnxSession ? (
+           {modelLoaded && onnxSession ? (
              <div className="space-y-4">
-               <p>ONNX model loaded. Ready for inference.</p>
-               {/* TODO: Add input fields for N, P, K, temperature, humidity, ph, rainfall */}
-               {/* For now, using a sample data point from the JSON */}
+               <p>Model loaded successfully. Ready for inference.</p>
                <Button
                  onClick={async () => {
-                   if (onnxSession) {
-                     // Using the first data point from the JSON as a sample
-                     const sampleData = { N: 90, P: 42, K: 43, temperature: 20.88, humidity: 82.00, ph: 6.50, rainfall: 202.94 }; // Using rounded values for simplicity
-                     const predictedIndex = await runInference(onnxSession, sampleData);
-                     setPrediction(predictedIndex);
+                   try {
+                     console.log('Running inference with session:', onnxSession);
+                     if (onnxSession) {
+                       setLoading(true);
+                       const sampleData = {
+                         N: 90, P: 42, K: 43,
+                         temperature: 20.88,
+                         humidity: 82.00,
+                         ph: 6.50,
+                         rainfall: 202.94
+                       };
+                       const result = await runInference(onnxSession, sampleData);
+                       if (result) {
+                         setPrediction(result);
+                       } else {
+                         console.error('Inference failed to return a result');
+                       }
+                     } else {
+                       console.error('Session is not available');
+                     }
+                   } catch (err) {
+                     console.error('Error during inference:', err);
+                   } finally {
+                     setLoading(false);
                    }
                  }}
-                 disabled={!onnxSession}
+                 disabled={!onnxSession || !modelLoaded || loading}
                >
-                 Run ONNX Inference (Sample Data)
+                 {loading ? 'Processing...' : 'Get Recommendation'}
                </Button>
                {prediction !== null && (
-                 <>
-                   <p className="text-lg font-semibold">Predicted Class Index: {prediction}</p>
-                   {/* TODO: Map predicted index to crop name */}
-                 </>
+                 <div className="mt-4 p-4 bg-muted rounded-lg">
+                   <p className="text-lg font-semibold">Predicted Crop: <span className="text-agri-green-dark">{prediction}</span></p>
+                 </div>
                )}
              </div>
            ) : (
-             <p>Loading ONNX model...</p>
+             <div className="flex flex-col items-center justify-center p-8">
+               <p className="mb-4">Loading ONNX model... This may take a moment.</p>
+               <Progress value={modelLoaded ? 100 : 30} className="w-full max-w-xs h-2" />
+             </div>
            )}
          </CardContent>
        </Card>
@@ -553,46 +628,6 @@ export default function CropRecommendation() {
             </Card>
           </TabsContent>
           
-          <TabsContent value="rotation">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Calendar className="h-5 w-5 mr-2 text-agri-green-light" />
-                  Crop Rotation Plan
-                </CardTitle>
-                <CardDescription>
-                  Two-year crop rotation recommendation for sustainable farming
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="relative">
-                  <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gray-200"></div>
-                  <div className="space-y-8">
-                    {cropRotationPlan.map((plan, i) => (
-                      <div key={i} className="relative flex">
-                        <div className="absolute left-0 rounded-full bg-white p-1.5 shadow">
-                          <div className="h-9 w-9 rounded-full bg-agri-green-light/20 flex items-center justify-center">
-                            <span className="text-xl">{plan.icon}</span>
-                          </div>
-                        </div>
-                        <div className="ml-20 flex-1 pt-1.5 pb-8">
-                          <div className="flex flex-col sm:flex-row sm:justify-between">
-                            <div>
-                              <h3 className="text-lg font-medium">{plan.season}</h3>
-                              <p className="text-muted-foreground">{plan.crop}</p>
-                            </div>
-                            <Button variant="outline" size="sm" className="mt-2 sm:mt-0">
-                              Details
-                            </Button>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
         </Tabs>
 
       </div>
