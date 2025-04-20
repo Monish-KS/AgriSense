@@ -1,0 +1,6 @@
+// pages/sign-in.tsx
+import { SignIn } from "@clerk/nextjs";
+
+export default function SignInPage() {
+  return <SignIn routing="path" path="/sign-in" />;
+}
