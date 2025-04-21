@@ -1,5 +1,4 @@
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Layout } from "@/components/layout";
 import { DashboardCard } from "@/components/dashboard/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -7,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Upload, FileBarChart, CloudRain, MoveVertical } from "lucide-react";
 import fertilizerData from "@/data/fertilizer_predictions.json"; // Import fertilizer data
 import { FertilizerPredictionTable } from "@/components/FertilizerPredictionTable";
+import { InferenceSession, Tensor } from "onnxruntime-web";
 
 // Define an interface for the fertilizer data structure
 interface FertilizerPrediction {
@@ -21,12 +21,79 @@ interface FertilizerPrediction {
   "Fertilizer Name": string;
 }
 
-
 export default function SoilAnalytics() {
   const [activeTab, setActiveTab] = useState("overview");
+  const [onnxPrediction, setOnnxPrediction] = useState<string | null>(null);
 
-  // Use type assertion for the imported data
-  const predictions = fertilizerData as FertilizerPrediction[];
+  // State for ONNX model inputs
+  const [temperature, setTemperature] = useState(25);
+  const [humidity, setHumidity] = useState(60);
+  const [moisture, setMoisture] = useState(30);
+  const [nitrogen, setNitrogen] = useState(100);
+  const [potassium, setPotassium] = useState(200);
+  const [phosphorous, setPhosphorous] = useState(150);
+
+
+  // Use type assertion for the imported data and limit to top 5
+  const top5Predictions = (fertilizerData as FertilizerPrediction[]).slice(0, 5);
+
+  const runOnnxPrediction = async (
+    temp: number,
+    hum: number,
+    mois: number,
+    n: number,
+    k: number,
+    p: number
+  ) => {
+    try {
+      setOnnxPrediction("Loading model and predicting..."); // Set loading state
+      // Load the ONNX model from the public folder
+      const session = await InferenceSession.create(
+        "/Fertilizer_rec.onnx",
+        { executionProviders: ['wasm'] } // Specify WASM execution provider
+      );
+
+      // Create input data from parameters
+      const inputData = new Float32Array([
+        temp,
+        hum,
+        mois,
+        n,
+        k,
+        p
+      ]);
+      // Adjust shape to [1, 6] as the model expects 6 features
+      const tensorInput = new Tensor("float32", inputData, [1, 6]);
+
+      const feeds: Record<string, Tensor> = {};
+      // Assuming the model's input name is the first one
+      feeds[session.inputNames[0]] = tensorInput;
+
+      // Run inference
+      const results = await session.run(feeds);
+
+      // Process the results
+      // Assuming the model has a 'label' output which is the fertilizer name directly
+      const outputTensor = results.label;
+      // The output is expected to be a string tensor containing the fertilizer name.
+      const predictedFertilizer = outputTensor.data[0] as string;
+
+      setOnnxPrediction(`Predicted Fertilizer (ONNX): ${predictedFertilizer}`);
+
+    } catch (e) {
+      console.error("Error running ONNX model:", e);
+      setOnnxPrediction("Error predicting fertilizer with ONNX model.");
+    }
+  };
+
+  useEffect(() => {
+    // Run prediction only when the recommendations tab is active and inputs are available (using default for now)
+    if (activeTab === "recommendations") {
+      // Use default state values for initial prediction
+      runOnnxPrediction(temperature, humidity, moisture, nitrogen, potassium, phosphorous);
+    }
+  }, [activeTab]);
+
 
   return (
     <Layout>
@@ -54,6 +121,7 @@ export default function SoilAnalytics() {
             <TabsTrigger value="recommendations">Recommendations</TabsTrigger>
           </TabsList>
           
+          {/* Overview Tab */}
           <TabsContent value="overview" className="space-y-4">
             <DashboardCard
               title="Soil Composition Overview"
@@ -126,6 +194,7 @@ export default function SoilAnalytics() {
             </div>
           </TabsContent>
           
+          {/* Composition Tab */}
           <TabsContent value="composition" className="space-y-4">
             <DashboardCard
               title="Soil Composition Analysis"
@@ -167,6 +236,7 @@ export default function SoilAnalytics() {
             </DashboardCard>
           </TabsContent>
           
+          {/* Nutrients Tab */}
           <TabsContent value="nutrients" className="space-y-4">
             <div className="grid gap-4 md:grid-cols-2">
               <DashboardCard
@@ -271,22 +341,97 @@ export default function SoilAnalytics() {
             </div>
           </TabsContent>
           
+          {/* Recommendations Tab */}
           <TabsContent value="recommendations" className="space-y-4">
             <DashboardCard
               title="Soil Improvement Recommendations"
               description="Based on your soil analysis"
             >
               <div className="space-y-6">
+                {/* Top 5 from Dataset */}
                 <div className="bg-agrisense-light p-4 rounded-md">
-                  <h3 className="font-medium text-agrisense-primary">Fertilizer Recommendations</h3>
-                  {/* Display fertilizer recommendations from the imported data */}
-                  {predictions.length > 0 ? (
-                    <FertilizerPredictionTable predictions={predictions} />
+                  <h3 className="font-medium text-agrisense-primary">Top 5 Fertilizer Recommendations (from dataset)</h3>
+                  {top5Predictions.length > 0 ? (
+                    <FertilizerPredictionTable predictions={top5Predictions} />
                   ) : (
                     <p className="text-muted-foreground">No fertilizer prediction data available.</p>
                   )}
                 </div>
+
+                {/* ONNX Prediction Input and Output */}
+                <div className="bg-green-50 p-4 rounded-md space-y-4">
+                  <h3 className="font-medium text-green-600">Fertilizer Prediction (using ONNX model)</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="temperature" className="block text-sm font-medium text-gray-700">Temperature (°C)</label>
+                      <input
+                        type="number"
+                        id="temperature"
+                        value={temperature}
+                        onChange={(e) => setTemperature(Number(e.target.value))}
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="humidity" className="block text-sm font-medium text-gray-700">Humidity (%)</label>
+                      <input
+                        type="number"
+                        id="humidity"
+                        value={humidity}
+                        onChange={(e) => setHumidity(Number(e.target.value))}
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="moisture" className="block text-sm font-medium text-gray-700">Moisture (%)</label>
+                      <input
+                        type="number"
+                        id="moisture"
+                        value={moisture}
+                        onChange={(e) => setMoisture(Number(e.target.value))}
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="nitrogen" className="block text-sm font-medium text-gray-700">Nitrogen (ppm)</label>
+                      <input
+                        type="number"
+                        id="nitrogen"
+                        value={nitrogen}
+                        onChange={(e) => setNitrogen(Number(e.target.value))}
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="potassium" className="block text-sm font-medium text-gray-700">Potassium (ppm)</label>
+                      <input
+                        type="number"
+                        id="potassium"
+                        value={potassium}
+                        onChange={(e) => setPotassium(Number(e.target.value))}
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="phosphorous" className="block text-sm font-medium text-gray-700">Phosphorous (ppm)</label>
+                      <input
+                        type="number"
+                        id="phosphorous"
+                        value={phosphorous}
+                        onChange={(e) => setPhosphorous(Number(e.target.value))}
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm"
+                      />
+                    </div>
+                  </div>
+                  <Button onClick={() => runOnnxPrediction(temperature, humidity, moisture, nitrogen, potassium, phosphorous)}>
+                    Get Fertilizer Recommendation
+                  </Button>
+                  {onnxPrediction && (
+                    <p className="mt-2 text-sm font-medium">{onnxPrediction}</p>
+                  )}
+                </div>
                 
+                {/* Soil Management Practices */}
                 <div className="bg-blue-50 p-4 rounded-md">
                   <h3 className="font-medium text-blue-600">Soil Management Practices</h3>
                   <ul className="mt-2 text-sm space-y-2">
@@ -305,6 +450,7 @@ export default function SoilAnalytics() {
                   </ul>
                 </div>
                 
+                {/* Suitable Crops */}
                 <div className="bg-purple-50 p-4 rounded-md">
                   <h3 className="font-medium text-purple-600">Suitable Crops</h3>
                   <p className="mt-1 text-sm">Based on your loam soil with current nutrient profile, these crops would perform well:</p>
