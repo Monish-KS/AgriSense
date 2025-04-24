@@ -217,13 +217,6 @@ export default function Dashboard() {
         {/* First row of cards (4 cards) */}
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           <StatsCard
-            title="Weather Summary"
-            value="27°C"
-            icon={<Sun className="h-4 w-4" />}
-            trend="neutral"
-            trendValue="Clear day"
-          />
-          <StatsCard
             title="Soil Health"
             value="Excellent"
             icon={<FileBarChart className="h-4 w-4" />}
@@ -301,8 +294,6 @@ export default function Dashboard() {
           <TabsList>
             <TabsTrigger value="summary">Summary</TabsTrigger>
             <TabsTrigger value="soil">Soil</TabsTrigger>
-            <TabsTrigger value="weather">Weather</TabsTrigger>
-            <TabsTrigger value="crops">Crops</TabsTrigger>
           </TabsList>
           <TabsContent value="summary" className="space-y-4">
             <div className="grid gap-4 md:grid-cols-2">

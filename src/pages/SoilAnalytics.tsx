@@ -432,12 +432,11 @@ const nutrientCategories = [
           <TabsContent value="recommendations" className="space-y-4">
             <DashboardCard
               title="Soil Improvement Recommendations"
-              description="Based on your soil analysis"
             >
               <div className="space-y-6">
                 {/* Top 5 from Dataset */}
                 <div className="bg-agrisense-light p-4 rounded-md">
-                  <h3 className="font-medium text-agrisense-primary">Top 5 Fertilizer Recommendations (from dataset)</h3>
+                  <h3 className="font-medium text-agrisense-primary">Top 5 Fertilizer Recommendations </h3>
                   {top5Predictions.length > 0 ? (
                     <FertilizerPredictionTable predictions={top5Predictions} />
                   ) : (
