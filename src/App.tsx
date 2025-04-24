@@ -9,7 +9,6 @@ import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
 // Page Imports
 import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
-import Maps from "./pages/Maps";
 import SoilAnalytics from "./pages/SoilAnalytics";
 import NotFound from "./pages/NotFound";
 import CropRecommendations from "./pages/CropRecommendations";
@@ -68,19 +67,6 @@ const App = () => (
               <>
                 <SignedIn>
                   <Dashboard />
-                </SignedIn>
-                <SignedOut>
-                  <RedirectToSignIn />
-                </SignedOut>
-              </>
-            }
-          />
-          <Route
-            path="/maps"
-            element={
-              <>
-                <SignedIn>
-                  <Maps />
                 </SignedIn>
                 <SignedOut>
                   <RedirectToSignIn />

@@ -49,14 +49,6 @@ export function AppSidebar() {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <Link to="/maps" className="flex gap-2">
-                    <Map />
-                    <span>Maps</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
                   <Link to="/soil" className="flex gap-2">
                     <FileBarChart />
                     <span>Soil Analytics</span>
