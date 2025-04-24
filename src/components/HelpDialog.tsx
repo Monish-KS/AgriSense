@@ -37,7 +37,7 @@ export function HelpDialog() {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant="ghost" className="text-white hover:text-white/90 hover:bg-agrisense-dark">Help</Button>
+        <Button variant="ghost" className="text-white bg-agrisense-primary hover:text-white hover:bg-green-900">Help</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] md:max-w-[600px] lg:max-w-[800px]">
         <DialogHeader>

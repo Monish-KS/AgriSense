@@ -1,7 +1,7 @@
 
-import { Link } from "react-router-dom";
-import { 
-  Home, 
+import { Link, useLocation } from "react-router-dom";
+import {
+  Home,
   Map, 
   Droplets, 
   Sun, 
@@ -29,6 +29,9 @@ import {
 } from "@/components/ui/sidebar";
 
 export function AppSidebar() {
+  const location = useLocation();
+  const currentPath = location.pathname;
+
   return (
     <Sidebar>
       <SidebarHeader className="border-b border-sidebar-border pb-2">
@@ -41,7 +44,7 @@ export function AppSidebar() {
           <SidebarGroupLabel>Navigation</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              <SidebarMenuItem>
+              <SidebarMenuItem className={currentPath === "/dashboard" ? "rounded-md bg-green-900" : ""}>
                 <SidebarMenuButton asChild>
                   <Link to="/dashboard" className="flex gap-2">
                     <Home />
@@ -49,7 +52,7 @@ export function AppSidebar() {
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
-              <SidebarMenuItem>
+              <SidebarMenuItem className={currentPath === "/soil" ? "rounded-md bg-green-900" : ""}>
                 <SidebarMenuButton asChild>
                   <Link to="/soil" className="flex gap-2">
                     <FileBarChart />
@@ -57,7 +60,7 @@ export function AppSidebar() {
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
-              <SidebarMenuItem>
+              <SidebarMenuItem className={currentPath === "/weather" ? "rounded-md bg-green-900" : ""}>
                 <SidebarMenuButton asChild>
                   <Link to="/weather" className="flex gap-2">
                     <CloudSun />
@@ -65,7 +68,7 @@ export function AppSidebar() {
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
-              <SidebarMenuItem>
+              <SidebarMenuItem className={currentPath === "/water-management" ? "rounded-md bg-green-900" : ""}>
                 <SidebarMenuButton asChild>
                   <Link to="/water-management" className="flex gap-2"> {/* Updated path */}
                     <Droplets />
@@ -73,7 +76,7 @@ export function AppSidebar() {
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
-              <SidebarMenuItem>
+              <SidebarMenuItem className={currentPath === "/crop-recommendations" ? "rounded-md bg-green-900" : ""}>
                 <SidebarMenuButton asChild>
                   <Link to="/crop-recommendations" className="flex gap-2">
                     <Sprout />
@@ -81,7 +84,7 @@ export function AppSidebar() {
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
-              <SidebarMenuItem>
+              <SidebarMenuItem className={currentPath === "/supply-chain" ? "rounded-md bg-green-900" : ""}>
                 <SidebarMenuButton asChild>
                   <Link to="/supply-chain" className="flex gap-2">
                     <Store />
@@ -89,7 +92,7 @@ export function AppSidebar() {
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
-              <SidebarMenuItem>
+              <SidebarMenuItem className={currentPath === "/mgnrega" ? "rounded-md bg-green-900" : ""}>
                 <SidebarMenuButton asChild>
                   <Link to="/mgnrega" className="flex gap-2">
                     <ClipboardList />
@@ -105,7 +108,7 @@ export function AppSidebar() {
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              <SidebarMenuItem>
+              <SidebarMenuItem className={currentPath === "/settings" ? "rounded-md bg-green-900" : ""}>
                 <SidebarMenuButton asChild>
                   <Link to="/settings" className="flex gap-2">
                     <Settings />
@@ -113,7 +116,7 @@ export function AppSidebar() {
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
-              <SidebarMenuItem>
+              <SidebarMenuItem className={currentPath === "/profile" ? "rounded-md bg-green-900" : ""}>
                 <SidebarMenuButton asChild>
                   <Link to="/profile" className="flex gap-2">
                     <User />

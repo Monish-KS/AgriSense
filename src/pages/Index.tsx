@@ -41,7 +41,7 @@ const Index = () => {
             </SignUpButton>
           </SignedOut>
           <SignedIn>
-             <Button asChild variant="outline" className="text-white border-white hover:bg-white hover:text-agrisense-primary">
+             <Button asChild variant="outline" className="text-agrisense-primary border-white hover:bg-white/90 hover:text-agrisense-primary">
                <Link to="/dashboard">Dashboard</Link>
              </Button>
              {/* You might want a UserButton here too, but the main layout handles it */}
@@ -69,7 +69,7 @@ const Index = () => {
               >
                 Get Started
               </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-agrisense-primary"> {/* Styled Learn More */}
+              <Button size="lg" variant="outline" className="text-agrisense-primary border-white hover:bg-white/90 hover:text-agrisense-primary"> {/* Styled Learn More */}
                 Learn More
               </Button>
             </div>
