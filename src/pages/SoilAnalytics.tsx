@@ -7,6 +7,7 @@ import { Upload, FileBarChart, CloudRain, MoveVertical } from "lucide-react";
 import fertilizerData from "@/data/fertilizer_predictions.json"; // Import fertilizer data
 import { FertilizerPredictionTable } from "@/components/FertilizerPredictionTable";
 import { InferenceSession, Tensor } from "onnxruntime-web";
+import { SoilMap } from "@/components/SoilMap"; // Import the SoilMap component
 
 // Define an interface for the fertilizer data structure
 interface FertilizerPrediction {
@@ -151,9 +152,8 @@ export default function SoilAnalytics() {
                 </div>
                 
                 <div className="col-span-2">
-                  <div className="aspect-square bg-muted/20 rounded-md flex items-center justify-center">
-                    <p className="text-muted-foreground">Soil composition chart would be displayed here</p>
-                  </div>
+                  {/* Replace placeholder with the SoilMap component */}
+                  <SoilMap />
                 </div>
               </div>
             </DashboardCard>
