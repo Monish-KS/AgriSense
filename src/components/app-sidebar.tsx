@@ -2,11 +2,10 @@
 import { Link } from "react-router-dom";
 import { 
   Home, 
-  Map, 
-  Droplets, 
-  Sun, 
-  Sprout, 
-  Store, 
+  Droplets,
+  Sun,
+  Sprout,
+  Store,
   Settings,
   FileBarChart,
   CloudSun
@@ -44,14 +43,6 @@ export function AppSidebar() {
                   <Link to="/dashboard" className="flex gap-2">
                     <Home />
                     <span>Overview</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <Link to="/maps" className="flex gap-2">
-                    <Map />
-                    <span>Maps</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
