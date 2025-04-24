@@ -120,7 +120,7 @@ export default function SoilAnalytics() {
     const fetchMicronutrientData = async () => {
       try {
         console.log("Fetching micronutrient data...");
-        const response = await fetch('/csv/micronutients.csv');
+        const response = await fetch('/data/micronutrients.csv');
         const text = await response.text();
         console.log("CSV raw text (first 500 chars):", text.substring(0, 500) + "..."); // Log first 500 chars
         const lines = text.split('\n').filter(line => line.trim() !== '' && !line.startsWith('#')); // Split and remove empty lines and comments
