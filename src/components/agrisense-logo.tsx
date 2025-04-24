@@ -9,11 +9,11 @@ interface LogoProps extends React.HTMLAttributes<HTMLDivElement> {
 export function AgriSenseLogo({ showText = true, className, ...props }: LogoProps) {
   return (
     <div className={cn("flex items-center gap-2", className)} {...props}>
-      <div className="h-8 w-8 rounded-md flex items-center justify-center bg-agrisense-primary text-white">
-        <LeafIcon className="h-5 w-5" />
+      <div className="h-8 w-8 rounded-md flex items-center justify-center bg-agrisense-primary text-agrisense-primary">
+        <LeafIcon className="h-5 w-5 text-white" />
       </div>
       {showText && (
-        <span className="font-semibold text-xl text-agrisense-primary">
+        <span className="font-semibold text-xl text-white">
           AgriSense
         </span>
       )}

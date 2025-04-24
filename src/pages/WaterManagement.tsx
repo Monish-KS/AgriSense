@@ -33,7 +33,6 @@ export default function WaterManagement() {
       <div className="container mx-auto">
         <h1 className="text-3xl font-bold mb-6">Water Management</h1>
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold">Water Management</h1>
           <Link to="/water-management/centre-pivot">
             <Button className="flex items-center gap-2">
               <span>3D Visualization</span>

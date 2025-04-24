@@ -10,6 +10,7 @@ import {
   FileBarChart,
   CloudSun
 } from "lucide-react";
+import { CircleUser } from "lucide-react";
 
 import { AgriSenseLogo } from "@/components/agrisense-logo";
 import {
@@ -89,7 +90,7 @@ export function AppSidebar() {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-        
+
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -99,6 +100,14 @@ export function AppSidebar() {
                   <Link to="/settings" className="flex gap-2">
                     <Settings />
                     <span>Settings</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/profile" className="flex gap-2">
+                    <CircleUser />
+                    <span>Profile</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
