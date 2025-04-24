@@ -447,7 +447,7 @@ const nutrientCategories = [
  
                 {/* ONNX Prediction Input and Output */}
                 <div className="bg-green-50 p-4 rounded-md space-y-4">
-                  <h3 className="font-medium text-green-600">Fertilizer Prediction (using ONNX model)</h3>
+                  <h3 className="font-medium text-green-600">Fertilizer Prediction </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="temperature" className="block text-sm font-medium text-gray-700">Temperature (°C)</label>

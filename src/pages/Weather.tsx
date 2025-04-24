@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 // Import the fetchWeatherApi function
 import { fetchWeatherApi } from 'openmeteo';
 import { Layout } from "@/components/layout";
@@ -123,7 +123,8 @@ const getWeatherIcon = (code: number) => {
 const Weather = () => {
     const [selectedDistrict, setSelectedDistrict] = useState<string>("");
     const [selectedYear, setSelectedYear] = useState<string>("");
-    const [locationInput, setLocationInput] = useState("");
+    const [searchLocationInput, setSearchLocationInput] = useState(""); // State for the location input/search term
+    const [weatherSearchTerm, setWeatherSearchTerm] = useState(""); // State for the actual term used for weather API search
     const [coordinates, setCoordinates] = useState<{ latitude: number; longitude: number } | null>(null);
     const [weatherData, setWeatherData] = useState<WeatherApiResponse | null>(null); // State for weather data
     const [loadingWeather, setLoadingWeather] = useState(false); // Loading state for weather
@@ -132,7 +133,48 @@ const Weather = () => {
     const [districtSearchTerm, setDistrictSearchTerm] = useState(""); // State for the search input
     const [isYearSelectOpen, setIsYearSelectOpen] = useState(false); // State for controlling the year popover
     const [yearSearchTerm, setYearSearchTerm] = useState(""); // State for the year search input
+    const [initialLoadStateHandled, setInitialLoadStateHandled] = useState(false); // Flag to prevent re-fetching on initial render
 
+// Mapping of Indian states to their capitals
+    const stateCapitals: { [key: string]: string } = {
+        "Andhra Pradesh": "Amaravati",
+        "Arunachal Pradesh": "Itanagar",
+        "Assam": "Dispur",
+        "Bihar": "Patna",
+        "Chhattisgarh": "Raipur",
+        "Goa": "Panaji",
+        "Gujarat": "Gandhinagar",
+        "Haryana": "Chandigarh",
+        "Himachal Pradesh": "Shimla",
+        "Jharkhand": "Ranchi",
+        "Karnataka": "Bengaluru",
+        "Kerala": "Thiruvananthapuram",
+        "Madhya Pradesh": "Bhopal",
+        "Maharashtra": "Mumbai",
+        "Manipur": "Imphal",
+        "Meghalaya": "Shillong",
+        "Mizoram": "Aizawl",
+        "Nagaland": "Kohima",
+        "Odisha": "Bhubaneswar",
+        "Punjab": "Chandigarh",
+        "Rajasthan": "Jaipur",
+        "Sikkim": "Gangtok",
+        "Tamil Nadu": "Chennai",
+        "Telangana": "Hyderabad",
+        "Tripura": "Agartala",
+        "Uttar Pradesh": "Lucknow",
+        "Uttarakhand": "Dehradun",
+        "West Bengal": "Kolkata",
+        // Union Territories
+        "Andaman and Nicobar Islands": "Port Blair",
+        "Chandigarh": "Chandigarh",
+        "Dadra and Nagar Haveli and Daman and Diu": "Daman",
+        "Delhi": "New Delhi",
+        "Jammu and Kashmir": "Srinagar", // Using Summer capital
+        "Lakshadweep": "Kavaratti",
+        "Puducherry": "Puducherry",
+        "Ladakh": "Leh",
+    };
     const rainfallDataTyped = rainfallData as RainfallData[];
 
     const districts: string[] = [...new Set(rainfallDataTyped.map((item: RainfallData) => item["Dist Name"]))];
@@ -156,14 +198,14 @@ const Weather = () => {
     );
 
     // Still use geocoding API directly for location search (openmeteo lib doesn't include this)
-    const handleSearchLocation = async () => {
-        if (!locationInput) return;
+    const handleSearchLocation = useCallback(async (locationNameToSearch: string) => {
+        if (!locationNameToSearch) return;
         setFetchError(null); // Clear previous errors
         setWeatherData(null); // Clear previous weather data
         setCoordinates(null); // Clear previous coordinates
         try {
             // !! Keep using the geocoding API directly for searching location names !!
-            const response = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(locationInput)}&count=1`);
+            const response = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(locationNameToSearch)}&count=1`);
             if (!response.ok) {
                 throw new Error(`Geocoding API error: ${response.statusText}`);
             }
@@ -192,8 +234,49 @@ const Weather = () => {
             setCoordinates(null);
             setWeatherData(null);
         }
-    };
+    }, []); // Empty dependency array means this function is created once
 
+
+    // Effect to handle initial load from local storage and set initial rainfall data location
+    useEffect(() => {
+        if (initialLoadStateHandled) return; // Only run once on mount
+
+        const savedState = localStorage.getItem('selectedSoilAnalyticsState');
+        if (savedState) {
+            const capital = stateCapitals[savedState];
+            if (capital) {
+                setSearchLocationInput(capital); // Set the input box value to the capital
+                setWeatherSearchTerm(capital); // Set the actual search term to the capital
+                // Trigger the location search and subsequent weather fetch using the capital
+                handleSearchLocation(capital);
+            } else {
+                // If no capital found for the saved state, just set the input box value
+                // The user can manually trigger a search if needed.
+                setSearchLocationInput(savedState);
+                setWeatherSearchTerm(""); // Clear the weather search term if no capital found
+            }
+
+            // Find a district that belongs to the saved state and set it
+            const districtForState = rainfallDataTyped.find(item => item["State Name"] === savedState);
+            if (districtForState) {
+                setSelectedDistrict(districtForState["Dist Name"]);
+            } else if (districts.length > 0) {
+                 // Fallback to the first district if no district found for the state
+                 setSelectedDistrict(districts[0]);
+            }
+
+            // Set the default year for rainfall data
+            setSelectedYear("2024");
+        } else {
+             // If no saved state, set default district and year for rainfall data
+             if (districts.length > 0) {
+                 setSelectedDistrict(districts[0]);
+             }
+             setSelectedYear("2024");
+        }
+
+        setInitialLoadStateHandled(true); // Mark initial load as handled
+    }, [initialLoadStateHandled, stateCapitals, handleSearchLocation, rainfallDataTyped, districts]); // Added dependencies
 
     // Fetch weather data using the openmeteo library when coordinates change
     useEffect(() => {
@@ -324,7 +407,22 @@ const Weather = () => {
         };
 
         fetchWeatherData();
-    }, [coordinates]); // Fetch weather data whenever coordinates change
+    }, [coordinates, handleSearchLocation]); // Fetch weather data whenever coordinates change
+
+    // Effect to update weather search term based on selected district/year
+    useEffect(() => {
+        if (filteredRainfallData) {
+            const stateName = filteredRainfallData["State Name"];
+            const capital = stateCapitals[stateName];
+            if (capital && capital !== weatherSearchTerm) { // Only update if capital found and it's different from current search term
+                setSearchLocationInput(capital); // Update input box
+                setWeatherSearchTerm(capital); // Update actual search term
+                // Do NOT call handleSearchLocation here directly to avoid loop
+            }
+        }
+    }, [selectedDistrict, selectedYear, filteredRainfallData, stateCapitals, weatherSearchTerm]); // Dependencies
+
+
 
     // --- JSX ---
     return (
@@ -345,11 +443,11 @@ const Weather = () => {
                             <Input
                                 placeholder="Enter location (e.g., Chennai)"
                                 className="w-64"
-                                value={locationInput}
-                                onChange={(e) => setLocationInput(e.target.value)}
-                                onKeyDown={(e) => e.key === 'Enter' && handleSearchLocation()} // Optional: allow search on Enter
+                                value={searchLocationInput} // Use searchLocationInput
+                                onChange={(e) => setSearchLocationInput(e.target.value)} // Update searchLocationInput
+                                onKeyDown={(e) => e.key === 'Enter' && handleSearchLocation(searchLocationInput)} // Use searchLocationInput for manual search
                             />
-                            <Button onClick={handleSearchLocation} disabled={loadingWeather || !locationInput}>Search</Button>
+                            <Button onClick={() => handleSearchLocation(searchLocationInput)} disabled={loadingWeather || !searchLocationInput}>Search</Button>
                         </div>
                     </div>
 
