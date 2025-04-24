@@ -193,6 +193,7 @@ class IrrigationSimulator {
         // this.renderer.outputEncoding = THREE.sRGBEncoding; // Deprecated
         this.renderer.outputColorSpace = THREE.SRGBColorSpace; // Use new property
         mountElement.appendChild(this.renderer.domElement); // Append to mount point
+        this.renderer.setClearColor(Colors.SKY, 1); // Explicitly set clear color AFTER appending
 
         // Controls
         this.controls = new OrbitControls(this.camera, this.renderer.domElement) as OrbitControlsType;
@@ -224,13 +225,20 @@ class IrrigationSimulator {
         this.scene.add(this.hemisphereLight);
 
         // --- Create Scene Elements ---
+        console.log("Creating scene elements...");
         // this._createSkybox(); // Method removed or empty
         this._createField();
+        console.log("Field created.");
         this._createCentralPole();
+        console.log("Central pole created.");
         this._createRobot();
+        console.log("Robot created.");
         this._createPivotArm();
+        console.log("Pivot arm created.");
         this._createObstacles();
+        console.log("Obstacles created.");
         this._createPathVisualization();
+        console.log("Path visualization created.");
 
         // --- Optional GUI ---
         this._setupGUI();
@@ -242,6 +250,7 @@ class IrrigationSimulator {
         this.updateArmPositionOrientationLength();
 
         // Start Animation Loop
+        console.log("Starting animation loop.");
         this._animate();
     }
 
@@ -1151,6 +1160,7 @@ class IrrigationSimulator {
 const IrrigationSimulatorComponent: React.FC = () => {
     const mountRef = useRef<HTMLDivElement>(null);
     const simulatorRef = useRef<IrrigationSimulator | null>(null);
+    const videoRef = useRef<HTMLVideoElement>(null); // Ref for the video element
 
     useEffect(() => {
         // Prevent StrictMode double-invocation issues
@@ -1188,8 +1198,30 @@ const IrrigationSimulatorComponent: React.FC = () => {
         };
     }, []); // Empty dependency array ensures this runs only once on mount and cleanup on unmount
 
-    // Style the mount point to be visible and take up space
-    return <div ref={mountRef} style={{ width: '100%', height: '100vh', display: 'block', position: 'relative' }} />;
+    // Effect to set video playback rate
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.playbackRate = 0.75; // Set playback speed to 75%
+        }
+    }, []); // Run once on mount
+
+    // Style the mount point and add the video below
+    return (
+        <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+            <div ref={mountRef} style={{ flexGrow: 1, width: '100%', display: 'block', position: 'relative' }} />
+            <div style={{ padding: '10px', backgroundColor: '#f0f0f0', textAlign: 'center' }}>
+                <h4>Training Video: Perimeter Following</h4>
+                <video
+                    ref={videoRef} // Assign the ref
+                    src="/training_perimeter_following_interactive.mp4"
+                    controls
+                    // playbackRate prop removed
+                    style={{ maxWidth: '80%', maxHeight: '300px', marginTop: '10px' }}
+                    aria-label="Training video showing perimeter following"
+                />
+            </div>
+        </div>
+    );
 };
 
 export default IrrigationSimulatorComponent;
