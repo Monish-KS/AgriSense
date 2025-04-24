@@ -2,15 +2,15 @@
 import { Link } from "react-router-dom";
 import { 
   Home, 
-  Map, 
-  Droplets, 
-  Sun, 
-  Sprout, 
-  Store, 
+  Droplets,
+  Sun,
+  Sprout,
+  Store,
   Settings,
   FileBarChart,
   CloudSun
 } from "lucide-react";
+import { CircleUser } from "lucide-react";
 
 import { AgriSenseLogo } from "@/components/agrisense-logo";
 import {
@@ -44,14 +44,6 @@ export function AppSidebar() {
                   <Link to="/dashboard" className="flex gap-2">
                     <Home />
                     <span>Overview</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <Link to="/maps" className="flex gap-2">
-                    <Map />
-                    <span>Maps</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -98,7 +90,7 @@ export function AppSidebar() {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-        
+
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -108,6 +100,14 @@ export function AppSidebar() {
                   <Link to="/settings" className="flex gap-2">
                     <Settings />
                     <span>Settings</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/profile" className="flex gap-2">
+                    <CircleUser />
+                    <span>Profile</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
