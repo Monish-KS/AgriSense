@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import type { FillLayerSpecification, ErrorEvent } from 'maplibre-gl'; // Import FillLayerSpecification and ErrorEvent
-import MapGL, { Source, Layer, Popup, MapLayerMouseEvent } from 'react-map-gl';
+import MapGL, { Source, Layer, Popup, MapLayerMouseEvent } from 'react-map-gl/maplibre';
 import type { Feature, GeoJSON as GeoJSONType } from 'geojson';
 
 // Make sure maplibre-gl CSS is imported IF you aren't using mapbox-gl css.

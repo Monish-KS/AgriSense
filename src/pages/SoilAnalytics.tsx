@@ -5,13 +5,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Upload, FileBarChart, CloudRain, MoveVertical } from "lucide-react";
 import fertilizerData from "@/data/fertilizer_predictions.json"; // Import fertilizer data
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { FertilizerPredictionTable } from "@/components/FertilizerPredictionTable";
 import { InferenceSession, Tensor } from "onnxruntime-web";
 import { SoilMap } from "@/components/SoilMap"; // Import the SoilMap component
@@ -32,21 +25,7 @@ interface FertilizerPrediction {
 export default function SoilAnalytics() {
   const [activeTab, setActiveTab] = useState("overview");
   const [onnxPrediction, setOnnxPrediction] = useState<string | null>(null);
-  const [selectedState, setSelectedState] = useState<string | null>(null);
-  const [micronutrientData, setMicronutrientData] = useState<any[]>([]);
-  const [filteredMicronutrientData, setFilteredMicronutrientData] = useState<any[]>([]);
 
-  const indianStates = [
-    "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
-    "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka",
-    "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya",
-    "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim",
-    "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand",
-    "West Bengal", "Andaman and Nicobar Islands", "Chandigarh",
-    "Dadra and Nagar Haveli and Daman and Diu", "Lakshadweep", "Delhi",
-    "Puducherry"
-  ];
- 
   // State for ONNX model inputs
   const [temperature, setTemperature] = useState(25);
   const [humidity, setHumidity] = useState(60);
@@ -116,97 +95,6 @@ export default function SoilAnalytics() {
     }
   }, [activeTab]);
 
-  useEffect(() => {
-    const fetchMicronutrientData = async () => {
-      try {
-        console.log("Fetching micronutrient data...");
-        const response = await fetch('/csv/micronutients.csv');
-        const text = await response.text();
-        console.log("CSV raw text (first 500 chars):", text.substring(0, 500) + "..."); // Log first 500 chars
-        const lines = text.split('\n').filter(line => line.trim() !== '' && !line.startsWith('#')); // Split and remove empty lines and comments
-        console.log("CSV lines (excluding comments/empty):", lines);
-
-        if (lines.length < 1) {
-          console.error("CSV does not contain any data lines.");
-          setMicronutrientData([]);
-          return;
-        }
-
-        // The first line after filtering is the header
-        const rawHeaders = lines[0].split(',');
-        console.log("Raw headers:", rawHeaders);
-        const headers = rawHeaders.map(header => header.replace(/['"\ufeff]/g, '').trim());
-        console.log("Parsed and cleaned headers:", headers);
-
-        // Data starts from the second line
-        // Process only the first 33 data lines (corresponding to lines 2-34 in the original CSV)
-        const dataLines = lines.slice(1, 35);
-
-        const data = dataLines.map(line => {
-          const values = line.split(',');
-          console.log("Processing line:", line);
-          console.log("Split values:", values);
-          console.log("Values length:", values.length, "Headers length:", headers.length);
-
-          let row: any = {};
-          // Ensure the number of values matches the number of headers
-          if (values.length === headers.length) {
-            headers.forEach((header, index) => {
-              const cleanedHeader = header.replace(/['"\ufeff]/g, '').trim();
-              const cleanedValue = values[index].replace(/['"\ufeff]/g, '').trim();
-              row[cleanedHeader] = cleanedValue; // Clean and assign value to header
-              console.log(`Mapping header "${cleanedHeader}" to value "${cleanedValue}"`);
-            });
-          } else {
-            console.warn(`Skipping line due to mismatch in column count: ${line}`);
-            // Optionally, handle lines with incorrect column counts, e.g., skip them
-            return null; // Return null for invalid rows
-          }
-          console.log("Parsed row object:", row);
-          return row;
-        }).filter(row => row !== null); // Filter out null values (invalid rows)
-
-        console.log("Micronutrient data fetched and parsed:", data);
-        setMicronutrientData(data);
-      } catch (error) {
-        console.error("Error fetching micronutrient data:", error);
-      }
-    };
-
-    fetchMicronutrientData();
-  }, []); // Empty dependency array means this runs once on mount
-
-  useEffect(() => {
-    console.log("Selected state changed:", selectedState);
-    console.log("Micronutrient data available:", micronutrientData.length > 0);
-    if (selectedState && micronutrientData.length > 0) {
-      const filteredData = micronutrientData.filter(
-        (item) => {
-          const itemState = item["State"]?.trim().toLowerCase();
-          const selected = selectedState.trim().toLowerCase();
-          if (itemState === undefined) {
-            console.log("Item with undefined state:", item);
-          }
-          console.log(`Comparing item state "${itemState}" with selected state "${selected}"`);
-          return itemState === selected;
-        }
-      );
-      console.log("Filtered micronutrient data:", filteredData);
-      setFilteredMicronutrientData(filteredData);
-    } else {
-      console.log("No state selected or micronutrient data not loaded.");
-      setFilteredMicronutrientData([]);
-    }
-  }, [selectedState, micronutrientData]);
-
-const nutrientCategories = [
-    { name: "Nitrogen", keys: ["Nitrogen - High", "Nitrogen - Medium", "Nitrogen - Low"] },
-    { name: "Phosphorous", keys: ["Phosphorous - High", "Phosphorous - Medium", "Phosphorous - Low"] },
-    { name: "Potassium", keys: ["Potassium - High", "Potassium - Medium", "Potassium - Low"] },
-    { name: "Organic Carbon (OC)", keys: ["OC - High", "OC - Medium", "OC - Low"] },
-    { name: "Electrical Conductivity (EC)", keys: ["EC - Saline", "EC - Non Saline"] },
-    { name: "pH", keys: ["pH - Acidic", "pH - Neutral", "pH - Alkaline"] },
-  ];
 
   return (
     <Layout>
@@ -219,18 +107,10 @@ const nutrientCategories = [
             </p>
           </div>
           <div className="mt-4 flex flex-col sm:flex-row gap-2 md:mt-0">
-            <Select onValueChange={setSelectedState}>
-              <SelectTrigger className="w-[180px]">
-                <SelectValue placeholder="Select State" />
-              </SelectTrigger>
-              <SelectContent>
-                {indianStates.map((state) => (
-                  <SelectItem key={state} value={state}>
-                    {state}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+            <Button variant="outline">
+              <Upload className="mr-2 h-4 w-4" />
+              Import Data
+            </Button>
           </div>
         </div>
 
@@ -358,52 +238,107 @@ const nutrientCategories = [
           
           {/* Nutrients Tab */}
           <TabsContent value="nutrients" className="space-y-4">
-            <Select onValueChange={setSelectedState} value={selectedState || ""}>
-              <SelectTrigger className="w-[180px]">
-                <SelectValue placeholder="Select State" />
-              </SelectTrigger>
-              <SelectContent>
-                {indianStates.map((state) => (
-                  <SelectItem key={state} value={state}>
-                    {state}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-            <DashboardCard
-              title="Micronutrients"
-              description="Trace elements essential for plant growth"
-            >
-              <div className="space-y-4">
-                {filteredMicronutrientData.length > 0 ? (
-                  filteredMicronutrientData.map((data, index) => (
-                    <div key={index} className="space-y-6">
-                      {nutrientCategories.map((category) => (
-                        <div key={category.name} className="space-y-2">
-                          <h4 className="text-md font-semibold">{category.name}</h4>
-                          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            {category.keys.map((key) => {
-                              const value = data[key];
-                              if (value !== undefined) {
-                                return (
-                                  <div key={key} className="flex flex-col items-center p-3 bg-muted/20 rounded-md">
-                                    <span className="text-sm font-medium text-center">{key.replace(`${category.name} - `, '')}</span>
-                                    <div className="text-lg font-bold mt-1">{value}</div>
-                                  </div>
-                                );
-                              }
-                              return null;
-                            })}
-                          </div>
-                        </div>
-                      ))}
+            <div className="grid gap-4 md:grid-cols-2">
+              <DashboardCard
+                title="Macronutrients"
+                description="Primary and secondary nutrients"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium">Nitrogen (N)</span>
+                    <div className="text-right">
+                      <div className="text-sm font-medium">120 ppm</div>
+                      <div className="text-xs text-agrisense-success">Adequate</div>
                     </div>
-                  ))
-                ) : (
-                  <p className="text-muted-foreground">Select a state to view micronutrient data.</p>
-                )}
-              </div>
-            </DashboardCard>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium">Phosphorus (P)</span>
+                    <div className="text-right">
+                      <div className="text-sm font-medium">45 ppm</div>
+                      <div className="text-xs text-yellow-500">Slightly Low</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium">Potassium (K)</span>
+                    <div className="text-right">
+                      <div className="text-sm font-medium">210 ppm</div>
+                      <div className="text-xs text-agrisense-success">High</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium">Calcium (Ca)</span>
+                    <div className="text-right">
+                      <div className="text-sm font-medium">1500 ppm</div>
+                      <div className="text-xs text-agrisense-success">Adequate</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium">Magnesium (Mg)</span>
+                    <div className="text-right">
+                      <div className="text-sm font-medium">180 ppm</div>
+                      <div className="text-xs text-agrisense-success">Adequate</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium">Sulfur (S)</span>
+                    <div className="text-right">
+                      <div className="text-sm font-medium">15 ppm</div>
+                      <div className="text-xs text-red-500">Low</div>
+                    </div>
+                  </div>
+                </div>
+              </DashboardCard>
+              
+              <DashboardCard
+                title="Micronutrients"
+                description="Trace elements essential for plant growth"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium">Iron (Fe)</span>
+                    <div className="text-right">
+                      <div className="text-sm font-medium">4.5 ppm</div>
+                      <div className="text-xs text-agrisense-success">Adequate</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium">Manganese (Mn)</span>
+                    <div className="text-right">
+                      <div className="text-sm font-medium">2.0 ppm</div>
+                      <div className="text-xs text-yellow-500">Slightly Low</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium">Zinc (Zn)</span>
+                    <div className="text-right">
+                      <div className="text-sm font-medium">0.8 ppm</div>
+                      <div className="text-xs text-red-500">Low</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium">Copper (Cu)</span>
+                    <div className="text-right">
+                      <div className="text-sm font-medium">0.3 ppm</div>
+                      <div className="text-xs text-agrisense-success">Adequate</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium">Boron (B)</span>
+                    <div className="text-right">
+                      <div className="text-sm font-medium">0.5 ppm</div>
+                      <div className="text-xs text-agrisense-success">Adequate</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium">Molybdenum (Mo)</span>
+                    <div className="text-right">
+                      <div className="text-sm font-medium">0.05 ppm</div>
+                      <div className="text-xs text-agrisense-success">Adequate</div>
+                    </div>
+                  </div>
+                </div>
+              </DashboardCard>
+            </div>
           </TabsContent>
           
           {/* Recommendations Tab */}
@@ -422,7 +357,7 @@ const nutrientCategories = [
                     <p className="text-muted-foreground">No fertilizer prediction data available.</p>
                   )}
                 </div>
- 
+
                 {/* ONNX Prediction Input and Output */}
                 <div className="bg-green-50 p-4 rounded-md space-y-4">
                   <h3 className="font-medium text-green-600">Fertilizer Prediction (using ONNX model)</h3>
