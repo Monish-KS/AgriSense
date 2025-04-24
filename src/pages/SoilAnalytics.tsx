@@ -36,6 +36,7 @@ export default function SoilAnalytics() {
   const [micronutrientData, setMicronutrientData] = useState<any[]>([]);
   const [filteredMicronutrientData, setFilteredMicronutrientData] = useState<any[]>([]);
 
+
   const indianStates = [
     "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
     "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka",
@@ -117,8 +118,9 @@ export default function SoilAnalytics() {
   }, [activeTab]);
 
   useEffect(() => {
-    const fetchMicronutrientData = async () => {
+    const fetchData = async () => {
       try {
+        // Fetch micronutrient data
         console.log("Fetching micronutrient data...");
         const response = await fetch('/data/micronutrients.csv');
         const text = await response.text();
@@ -168,13 +170,23 @@ export default function SoilAnalytics() {
 
         console.log("Micronutrient data fetched and parsed:", data);
         setMicronutrientData(data);
+
+        // Set initial selected state from local storage
+        const savedState = localStorage.getItem('selectedSoilAnalyticsState');
+        if (savedState) {
+          setSelectedState(savedState);
+          console.log("Initial state set from local storage:", savedState);
+        } else {
+          console.log("No state found in local storage, user needs to select.");
+        }
+
       } catch (error) {
-        console.error("Error fetching micronutrient data:", error);
+        console.error("Error fetching data:", error);
       }
     };
 
-    fetchMicronutrientData();
-  }, []); // Empty dependency array means this runs once on mount
+    fetchData();
+  }, []); // Dependency array is empty as we only read from local storage on mount
 
   useEffect(() => {
     console.log("Selected state changed:", selectedState);
@@ -219,7 +231,12 @@ const nutrientCategories = [
             </p>
           </div>
           <div className="mt-4 flex flex-col sm:flex-row gap-2 md:mt-0">
-            <Select onValueChange={setSelectedState}>
+            <Select onValueChange={(value) => {
+                setSelectedState(value);
+                localStorage.setItem('selectedSoilAnalyticsState', value); // Save state to local storage
+              }}
+              value={selectedState || ""} // Control the component with state
+            >
               <SelectTrigger className="w-[180px]">
                 <SelectValue placeholder="Select State" />
               </SelectTrigger>
@@ -358,7 +375,12 @@ const nutrientCategories = [
           
           {/* Nutrients Tab */}
           <TabsContent value="nutrients" className="space-y-4">
-            <Select onValueChange={setSelectedState} value={selectedState || ""}>
+            <Select onValueChange={(value) => {
+                setSelectedState(value);
+                localStorage.setItem('selectedSoilAnalyticsState', value); // Save state to local storage
+              }}
+              value={selectedState || ""} // Control the component with state
+            >
               <SelectTrigger className="w-[180px]">
                 <SelectValue placeholder="Select State" />
               </SelectTrigger>

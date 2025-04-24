@@ -3,6 +3,13 @@ import { DashboardCard, StatsCard } from "@/components/dashboard/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Droplets, FileBarChart, Sun, Sprout, Store } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 // import CropProductionMap from "@/components/CropProductionMap"; // Removed static import
 import { Separator } from "@/components/ui/separator";
 import cropProductionData from "../data/crop_production_data.json";
@@ -46,6 +53,18 @@ interface Chemical {
 export default function Dashboard() {
   const [productionData, setProductionData] = useState<CropProduction[]>([]);
   const [damageData, setDamageData] = useState<CropDamage[]>([]);
+  const [selectedState, setSelectedState] = useState<string | null>(null);
+
+  const indianStates = [
+    "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
+    "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka",
+    "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya",
+    "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim",
+    "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand",
+    "West Bengal", "Andaman and Nicobar Islands", "Chandigarh",
+    "Dadra and Nagar Haveli and Daman and Diu", "Lakshadweep", "Delhi",
+    "Puducherry"
+  ];
 
   useEffect(() => {
     // Validate and set production data
@@ -87,6 +106,17 @@ export default function Dashboard() {
     }
 
   }, []);
+
+  useEffect(() => {
+   // Set initial selected state from local storage
+   const savedState = localStorage.getItem('selectedSoilAnalyticsState');
+   if (savedState) {
+     setSelectedState(savedState);
+     console.log("Initial state set from local storage:", savedState);
+   } else {
+     console.log("No state found in local storage, user needs to select.");
+   }
+ }, []); // Dependency array is empty as we only read from local storage on mount
 
   // Basic data for now, can be expanded
   const totalProduction = productionData.reduce((sum:number, crop:CropProduction) => sum + crop.Production, 0);
@@ -136,7 +166,23 @@ export default function Dashboard() {
             </p>
           </div>
           <div className="mt-4 flex flex-col sm:flex-row gap-2 md:mt-0">
-            <Button variant="outline">Import Data</Button>
+            <Select onValueChange={(value) => {
+                setSelectedState(value);
+                localStorage.setItem('selectedSoilAnalyticsState', value); // Save state to local storage
+              }}
+              value={selectedState || ""} // Control the component with state
+            >
+              <SelectTrigger className="w-[180px]">
+                <SelectValue placeholder="Select State" />
+              </SelectTrigger>
+              <SelectContent>
+                {indianStates.map((state) => (
+                  <SelectItem key={state} value={state}>
+                    {state}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
         </div>
 

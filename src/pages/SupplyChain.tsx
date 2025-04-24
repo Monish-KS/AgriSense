@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Layout } from "@/components/layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -11,6 +12,13 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import dealersData from "../data/dealers_data.json";
 import chemicalsData from "../data/chemicals_data.json";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
@@ -57,9 +65,55 @@ function shuffleArray<T>(array: T[]): T[] {
 }
 
 export default function SupplyChain() {
-  // Shuffle the dealersData before slicing
-  const shuffledDealersData = shuffleArray([...dealersData as Dealer[]]);
-  const limitedDealersData = shuffledDealersData.slice(0, 5);
+  const [selectedState, setSelectedState] = useState<string | null>(null);
+  const [filteredDealersData, setFilteredDealersData] = useState<Dealer[]>([]);
+
+  const indianStates = [
+    "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
+    "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka",
+    "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya",
+    "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim",
+    "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand",
+    "West Bengal", "Andaman and Nicobar Islands", "Chandigarh",
+    "Dadra and Nagar Haveli and Daman and Diu", "Lakshadweep", "Delhi",
+    "Puducherry"
+  ];
+
+  useEffect(() => {
+    // Set initial selected state from local storage
+    const savedState = localStorage.getItem('selectedSoilAnalyticsState');
+    if (savedState) {
+      setSelectedState(savedState);
+      console.log("Initial state set from local storage:", savedState);
+    } else {
+      console.log("No state found in local storage, user needs to select.");
+    }
+  }, []); // Dependency array is empty as we only read from local storage on mount
+
+  useEffect(() => {
+    console.log("Selected state changed:", selectedState);
+    console.log("Dealers data available:", dealersData.length > 0);
+    if (selectedState && dealersData.length > 0) {
+      const filteredData = (dealersData as Dealer[]).filter(
+        (item) => {
+          const itemState = item["State"]?.trim().toLowerCase();
+          const selected = selectedState.trim().toLowerCase();
+          if (itemState === undefined) {
+            console.log("Item with undefined state:", item);
+          }
+          console.log(`Comparing item state "${itemState}" with selected state "${selected}"`);
+          return itemState === selected;
+        }
+      );
+      console.log("Filtered dealers data:", filteredData);
+      setFilteredDealersData(filteredData);
+    } else {
+      console.log("No state selected or dealers data not loaded.");
+      setFilteredDealersData([]);
+    }
+  }, [selectedState, dealersData]);
+
+
   const limitedChemicalsData = (chemicalsData as Chemical[]).slice(0, 5);
 
   const chemicalChartData = limitedChemicalsData.map(item => ({
@@ -147,31 +201,54 @@ export default function SupplyChain() {
             <TabsContent value="suppliers">
               <Card>
                 <CardHeader>
-                  <CardTitle>Fertilizer Dealers by District (up to 2013-14)</CardTitle>
+                  <CardTitle>Fertilizer Dealers in {selectedState || "Selected State"}</CardTitle>
                 </CardHeader>
                 <CardContent className="p-0">
-                  <Table>
-                    <TableHeader>
-                      <TableRow>
-                        <TableHead className="w-[80px]">Sl No</TableHead>
-                        <TableHead>State</TableHead>
-                        <TableHead>District</TableHead>
-                        <TableHead className="text-right">Wholesalers</TableHead>
-                        <TableHead className="text-right">Retailers</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {limitedDealersData.map((dealer: Dealer, index) => (
-                        <TableRow key={index}>
-                          <TableCell className="font-medium">{index + 1}</TableCell>
-                          <TableCell>{dealer["State"]}</TableCell>
-                          <TableCell>{dealer["District"]}</TableCell>
-                          <TableCell className="text-right">{dealer["No of Wholesalers"]}</TableCell>
-                          <TableCell className="text-right">{dealer["No of Retailers"]}</TableCell>
+                  <div className="flex justify-end p-4">
+                    <Select onValueChange={(value) => {
+                        setSelectedState(value);
+                        localStorage.setItem('selectedSoilAnalyticsState', value); // Save state to local storage
+                      }}
+                      value={selectedState || ""} // Control the component with state
+                    >
+                      <SelectTrigger className="w-[180px]">
+                        <SelectValue placeholder="Select State" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {indianStates.map((state) => (
+                          <SelectItem key={state} value={state}>
+                            {state}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  {filteredDealersData.length > 0 ? (
+                    <Table>
+                      <TableHeader>
+                        <TableRow>
+                          <TableHead className="w-[80px]">Sl No</TableHead>
+                          <TableHead>State</TableHead>
+                          <TableHead>District</TableHead>
+                          <TableHead className="text-right">Wholesalers</TableHead>
+                          <TableHead className="text-right">Retailers</TableHead>
                         </TableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
+                      </TableHeader>
+                      <TableBody>
+                        {filteredDealersData.map((dealer: Dealer, index) => (
+                          <TableRow key={index}>
+                            <TableCell className="font-medium">{index + 1}</TableCell>
+                            <TableCell>{dealer["State"]}</TableCell>
+                            <TableCell>{dealer["District"]}</TableCell>
+                            <TableCell className="text-right">{dealer["No of Wholesalers"]}</TableCell>
+                            <TableCell className="text-right">{dealer["No of Retailers"]}</TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  ) : (
+                    <p className="p-4 text-muted-foreground">Select a state to view fertilizer dealers.</p>
+                  )}
                 </CardContent>
               </Card>
             </TabsContent>
@@ -217,15 +294,15 @@ export default function SupplyChain() {
                     <p className="text-muted-foreground">Coordinate with nearby farmers to make bulk purchases of seeds and fertilizers, potentially saving 15-20% on costs.</p>
                   </div>
                 </div>
-                
+
                 <div className="flex gap-4 p-4 border rounded-lg bg-muted/30">
                   <Truck className="h-12 w-12 text-primary" />
                   <div>
                     <h3 className="text-lg font-medium">Shared Transportation</h3>
                     <p className="text-muted-foreground">Share transportation costs with other farmers in your area when bringing produce to the Rajkot APMC market.</p>
-                  </div>
+                    </div>
                 </div>
-                
+
                 <div className="flex gap-4 p-4 border rounded-lg bg-muted/30">
                   <Store className="h-12 w-12 text-primary" />
                   <div>
