@@ -20,8 +20,8 @@ const SplitScreen = () => {
         >
           <div className="space-y-6">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#8B4513]">Job Providers</h2>
-              <BriefcaseBusiness className="h-8 w-8 md:h-10 md:w-10 text-[#8B4513]" />
+              <h2 className="text-2xl md:text-3xl font-bold text-[#228B22]">Job Providers</h2> {/* Changed text color to green */}
+              <BriefcaseBusiness className="h-8 w-8 md:h-10 md:w-10 text-[#228B22]" /> {/* Changed icon color to green */}
             </div>
 
             <div className="space-y-4">
@@ -35,7 +35,7 @@ const SplitScreen = () => {
               </ul>
             </div>
 
-            <Button className="w-full bg-[#8B4513] hover:bg-[#CD853F] transition-colors text-white py-3 text-lg rounded-md"> {/* Added rounded-md */}
+            <Button className="w-full bg-[#228B22] hover:bg-[#32CD32] transition-colors text-white py-3 text-lg rounded-md"> {/* Changed button colors to green */}
               Enter as Provider
             </Button>
           </div>
