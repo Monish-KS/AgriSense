@@ -19,6 +19,10 @@ import SupplyChain from "./pages/SupplyChain";
 import Weather from "./pages/Weather";
 import LoginPage from "./pages/LoginPage"; // Import Login Page
 import SignUpPage from "./pages/SignUpPage"; // Import SignUp Page
+import SplitScreen from "./pages/mgnrega/SplitScreen"; // Import MGNREGA Split Screen
+import JobProviderSection from "./pages/mgnrega/JobProviderSection";
+import WorkerSection from "./pages/mgnrega/WorkerSection";
+import Profile from "./pages/Profile"; // Import Profile Page
 
 const queryClient = new QueryClient();
 
@@ -167,6 +171,25 @@ const App = () => (
               </>
             }
           />
+          <Route
+            path="/profile"
+            element={
+              <>
+                <SignedIn>
+                  <Profile />
+                </SignedIn>
+                <SignedOut>
+                  <RedirectToSignIn />
+                </SignedOut>
+              </>
+            }
+          />
+
+          {/* MGNREGA Routes */}
+          <Route path="/mgnrega" element={<SplitScreen />} />
+          <Route path="/provider" element={<JobProviderSection />} />
+          <Route path="/worker" element={<WorkerSection />} />
+
 
           {/* Catch-all Not Found route */}
           <Route path="*" element={<NotFound />} />

@@ -2,8 +2,10 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import { Button } from "@/components/ui/button";
-import { UserCircle } from "lucide-react";
+import { UserButton } from "@clerk/clerk-react";
 import { AgriSenseLogo } from "./agrisense-logo";
+import { HelpDialog } from "./HelpDialog"; // Import HelpDialog
+// Removed UserCircle import as it's replaced by UserButton
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -20,12 +22,9 @@ export function Layout({ children }: LayoutProps) {
               <SidebarTrigger />
               <AgriSenseLogo />
             </div>
-            <div className="flex w-full items-center justify-end gap-2">
-              <Button variant="ghost" size="icon">
-                <UserCircle className="h-5 w-5" />
-                <span className="sr-only">User</span>
-              </Button>
-              <Button variant="outline">Help</Button>
+            <div className="flex w-full items-center justify-end gap-4">
+              <HelpDialog /> {/* Use the HelpDialog component */}
+              <UserButton afterSignOutUrl="/" />
             </div>
           </header>
           <div className="flex-1 p-4 md:p-6">{children}</div>

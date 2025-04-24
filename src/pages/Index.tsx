@@ -1,5 +1,6 @@
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
+import { useAuth, SignedIn, SignedOut, SignInButton, SignUpButton } from "@clerk/clerk-react"; // Import Clerk components/hooks
 import { Button } from "@/components/ui/button";
 import { FeatureCard } from "@/components/dashboard/card";
 import { 
@@ -13,13 +14,38 @@ import {
 import { AgriSenseLogo } from "@/components/agrisense-logo";
 
 const Index = () => {
+  const { isSignedIn } = useAuth(); // Get authentication status
+  const navigate = useNavigate(); // Get navigation function
+
+  const handleGetStartedClick = () => {
+    if (isSignedIn) {
+      navigate("/dashboard");
+    } else {
+      navigate("/sign-in"); // Redirect to sign-in page
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-agrisense-light">
-      {/* Hero Section */}
+      {/* Header */}
       <header className="bg-agrisense-primary py-4 px-6 flex justify-between items-center">
         <AgriSenseLogo />
-        <div className="flex gap-4">
+        <div className="flex gap-2 items-center"> {/* Adjusted gap */}
           <Button variant="ghost" className="text-white hover:text-white/90 hover:bg-agrisense-dark">Help</Button>
+          <SignedOut>
+            <SignInButton mode="modal">
+              <Button variant="outline" className="text-white border-white hover:bg-white hover:text-agrisense-primary">Sign In</Button>
+            </SignInButton>
+            <SignUpButton mode="modal">
+               <Button className="bg-white text-agrisense-primary hover:bg-white/90">Sign Up</Button>
+            </SignUpButton>
+          </SignedOut>
+          <SignedIn>
+             <Button asChild variant="outline" className="text-white border-white hover:bg-white hover:text-agrisense-primary">
+               <Link to="/dashboard">Dashboard</Link>
+             </Button>
+             {/* You might want a UserButton here too, but the main layout handles it */}
+          </SignedIn>
         </div>
       </header>
 
@@ -36,14 +62,14 @@ const Index = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">AgriSense</h1>
             <p className="text-xl mb-8">AI-Powered Agricultural Decision Support System for Indian Farmers</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button 
-                asChild
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-white text-agrisense-primary hover:bg-white/90"
+                onClick={handleGetStartedClick} // Use onClick handler
               >
-                <Link to="/dashboard">Get Started</Link>
+                Get Started
               </Button>
-              <Button size="lg">
+              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-agrisense-primary"> {/* Styled Learn More */}
                 Learn More
               </Button>
             </div>
@@ -96,12 +122,12 @@ const Index = () => {
             <p className="text-xl mb-8">
               Join thousands of farmers who are already using AgriSense to increase productivity and optimize resources.
             </p>
-            <Button 
-              asChild
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-white text-agrisense-primary hover:bg-white/90"
+              onClick={handleGetStartedClick} // Use onClick handler
             >
-              <Link to="/dashboard">Start Now</Link>
+              Start Now
             </Button>
           </div>
         </section>

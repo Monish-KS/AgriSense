@@ -9,7 +9,9 @@ import {
   Store, 
   Settings,
   FileBarChart,
-  CloudSun
+  CloudSun,
+  ClipboardList, // Added for MGNREGA
+  User // Added for Profile
 } from "lucide-react";
 
 import { AgriSenseLogo } from "@/components/agrisense-logo";
@@ -87,6 +89,14 @@ export function AppSidebar() {
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/mgnrega" className="flex gap-2">
+                    <ClipboardList />
+                    <span>MGNREGA Portal</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
@@ -100,6 +110,14 @@ export function AppSidebar() {
                   <Link to="/settings" className="flex gap-2">
                     <Settings />
                     <span>Settings</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/profile" className="flex gap-2">
+                    <User />
+                    <span>Profile</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
