@@ -13,7 +13,7 @@ export function AgriSenseLogo({ showText = true, className, ...props }: LogoProp
         <LeafIcon className="h-5 w-5" />
       </div>
       {showText && (
-        <span className="font-semibold text-xl text-agrisense-primary">
+        <span className="font-semibold text-xl text-white-100">
           AgriSense
         </span>
       )}
