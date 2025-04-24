@@ -1,0 +1,23 @@
+{
+  "welcome": "Welcome to React and react-i18next",
+  "rice": "Rice",
+  "maize": "Maize",
+  "chickpea": "Chickpea",
+  "kidneybeans": "Kidney Beans",
+  "pigeonpeas": "Pigeon Peas",
+  "mothbeans": "Moth Beans",
+  "mungbean": "Mung Bean",
+  "blackgram": "Black Gram",
+  "lentil": "Lentil",
+  "pomegranate": "Pomegranate",
+  "banana": "Banana",
+  "mango": "Mango",
+  "watermelon": "Watermelon",
+  "muskmelon": "Muskmelon",
+  "apple": "Apple",
+  "orange": "Orange",
+  "coconut": "Coconut",
+  "cotton": "Cotton",
+  "jute": "Jute",
+  "coffee": "Coffee"
+}

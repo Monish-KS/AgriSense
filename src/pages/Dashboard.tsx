@@ -17,7 +17,8 @@ import cropDamageData from "../data/crop_damage_data.json";
 import chemicalsData from "../data/chemicals_data.json"; // Import chemicalsData
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { useEffect, useState, lazy, Suspense } from "react"; // Added lazy and Suspense
-import SensorData from "@/components/SensorData"; // Import the new component
+import { getFirestore, collection, query, orderBy, limit, onSnapshot, Timestamp } from 'firebase/firestore'; // Import Firestore functions
+import { db } from '../firebase'; // Import db from firebase.ts
 
 
 const CropProductionMap = lazy(() => import("@/components/CropProductionMap")); // Dynamic import
@@ -54,6 +55,14 @@ export default function Dashboard() {
   const [productionData, setProductionData] = useState<CropProduction[]>([]);
   const [damageData, setDamageData] = useState<CropDamage[]>([]);
   const [selectedState, setSelectedState] = useState<string | null>(null);
+
+  interface SensorLog {
+    humidity: number;
+    temperature: number;
+    moisture: number;
+    last_updated: Timestamp;
+  }
+  const [sensorData, setSensorData] = useState<SensorLog | null>(null); // State for sensor data with defined interface
 
   const indianStates = [
     "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
@@ -106,6 +115,25 @@ export default function Dashboard() {
     }
 
   }, []);
+
+  useEffect(() => {
+    const logsRef = collection(db, 'farms', 'farm001', 'logs');
+    const q = query(logsRef, orderBy('last_updated', 'desc'), limit(1)); // Get the latest log
+
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      if (!snapshot.empty) {
+        const latestLog = snapshot.docs[0].data() as SensorLog;
+        setSensorData(latestLog);
+      } else {
+        setSensorData(null); // No logs found
+      }
+    }, (error) => {
+      console.error("Error fetching sensor data:", error);
+      setSensorData(null);
+    });
+
+    return () => unsubscribe(); // Clean up listener on unmount
+  }, []); // Empty dependency array to run only once on mount
 
   useEffect(() => {
    // Set initial selected state from local storage
@@ -186,6 +214,7 @@ export default function Dashboard() {
           </div>
         </div>
 
+        {/* First row of cards (4 cards) */}
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           <StatsCard
             title="Weather Summary"
@@ -217,9 +246,56 @@ export default function Dashboard() {
           />
         </div>
 
+        {/* Second row of cards (live sensor data) */}
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <StatsCard
+            title="Live Temperature"
+            value={sensorData ? `${sensorData.temperature}°C` : 'N/A'}
+            icon={<Sun className="h-4 w-4" />}
+            trend="neutral"
+            trendValue={sensorData ? `Updated: ${sensorData.last_updated?.toDate().toLocaleString()}` : 'No data'}
+          />
+          <StatsCard
+            title="Live Humidity"
+            value={sensorData ? `${sensorData.humidity}%` : 'N/A'}
+            icon={<Droplets className="h-4 w-4" />}
+            trend="neutral"
+            trendValue={sensorData ? `Updated: ${sensorData.last_updated?.toDate().toLocaleString()}` : 'No data'}
+          />
+          <StatsCard
+            title="Live Soil Moisture"
+            value={sensorData ? `${sensorData.moisture}%` : 'N/A'}
+            icon={<FileBarChart className="h-4 w-4" />}
+            trend="neutral"
+            trendValue={sensorData ? `Updated: ${sensorData.last_updated?.toDate().toLocaleString()}` : 'No data'}
+          />
+        </div>
 
-        {/* Sensor Data Cards */}
-        <SensorData />
+        {/* Third row of cards (NPK placeholders) */}
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <StatsCard
+            title="Nitrogen (N)"
+            value="70%"
+            icon={<Sprout className="h-4 w-4" />} // Using Sprout icon for NPK
+            trend="neutral"
+            trendValue="Good"
+          />
+          <StatsCard
+            title="Phosphorus (P)"
+            value="55%"
+            icon={<Sprout className="h-4 w-4" />} // Using Sprout icon for NPK
+            trend="neutral"
+            trendValue="Adequate"
+          />
+          <StatsCard
+            title="Potassium (K)"
+            value="60%"
+            icon={<Sprout className="h-4 w-4" />} // Using Sprout icon for NPK
+            trend="neutral"
+            trendValue="Excellent"
+          />
+        </div>
+
 
         <Tabs defaultValue="summary" className="mt-4">
           <TabsList>
