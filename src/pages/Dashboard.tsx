@@ -19,6 +19,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 import { useEffect, useState, lazy, Suspense } from "react"; // Added lazy and Suspense
 import { getFirestore, collection, query, orderBy, limit, onSnapshot, Timestamp } from 'firebase/firestore'; // Import Firestore functions
 import { db } from '../firebase'; // Import db from firebase.ts
+import { predictNpk } from '../lib/npkPredictor'; // Import predictNpk
 
 
 const CropProductionMap = lazy(() => import("@/components/CropProductionMap")); // Dynamic import
@@ -59,10 +60,11 @@ export default function Dashboard() {
   interface SensorLog {
     humidity: number;
     temperature: number;
-    moisture: number;
+    moisture: number; // Use moisture instead of ph
     last_updated: Timestamp;
   }
   const [sensorData, setSensorData] = useState<SensorLog | null>(null); // State for sensor data with defined interface
+  const [predictedNpk, setPredictedNpk] = useState<{ N: number | null, P: number | null, K: number | null }>({ N: null, P: null, K: null }); // State for predicted NPK
 
   const indianStates = [
     "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
@@ -123,9 +125,12 @@ export default function Dashboard() {
     const unsubscribe = onSnapshot(q, (snapshot) => {
       if (!snapshot.empty) {
         const latestLog = snapshot.docs[0].data() as SensorLog;
+        console.log("Fetched latest sensor log:", latestLog); // Added logging
         setSensorData(latestLog);
       } else {
+        console.log("No sensor logs found in Firebase."); // Added logging
         setSensorData(null); // No logs found
+        setPredictedNpk({ N: null, P: null, K: null }); // Clear NPK if no sensor data
       }
     }, (error) => {
       console.error("Error fetching sensor data:", error);
@@ -134,6 +139,29 @@ export default function Dashboard() {
 
     return () => unsubscribe(); // Clean up listener on unmount
   }, []); // Empty dependency array to run only once on mount
+
+  // Effect to run NPK prediction when sensor data changes
+  useEffect(() => {
+    if (sensorData && sensorData.temperature !== undefined && sensorData.humidity !== undefined && sensorData.moisture !== undefined) {
+      const runPrediction = async () => {
+        try {
+          const prediction = await predictNpk({
+            temperature: sensorData.temperature,
+            humidity: sensorData.humidity,
+            moisture: sensorData.moisture, // Pass moisture to predictNpk
+          });
+          setPredictedNpk(prediction);
+        } catch (error) {
+          console.error("Error during NPK prediction:", error);
+          setPredictedNpk({ N: null, P: null, K: null }); // Clear NPK on error
+        }
+      };
+      runPrediction();
+    } else {
+       console.log("Sensor data incomplete or null, cannot run NPK prediction:", sensorData); // Added logging
+       setPredictedNpk({ N: null, P: null, K: null }); // Clear NPK if sensor data is incomplete or null
+    }
+  }, [sensorData]); // Rerun when sensorData changes
 
   useEffect(() => {
    // Set initial selected state from local storage
@@ -268,24 +296,24 @@ export default function Dashboard() {
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           <StatsCard
             title="Nitrogen (N)"
-            value="70%"
+            value={predictedNpk.N !== null ? predictedNpk.N.toFixed(2) : 'N/A'}
             icon={<Sprout className="h-4 w-4" />} // Using Sprout icon for NPK
-            trend="neutral"
-            trendValue="Good"
+            trend="neutral" // You might want to add logic to determine trend based on predicted value
+            trendValue={predictedNpk.N !== null ? `${predictedNpk.N.toFixed(2)} ppm` : 'No data'} // Example trendValue
           />
           <StatsCard
             title="Phosphorus (P)"
-            value="55%"
+            value={predictedNpk.P !== null ? predictedNpk.P.toFixed(2) : 'N/A'}
             icon={<Sprout className="h-4 w-4" />} // Using Sprout icon for NPK
-            trend="neutral"
-            trendValue="Adequate"
+            trend="neutral" // You might want to add logic to determine trend based on predicted value
+            trendValue={predictedNpk.P !== null ? `${predictedNpk.P.toFixed(2)} ppm` : 'No data'} // Example trendValue
           />
           <StatsCard
             title="Potassium (K)"
-            value="60%"
+            value={predictedNpk.K !== null ? predictedNpk.K.toFixed(2) : 'N/A'}
             icon={<Sprout className="h-4 w-4" />} // Using Sprout icon for NPK
-            trend="neutral"
-            trendValue="Excellent"
+            trend="neutral" // You might want to add logic to determine trend based on predicted value
+            trendValue={predictedNpk.K !== null ? `${predictedNpk.K.toFixed(2)} ppm` : 'No data'} // Example trendValue
           />
         </div>
 
