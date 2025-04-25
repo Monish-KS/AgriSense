@@ -3451,43 +3451,9 @@ find-up@^5.0.0:
     locate-path "^6.0.0"
     path-exists "^4.0.0"
 
-firebase@*:
+firebase@*, firebase@^11.6.1:
   version "11.6.1"
   resolved "https://registry.npmjs.org/firebase/-/firebase-11.6.1.tgz"
-  integrity sha512-aF00ZR+ziiq5/vxamCKpY1I0LA/ungG2qrsQIDibT+xqdvz8MaMnN0aHU4LIxxTx+Dbga/KlUXeklidRJahgHg==
-  dependencies:
-    "@firebase/analytics" "0.10.12"
-    "@firebase/analytics-compat" "0.2.18"
-    "@firebase/app" "0.11.5"
-    "@firebase/app-check" "0.8.13"
-    "@firebase/app-check-compat" "0.3.20"
-    "@firebase/app-compat" "0.2.54"
-    "@firebase/app-types" "0.9.3"
-    "@firebase/auth" "1.10.1"
-    "@firebase/auth-compat" "0.5.21"
-    "@firebase/data-connect" "0.3.4"
-    "@firebase/database" "1.0.14"
-    "@firebase/database-compat" "2.0.5"
-    "@firebase/firestore" "4.7.11"
-    "@firebase/firestore-compat" "0.3.46"
-    "@firebase/functions" "0.12.3"
-    "@firebase/functions-compat" "0.3.20"
-    "@firebase/installations" "0.6.13"
-    "@firebase/installations-compat" "0.2.13"
-    "@firebase/messaging" "0.12.17"
-    "@firebase/messaging-compat" "0.2.17"
-    "@firebase/performance" "0.7.2"
-    "@firebase/performance-compat" "0.2.15"
-    "@firebase/remote-config" "0.6.0"
-    "@firebase/remote-config-compat" "0.2.13"
-    "@firebase/storage" "0.13.7"
-    "@firebase/storage-compat" "0.3.17"
-    "@firebase/util" "1.11.0"
-    "@firebase/vertexai" "1.2.1"
-
-firebase@^11.6.1:
-  version "11.6.1"
-  resolved "https://registry.yarnpkg.com/firebase/-/firebase-11.6.1.tgz#a2e1e8a39f77c3adf800344c57a3a0ca23d1d762"
   integrity sha512-aF00ZR+ziiq5/vxamCKpY1I0LA/ungG2qrsQIDibT+xqdvz8MaMnN0aHU4LIxxTx+Dbga/KlUXeklidRJahgHg==
   dependencies:
     "@firebase/analytics" "0.10.12"
@@ -4119,7 +4085,7 @@ kind-of@^6.0.3:
 
 leaflet@^1.9.4:
   version "1.9.4"
-  resolved "https://registry.npmjs.org/leaflet/-/leaflet-1.9.4.tgz"
+  resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.9.4.tgz#23fae724e282fa25745aff82ca4d394748db7d8d"
   integrity sha512-nxS1ynzJOmOlHp+iL3FyWqK89GtNL8U8rvlMOsQdTTssxZwCXh8N2NB3GDQOL+YR3XnWyZAxwQixURb+FA74PA==
 
 levn@^0.4.1:
