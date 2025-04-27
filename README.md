@@ -5,6 +5,7 @@ AgriSense is an application designed to provide tools and insights for agricultu
 ## Features
 
 *   **Crop Recommendation:** Provides recommendations based on specific parameters.
+*   **Fertiliser Recommendation:** Provides fertiliser recommendation based on specific parameters.
 *   **Crop Production Mapping:** Visualizes crop production data geographically.
 *   **Centre Pivot Visualization:** Displays visualizations related to centre pivot irrigation systems.
 *   **Data Processing Scripts:** Includes scripts for converting and processing agricultural datasets.
