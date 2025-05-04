@@ -133,6 +133,46 @@ export default function SupplyChain() {
           </div>
         </div>
 
+        {/* Natural Element Animations Container */}
+        <div className="natural-elements-container mt-8 flex justify-around items-center">
+          <div className="flower-animation">
+            <svg width="50" height="50" viewBox="0 0 50 50" className="flower">
+              <circle cx="25" cy="25" r="10" fill="#ffb347" />
+              <circle cx="25" cy="10" r="5" fill="#ffb347" />
+              <circle cx="35" cy="15" r="5" fill="#ffb347" />
+              <circle cx="40" cy="25" r="5" fill="#ffb347" />
+              <circle cx="35" cy="35" r="5" fill="#ffb347" />
+              <circle cx="25" cy="40" r="5" fill="#ffb347" />
+              <circle cx="15" cy="35" r="5" fill="#ffb347" />
+              <circle cx="10" cy="25" r="5" fill="#ffb347" />
+              <circle cx="15" cy="15" r="5" fill="#ffb347" />
+            </svg>
+          </div>
+          <div className="plant-animation">
+            <svg width="50" height="50" viewBox="0 0 50 50" className="plant">
+              <rect x="23" y="10" width="4" height="30" fill="#66bb6a" />
+              <circle cx="25" cy="10" r="8" fill="#66bb6a" />
+              <circle cx="15" cy="20" r="6" fill="#66bb6a" />
+              <circle cx="35" cy="20" r="6" fill="#66bb6a" />
+            </svg>
+          </div>
+          <div className="leaves-animation">
+            <svg width="50" height="50" viewBox="0 0 50 50" className="leaves">
+              <ellipse cx="25" cy="15" rx="8" ry="4" fill="#81c784" transform="rotate(20 25 15)" />
+              <ellipse cx="20" cy="25" rx="8" ry="4" fill="#81c784" transform="rotate(-10 20 25)" />
+              <ellipse cx="30" cy="25" rx="8" ry="4" fill="#81c784" transform="rotate(10 30 25)" />
+            </svg>
+          </div>
+          <div className="grass-animation">
+            <svg width="50" height="50" viewBox="0 0 50 50" className="grass">
+              <line x1="10" y1="50" x2="15" y2="30" stroke="#aed581" strokeWidth="2" />
+              <line x1="20" y1="50" x2="25" y2="25" stroke="#aed581" strokeWidth="2" />
+              <line x1="30" y1="50" x2="35" y2="35" stroke="#aed581" strokeWidth="2" />
+              <line x1="40" y1="50" x2="45" y2="40" stroke="#aed581" strokeWidth="2" />
+            </svg>
+          </div>
+        </div>
+
         <div className="grid gap-6 md:grid-cols-4">
           <Card>
             <CardHeader className="pb-2">

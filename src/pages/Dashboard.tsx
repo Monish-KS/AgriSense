@@ -213,7 +213,7 @@ export default function Dashboard() {
   console.log('Rendering Dashboard, damageChartData:', damageChartData);
   return (
     <Layout>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 fade-in">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           <div>
             <h2 className="text-3xl font-bold tracking-tight">Farm Overview</h2>
@@ -242,28 +242,32 @@ export default function Dashboard() {
           </div>
         </div>
 
+
         {/* First row of cards (4 cards) */}
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           <StatsCard
             title="Soil Health"
             value="Excellent"
-            icon={<FileBarChart className="h-4 w-4" />}
+            icon={<div className="plant-bloom"><FileBarChart className="h-4 w-4" /></div>}
             trend="up"
             trendValue="85/100"
+            className="slide-in-from-left"
           />
           <StatsCard
             title="Current Crop Status"
             value="Wheat"
-            icon={<Sprout className="h-4 w-4" />}
+            icon={<div className="plant-bloom"><Sprout className="h-4 w-4" /></div>}
             trend="up"
             trendValue="Flowering stage"
+            className="fade-in-right"
           />
           <StatsCard
             title="Water Status"
             value="Optimal"
-            icon={<Droplets className="h-4 w-4" />}
+            icon={<div className="plant-bloom"><Droplets className="h-4 w-4" /></div>}
             trend="neutral"
             trendValue="Next irrigation in 3 days"
+            className="fade-in-up"
           />
         </div>
 
@@ -275,6 +279,7 @@ export default function Dashboard() {
             icon={<Sun className="h-4 w-4" />}
             trend="neutral"
             trendValue={sensorData ? `Updated: ${sensorData.last_updated?.toDate().toLocaleString()}` : 'No data'}
+            className="fade-in-up"
           />
           <StatsCard
             title="Live Humidity"
@@ -282,6 +287,7 @@ export default function Dashboard() {
             icon={<Droplets className="h-4 w-4" />}
             trend="neutral"
             trendValue={sensorData ? `Updated: ${sensorData.last_updated?.toDate().toLocaleString()}` : 'No data'}
+            className="fade-in-up"
           />
           <StatsCard
             title="Live Soil Moisture"
@@ -289,6 +295,7 @@ export default function Dashboard() {
             icon={<FileBarChart className="h-4 w-4" />}
             trend="neutral"
             trendValue={sensorData ? `Updated: ${sensorData.last_updated?.toDate().toLocaleString()}` : 'No data'}
+            className="fade-in-up"
           />
         </div>
 
@@ -300,6 +307,7 @@ export default function Dashboard() {
             icon={<Sprout className="h-4 w-4" />} // Using Sprout icon for NPK
             trend="neutral" // You might want to add logic to determine trend based on predicted value
             trendValue={predictedNpk.N !== null ? `${predictedNpk.N.toFixed(2)} ppm` : 'No data'} // Example trendValue
+            className="fade-in-up"
           />
           <StatsCard
             title="Phosphorus (P)"
@@ -307,6 +315,7 @@ export default function Dashboard() {
             icon={<Sprout className="h-4 w-4" />} // Using Sprout icon for NPK
             trend="neutral" // You might want to add logic to determine trend based on predicted value
             trendValue={predictedNpk.P !== null ? `${predictedNpk.P.toFixed(2)} ppm` : 'No data'} // Example trendValue
+            className="fade-in-up"
           />
           <StatsCard
             title="Potassium (K)"
@@ -314,6 +323,7 @@ export default function Dashboard() {
             icon={<Sprout className="h-4 w-4" />} // Using Sprout icon for NPK
             trend="neutral" // You might want to add logic to determine trend based on predicted value
             trendValue={predictedNpk.K !== null ? `${predictedNpk.K.toFixed(2)} ppm` : 'No data'} // Example trendValue
+            className="fade-in-up"
           />
         </div>
 
@@ -461,7 +471,7 @@ export default function Dashboard() {
               </div>
             </DashboardCard>
           </TabsContent>
-          
+
           <TabsContent value="soil" className="space-y-4">
             <div className="grid gap-4 md:grid-cols-3">
               <DashboardCard
@@ -480,7 +490,7 @@ export default function Dashboard() {
                 <div className="flex flex-col items-center">
                   <div className="text-3xl font-bold">6.8</div>
                   <p className="text-sm text-agrisense-success">Optimal</p>
-                  <p className="text-xs text-muted-foreground">Slightly acidic, ideal for most crops</p>
+                <p className="text-xs text-muted-foreground">Slightly acidic, ideal for most crops</p>
                 </div>
               </DashboardCard>
               <DashboardCard
@@ -494,7 +504,7 @@ export default function Dashboard() {
                 </div>
               </DashboardCard>
             </div>
-            
+
             <DashboardCard
               title="Soil Health Summary"
               description="Key indicators of your soil's condition"
