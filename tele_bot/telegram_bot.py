@@ -15,11 +15,11 @@ firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 # --- Gemini Init ---
-configure(api_key="AIzaSyBifxap2m2g1S3h6mYvmWxs1WeZGEhxGo0")
+configure(api_key="XXXXX")
 model = GenerativeModel("gemini-2.0-flash")
 
 # --- Telegram Bot Token ---
-BOT_TOKEN = "7587056754:AAFRAqzqN5UJ03yJmzLH52Ztv7LY_-388hg"
+BOT_TOKEN = "XXXXXXXXX"
 
 # --- Languages ---
 LANGUAGES = {
